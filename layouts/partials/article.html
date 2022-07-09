@@ -1,0 +1,13 @@
+<article class="h-entry">
+{{ if .Title }}
+<header>
+<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+</header>
+{{ end }}
+<section class="e-content post-body">
+{{ .Content }}
+</section>
+
+{{ partial "article-footer.html" . }}
+
+</article>

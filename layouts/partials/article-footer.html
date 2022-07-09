@@ -1,0 +1,37 @@
+<footer>
+	<p>Category: <a href="#">Some Category</a><br/>
+		Tags: {{ .Params.tags }} ... {{ delimit .Params.tags ", " }}
+	</p>
+	
+		<p>Published: 
+			<time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+			{{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+			</time>
+		</p>
+		
+		
+</footer>
+
+<details>
+<summary>Debug</summary>
+<h3>Site Properties</h3>
+<pre>
+Site
+
+{{ printf "%#v \n" $.Site  }}
+
+Permalink
+{{ printf "%#v \n" .Permalink }}
+
+Page Information
+
+{{ range .Pages }}
+    {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+    {{ printf "%#v" . }}
+{{ end }}
+
+</pre>
+<h3>Params</h3>
+<pre>
+{{ printf "%s" $.Params }}
+</pre>

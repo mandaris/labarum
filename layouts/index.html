@@ -1,23 +1,9 @@
 {{ define "main" }}
-<p>This is the index page2 </p>
+<p>This is the index page </p>
 
 {{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
 
-<article>
-	<header>
-		<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	</header>
-	<section>
-		<p>This is the main body of the article.</p>
-		{{ .Render "summary"}}
-	</section>
-	<footer>
-	<p>Category: <a href="#">Some Category</a><br/>
-		Tags: One Two Three</p>
-	
-		<p>Published: Some Date</p>
-		</footer>
-</article>
+{{ partial "article.html" . }}
 	
 {{ end }}
 {{ end }}
