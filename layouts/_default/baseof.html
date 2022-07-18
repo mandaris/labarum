@@ -28,11 +28,11 @@
 
 {{ block "main" .}}{{ end }}
 
-
 </main>
 
 
 <footer>
+	<p>{{ .Site.Params.description | safeHTML }}
 	<p>Footer for the site. &copy; 20##</p>
 </footer>
 </body>
