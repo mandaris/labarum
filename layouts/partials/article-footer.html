@@ -26,29 +26,32 @@
 			</a>
 		</p>
 		
+	
+
+	<details>
+		<summary>Debug</summary>
+		<h3>Site Properties</h3>
+		<pre>
+		Site
 		
+		{{ printf "%#v \n" $.Site  }}
+		
+		Permalink
+		{{ printf "%#v \n" .Permalink }}
+		
+		Page Information
+		
+		{{ range .Pages }}
+			{{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+			{{ printf "%#v" . }}
+		{{ end }}
+		
+		</pre>
+		<h3>Params</h3>
+		<pre>
+		{{ printf "%s" $.Params }}
+		</pre>
+	</details>
+			
 </footer>
 
-<details>
-<summary>Debug</summary>
-<h3>Site Properties</h3>
-<pre>
-Site
-
-{{ printf "%#v \n" $.Site  }}
-
-Permalink
-{{ printf "%#v \n" .Permalink }}
-
-Page Information
-
-{{ range .Pages }}
-    {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
-    {{ printf "%#v" . }}
-{{ end }}
-
-</pre>
-<h3>Params</h3>
-<pre>
-{{ printf "%s" $.Params }}
-</pre>
