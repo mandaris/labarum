@@ -32,8 +32,16 @@
 
 
 <footer>
-	<p>{{ .Site.Params.description | safeHTML }}</p>
-	<p>Footer for the site. &copy; 20##</p>
+	{{ with  .Site.Params.description}}
+	<p>{{ . | safeHTML }}</p>
+	{{ end }}
+	
+	<p>
+		{{ with .Site.Copyright }}
+	{{ . | safeHTML }}
+	{{ else }}
+	&copy; {{ now.Year }}
+	{{ end }}</p>
 </footer>
 </body>
 
