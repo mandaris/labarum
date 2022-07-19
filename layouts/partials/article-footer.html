@@ -1,14 +1,14 @@
 <footer>
 	<p>
-	{{ with .Param "category" }}
-	Category: {{ . }}
+	{{ with .Param "categories" }}
+	Categories: {{ . }}
 	{{ end }}
 	
     
 		
-<br />		
-{{ with .Param "tags" }}
-		Tags: 
+    <br />		
+	{{ with .Param "tags" }}
+	Tags: 
   {{ range $index, $tag := (. | sort) }} 
   {{ with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
     <a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
