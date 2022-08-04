@@ -4,27 +4,28 @@
 	Categories: {{ . }}
 	{{ end }}
 	
-    
 		
-    <br />		
+	<br />		
 	{{ with .Param "tags" }}
 	Tags: 
   {{ range $index, $tag := (. | sort) }} 
   {{ with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
-    <a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+  <a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
   {{ end }}
   {{ end }}
 {{ end }}
 		
 	</p>
 	
-		<p>Published: 
-			<a href="{{ .Permalink }}">
-			<time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+	<p>Published: 
+		<a href="{{ .Permalink }}">
+		<time {{ 
+			printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") 
+			| safeHTMLAttr }}>
 			{{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) -}}
-			</time>
-			</a>
-		</p>
+		</time>
+		</a>
+	</p>
 		
 	
 
@@ -32,9 +33,10 @@
 		<summary>Debug</summary>
 		<h3>Site Properties</h3>
 		<pre>
-		Site
-		
 		{{ printf "%#v \n" $.Site  }}
+		Second Site
+
+		{{ printf "%#v" site.Params }}
 		
 		Permalink
 		{{ printf "%#v \n" .Permalink }}
