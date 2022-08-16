@@ -118,7 +118,9 @@ article footer p:last-of-type {
     text-align: right;
 }
 
-
+article footer details {
+    display: none;
+}
 
 article:last-of-type {
 	margin-bottom: inherit;
