@@ -1,9 +1,10 @@
 {{ define "main" }}
-<p>This is the index page </p>
 
 {{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
 
 {{ partial "article.html" . }}
 	
 {{ end }}
+
+{{ partial "site-pagination.html" . }}
 {{ end }}
