@@ -4,5 +4,6 @@
 		{{ range .Site.Menus.main }} 
 		<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
 		{{ end }}
+		<li><a href="{{ "feed.xml" | absURL }}">RSS</a></li>
 	</menu>
 </nav>
