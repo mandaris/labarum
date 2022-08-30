@@ -1,3 +1,23 @@
 {{ define "main" }}
-<p>This is the basic list.html file</p>
+{{ if .Title }}
+<h1>{{ .Title }}</h1>
+{{ end }}
+
+{{ range .Paginator.Pages	}}
+	<article class="h-entry">
+		<header>
+			{{ if .Title }}
+			<h2 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			{{ end }}
+			<a href="{{ .Permalink }}" class="u-url">
+				<time class="dt-published">
+					{{ .Date.Format "2 January 2006" }}
+				</time>
+			</a>
+		</header>
+		{{ .Content }}
+	</article>
+	{{ end }}
+
+
 {{ end }}
