@@ -9,13 +9,9 @@
 			{{ if .Title }}
 			<h2 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 			{{ end }}
-			<a href="{{ .Permalink }}" class="u-url">
-				<time class="dt-published">
-					{{ .Date.Format "2 January 2006" }}
-				</time>
-			</a>
 		</header>
 		{{ .Content }}
+    {{ partial "article-footer.html" . }}
 	</article>
 	{{ end }}
 
