@@ -11,9 +11,13 @@
 		{{ end }}
 	
 	{{ end }}
-	<br />		
+
+			
 	
 	{{ with .Param "tags" }}
+	{{ with $.Param "categories"}}
+	<br />
+	{{ end }}
 		Tags: 
   		{{ range $index, $tag := (. | sort) }} 
   			{{ with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
