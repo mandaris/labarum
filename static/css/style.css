@@ -82,7 +82,7 @@ article header h1 {
 	border-top-left-radius: inherit;
 }
 
-article header time {
+article footer time {
      color: var(--text-alt);
 }
 
