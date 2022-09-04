@@ -14,7 +14,7 @@
 
 <body>
 
-{{ partial "site-nav.html" . }}
+{{- partial "site-nav.html" . -}}
 
 <main>
 {{ block "main" .}}{{ end }}
@@ -22,16 +22,17 @@
 
 
 <footer>
-	{{ with  .Site.Params.description}}
+	{{- with  .Site.Params.description }}
 	<p>{{ . | safeHTML }}</p>
-	{{ end }}
+	{{ end -}}
 	
 	<p>
-		{{ with .Site.Copyright }}
+	{{- with .Site.Copyright }}
 	{{ . | safeHTML }}
-	{{ else }}
+	{{- else }}
 	&copy; {{ now.Year }}
-	{{ end }}</p>
+	{{ end -}}
+	</p>
 </footer>
 </body>
 
