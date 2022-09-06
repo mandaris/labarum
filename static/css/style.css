@@ -1,5 +1,5 @@
 :root {
-	font:-apple-system-body;
+	font:verdana, -apple-system-body;
     --background: white;
     --background-alt: #e6e6e6;
     --text: #222222;
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-    	font:-apple-system-body;
+    	font:verdana, -apple-system-body;
         --background: black;
         --background-alt: #121212;
         --text: #eeeeee;
@@ -223,4 +223,17 @@ img, video, iframe {
 .bookshelf_title {
     font-weight: 600;
     font-size: 1em;
+}
+
+.pagination {
+    display: block;
+    margin-top: 1rem;
+}
+
+.nav_prev {
+    text-align: left;
+}
+
+.nav_next {
+    text-align: right;
 }
