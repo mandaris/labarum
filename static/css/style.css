@@ -226,14 +226,19 @@ img, video, iframe {
 }
 
 .pagination {
-    display: block;
     margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 2;
+    
 }
 
 .nav_prev {
+    grid-column: 1;
     text-align: left;
 }
 
 .nav_next {
+    grid-column: 2;
     text-align: right;
+    /* float: right; */
 }
