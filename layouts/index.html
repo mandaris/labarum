@@ -1,7 +1,6 @@
 {{ define "main" }}
 
-{{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
-
+{{- range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
 {{ partial "article.html" . }}
 	
 {{ end }}

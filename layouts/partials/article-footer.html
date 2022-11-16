@@ -1,20 +1,18 @@
 <footer>
 	<p>
-	{{ with .Param "categories" }}
-		Categories:
-	
-		{{ range $CategoryArray, $Category := (. | sort) }}
-			{{ if gt $CategoryArray 0 }}
-				<span>•</span>
-			{{ end }}
-			<a href="/categories/{{ $Category | urlize }}">{{ $Category }}</a>
-		{{ end }}
-	
-	{{ end }}
+	{{- with .Param "categories" -}}
+	Categories:
+	{{ range $CategoryArray, $Category := (. | sort) -}}
+		{{- if gt $CategoryArray 0 -}}
+		<span> •</span>
+		{{- end }}
+		<a href="/categories/{{ $Category | urlize }}">{{ $Category }}</a>
+		{{- end }}
+	{{- end }}
 
 			
 	
-	{{ with .Param "tags" }}
+	{{- with .Param "tags" }}
 	{{ with $.Param "categories"}}
 	<br />
 	{{ end }}
@@ -24,7 +22,7 @@
   				<a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
   			{{ end }}
   		{{ end }}
-	{{ end }}
+	{{- end }}
 		
 	</p>
 	
@@ -34,13 +32,13 @@
 			{{ 
 			printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") 
 			| safeHTMLAttr }}>
-			{{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+			{{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) }}
 		</time>
 		</a>
 	</p>
 		
 	
-
+{{ "<!-- Debugging Details --> " | safeHTML }}
 	<details>
 		<summary>Debug</summary>
 		<h3>Site Properties</h3>
@@ -68,4 +66,3 @@
 	</details>
 			
 </footer>
-
