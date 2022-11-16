@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-US" }}">
 <head>
-	<meta theme_version="0.5" />
+	<meta theme_version="0.51" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ .Title }}</title>
@@ -33,6 +33,12 @@
 	{{ end -}}
 	</p>
 </footer>
+
+{{ partial "custom_footer.html" . }}
+{{ range .Site.Params.plugins_js }}
+	<script src="{{ . }}"></script>
+{{ end }}
+</body>
 </body>
 
 </html>

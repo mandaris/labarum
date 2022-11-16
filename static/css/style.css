@@ -88,11 +88,15 @@ article footer time {
 
 article section {
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: .5rem;
 }
 
 article section p:first-of-type {
     margin-top: .5rem;
+}
+
+article section p:last-child {
+    margin-bottom: 0px;
 }
 
 article footer {
