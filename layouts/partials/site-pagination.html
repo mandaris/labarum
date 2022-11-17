@@ -1,3 +1,4 @@
+{{ "<!-- Site Pagination -->" | safeHTML }}
 {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
 <nav class="pagination">
 	{{- if $paginator.HasPrev -}}
