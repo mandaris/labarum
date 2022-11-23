@@ -1,5 +1,5 @@
 :root {
-    font: verdana, -apple-system-body;
+    font-family: "Verdana", -apple-system-body, sans-serif;
     --background: white;
     --background-alt: #e6e6e6;
     --text: #222222;
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        font: verdana, -apple-system-body;
+        font: "Verdana", -apple-system-body, sans-serif;
         --background: black;
         --background-alt: #121212;
         --text: #eeeeee;
@@ -124,10 +124,6 @@ article footer details {
 
 article:last-of-type {
     margin-bottom: inherit;
-}
-
-main {
-    font: inherit;
 }
 
 body>header h1 {
