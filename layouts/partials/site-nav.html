@@ -3,7 +3,7 @@
 	<menu>
 		{{- range .Site.Menus.main }} 
 		<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
-		{{ end }}
+		{{ end -}}
 		<li><a href="{{ "feed.xml" | absURL }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}">RSS</a></li>
 	</menu>
 </nav>
