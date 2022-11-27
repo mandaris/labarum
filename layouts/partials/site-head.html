@@ -1,111 +1,99 @@
 <head>
-	<meta theme_version="0.6" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta theme_version="0.61" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <title>
-{{ if .IsHome }}
-		{{ .Site.Title}}
-{{ else }}
-{{ with .Title }} {{ . }} - {{ .Site.Title }}
-{{ end }}
-{{ end }}
-        {{ block "title" . }}
-		{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Site.Title }} - {{ .Title }} {{ end }}
-		{{ end }}
+{{- block "title" . }}
+{{ if .IsHome }}{{ .Site.Title }} {{ else }}{{ .Site.Title }} - {{ .Title }} {{ end }}
+{{ end -}}
 </title>
-
-
 
 {{ if .IsHome }}
 <meta name="description" content="{{ .Site.Params.Description }}" />
 {{ else }}
 <meta name="description" content="{{ .Summary }}" />
 {{ end }}
-<base href="{{ .Site.Author }}" />
-<meta name="keywords" content="{{ range .Site.Params.Keywords }}{{ . }},{{ end }}">
-<meta name="author" content="{{ .Site.Params.Author }}">
+<base href="{{ .Site.BaseURL }}" />
+<meta name="keywords" content="{{ range .Site.Params.categories }}{{ . }},{{ end }}" />
+<meta name="author" content="{{ .Site.Params.Author }}" />
+
 {{ "<!-- CSS Links -->" | safeHTML }}
-	<link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}" />
-	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "custom.css" | relURL }}" />
-</head>
-
-
-
-
-```````````
+<link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+{{- if isset .Site.Params "customcss" }}
+<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customCSS }}" />
+{{ end }}
+{{- if isset .Site.Params "customdarkcss" }}
+<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
+{{ end }}
+{{ range .Site.Params.plugins_css }}
+{{"<!-- Plugin CSS -->" | safeHTML }}
+<link rel="stylesheet" href="{{ . }}" />
+{{ end }}
 
 
 
 {{ "<!-- Micro.blog Values -->" | safeHTML }}
-	<link rel="shortcut icon" 
-		href="https://micro.blog/{{ .Site.Author.username }}/favicon.png"
-		type="image/x-icon" />
-	<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
-	<link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
-	<link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
-	<link rel="micropub" href="https://micro.blog/micropub" />
-	<link rel="microsub" href="https://micro.blog/microsub" />
-	<link rel="webmention" href="https://micro.blog/webmention" />
-	<link rel="subscribe" href="https://micro.blog/users/follow" />
-	<link rel="canonical" href="{{ .Permalink }}">		
-	
-	{{- with .OutputFormats.Get "RSS" -}}
-	{{ "<!-- RSS Definition -->" | safeHTML }}
-	<link rel="alternate" type="application/rss+xml"
-		title="{{ $.Site.Title }}"
-		href="{{ .RelPermalink }}" />
-	{{- with $.Site.Params.podcast_title }}
-	<link rel="alternate" type="application/rss+xml"
-		title="{{ . }}"
-		href="{{ "podcast.xml" | absURL }}" />
-	{{ else }}
-	<link rel="alternate" type="application/rss+xml" 
-		title="Podcast feed for {{ .Site.Title }}" 
-		href="{{ "podcast.xml" | absURL }}" />
-	{{ end -}}
-	<link rel="alternate" type="application/json" 
-		title="{{ $.Site.Title }}"
-		href="{{ "feed.json" | absURL }}" />
-	<link rel="EditURI" type="application/rsd+xml" 
-		href="{{ "rsd.xml" | absURL }}" />
-	{{- end -}}
+<link rel="shortcut icon" 
+	href="https://micro.blog/{{ .Site.Author.username }}/favicon.png"
+	type="image/x-icon" />
+<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
+<link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
+<link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
+<link rel="micropub" href="https://micro.blog/micropub" />
+<link rel="microsub" href="https://micro.blog/microsub" />
+<link rel="webmention" href="https://micro.blog/webmention" />
+<link rel="subscribe" href="https://micro.blog/users/follow" />
+<link rel="canonical" href="{{ .Permalink }}" />		
 
-	{{ with .Site.Params.twitter_username }}
-	<link rel="me" href="https://twitter.com/{{ . }}" />
-	{{ end }}
-	{{ with .Site.Params.github_username }}
-	<link rel="me" href="https://github.com/{{ . }}" />
-	{{ end }}
-	{{ with .Site.Params.instagram_username }}
-	<link rel="me" href="https://instagram.com/{{ . }}" />
-	{{ end }}
-	
-	{{ range .Site.Params.plugins_css }}
-	<link rel="stylesheet" href="{{ . }}" />
-	{{ end }}
-	{{ range $filename := .Site.Params.plugins_html }}
-	{{ partial $filename $ }}
-	{{ end }}
-</head>
+{{- with .OutputFormats.Get "RSS" -}}
+{{ "<!-- RSS Definition -->" | safeHTML }}
+<link rel="alternate" type="application/rss+xml"
+	title="{{ $.Site.Title }}"
+	href="{{ .RelPermalink }}" />
+{{- with $.Site.Params.podcast_title }}
+<link rel="alternate" type="application/rss+xml"
+	title="{{ . }}"
+	href="{{ "podcast.xml" | absURL }}" />
+{{ else }}
+<link rel="alternate" type="application/rss+xml" 
+	title="Podcast feed for {{ $.Site.Title }}" 
+	href="{{ "podcast.xml" | absURL }}" />
+{{ end -}}
+<link rel="alternate" type="application/json" 
+	title="{{ $.Site.Title }}"
+	href="{{ "feed.json" | absURL }}" />
+<link rel="EditURI" type="application/rsd+xml" 
+	href="{{ "rsd.xml" | absURL }}" />
+{{- end -}}
 
+{{ with .Site.Params.twitter_username }}
+<link rel="me" href="https://twitter.com/{{ . }}" />
+<meta name="twitter:site" content="{{ . }}" />
+<meta name="twitter:creator" content="@{{ . }}" />
+<meta name="twitter:card" content="summary_large_image" />
+{{ end }}
+{{ with .Site.Params.github_username }}
+<link rel="me" href="https://github.com/{{ . }}" />
+{{ end }}
+{{ with .Site.Params.instagram_username }}
+<link rel="me" href="https://instagram.com/{{ . }}" />
+{{ end }}
 
-
-
-``````````````
-
+{{ range .Site.Params.plugins_css }}
+<link rel="stylesheet" href="{{ . }}" />
+{{ end }}
+{{ range $filename := .Site.Params.plugins_html }}
+{{ partial $filename $ }}
+{{ end }}
 
 <meta property="og:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
 <meta property="og:description" content="{{ if .Params.ogdescription }}{{ .Params.ogdescription }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
 <meta property="og:type" content="website" />
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ if .Params.ogimage }}
 	<meta property="og:image" content="{{ .Params.ogimage }}" />
 {{ end }}
-
-``````````
-
-meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="{{ .Site.Params.Description }}">
+</head>
