@@ -2,11 +2,20 @@
 <meta theme_version="0.61" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+{{- $.Scratch.Set "myTitle" "Untitled" -}}
+{{- $.Scratch.Set "myDescription" "Description not set" -}}
+{{- $.Scratch.Set "myImage" "https://micro.blog/{{ .Site.Author.username }}/favicon.png" -}}
+{{- if .IsHome -}}
+	{{ $.Scratch.Set "myTitle" .Site.Title }} 
+	{{ $myDescription := .Site.Params.Description }}
+	{{ $.Scratch.Set "myDescription" .Params.Description }}
+	
+
+	{{ $myImage := "https://micro.blog/{{ .Site.Author.username }}/favicon.png" }}
+{{- end }}
 
 <title>
-{{- block "title" . }}
-{{ if .IsHome }}{{ .Site.Title }} {{ else }}{{ .Site.Title }} - {{ .Title }} {{ end }}
-{{ end -}}
+{{ $.Scratch.Get "myTitle" }}
 </title>
 
 {{ if .IsHome }}
@@ -88,8 +97,8 @@
 {{ partial $filename $ }}
 {{ end }}
 
-<meta property="og:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
-<meta property="og:description" content="{{ if .Params.ogdescription }}{{ .Params.ogdescription }}{{ else }}{{ .Site.Params.Description }}{{ end }}" />
+<meta property="og:title" content="{{ $.Scratch.Get "myTitle" }}" />
+<meta property="og:description" content="{{ $.Scratch.Get "myDescription" }}" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
