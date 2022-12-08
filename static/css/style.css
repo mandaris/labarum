@@ -1,5 +1,4 @@
 :root {
-    font-family: "Verdana", -apple-system-body, sans-serif;
     --background: white;
     --background-alt: #e6e6e6;
     --text: #222222;
@@ -14,13 +13,12 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        font: "Verdana", -apple-system-body, sans-serif;
         --background: black;
         --background-alt: #121212;
         --text: #eeeeee;
         --text-alt: #bbbbbb;
         --accent: #ff003f;
-        --accent-alt: #1f0008;
+        --accent-alt: #ec8230;
 
         --box-shadow-color-1: rgba(255, 255, 255, 0.4);
         --box-shadow-color-2: rgba(255, 255, 255, 0.3);
@@ -31,7 +29,7 @@
 html {
     background-color: var(--background);
     color: var(--text);
-    font-family: Verdana, sans-serif;
+    font-family: "Verdana", -apple-system-body, sans-serif;
     line-height: 1.6;
     font-size: 1rem;
 }
