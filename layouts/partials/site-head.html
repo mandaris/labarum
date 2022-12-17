@@ -1,28 +1,32 @@
 <head>
-<meta theme_version="0.61" />
+<meta theme_version="0.65" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 {{- $.Scratch.Set "myTitle" "Untitled" -}}
 {{- $.Scratch.Set "myDescription" "Description not set" -}}
 {{- $.Scratch.Set "myImage" "https://micro.blog/{{ .Site.Author.username }}/favicon.png" -}}
+
 {{- if .IsHome -}}
 	{{ $.Scratch.Set "myTitle" .Site.Title }} 
 	{{ $myDescription := .Site.Params.Description }}
 	{{ $.Scratch.Set "myDescription" .Params.Description }}
-	
-
 	{{ $myImage := "https://micro.blog/{{ .Site.Author.username }}/favicon.png" }}
-{{- end }}
+{{- else }}
+	{{ if .Title }}
+	{{ $.Scratch.Set "myTitle" .Title }}
+	{{ else }}
+	{{ $.Scratch.Set "MyTitle" "Micro Post"}}
+	{{ end }}
+	{{ $.Scratch.Set "myDescription" .Summary }}
+{{ end }}
 
 <title>
 {{ $.Scratch.Get "myTitle" }}
 </title>
 
-{{ if .IsHome }}
-<meta name="description" content="{{ .Site.Params.Description }}" />
-{{ else }}
-<meta name="description" content="{{ .Summary }}" />
-{{ end }}
+
+<meta name="description" content="{{ $.Scratch.Get "myDescription" }}" />
 <base href="{{ .Site.BaseURL }}" />
 <meta name="keywords" content="{{ range .Site.Params.categories }}{{ . }},{{ end }}" />
 <meta name="author" content="{{ .Site.Params.Author }}" />
@@ -75,13 +79,12 @@
 	href="{{ "feed.json" | absURL }}" />
 <link rel="EditURI" type="application/rsd+xml" 
 	href="{{ "rsd.xml" | absURL }}" />
-{{- end -}}
+{{- end }}
 
 {{ with .Site.Params.twitter_username }}
 <link rel="me" href="https://twitter.com/{{ . }}" />
 <meta name="twitter:site" content="{{ . }}" />
 <meta name="twitter:creator" content="@{{ . }}" />
-<meta name="twitter:card" content="summary_large_image" />
 {{ end }}
 {{ with .Site.Params.github_username }}
 <link rel="me" href="https://github.com/{{ . }}" />
@@ -102,7 +105,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if .Params.ogimage }}
-	<meta property="og:image" content="{{ .Params.ogimage }}" />
-{{ end }}
+<meta property="og:image" content="{{ $.Scratch.Get "myImage" }}" />
+
+
+{{ "<!-- Default opengraph tags -->" | safeHTML }}
+{{ template "_internal/opengraph.html" . }}
+
+{{ "<!-- Default schema tags -->" | safeHTML }}
+{{ template "_internal/schema.html" . }}
+
+{{ "<!-- Default twitter tags -->" | safeHTML }}
+{{ template "_internal/twitter_cards.html" . }}
 </head>
