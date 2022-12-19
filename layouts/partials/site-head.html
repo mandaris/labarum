@@ -44,12 +44,20 @@
 <meta property="og:video" content="{{ . | absURL }}" />
 {{ end }}{{ end }}
 {{- with $.Params.images -}}
-{{- range first 6 . }}
-<meta property="og:image" content="{{ . | absURL }}" />
-{{- end -}}
+	{{ "<!-- $.Params.images -->" | safeHTML }}
+	<meta name="twitter:card" content="summary_large_image" />
+	{{- range first 6 . }}
+	<meta property="og:image" content="{{ . | absURL }}" />
+	<meta itemprop="image" content="{{ . | absURL }}" />
+	{{- end -}}
 {{- else -}}
-{{- with $.Site.Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}" />{{ end -}}
+	{{ "<!-- $.Site.Params.images -->" | safeHTML }}
+	<meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+	<meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+	<meta name="twitter:card" content="summary" />
 {{- end -}}
+
+
 {{ end }}
 
 
@@ -58,8 +66,9 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
 
-
-<meta name="author" content="{{ .Site.Params.name }}" />
+{{ with $.Site.Params.Author }}
+<meta name="author" content="{{ .Name }}" />
+{{ end }}
 {{ with .Site.Params.twitter_username }}
 <link rel="me" href="https://twitter.com/{{ . }}" />
 <meta name="twitter:site" content="@{{ . }}" />
