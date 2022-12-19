@@ -47,7 +47,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 {{- range first 6 . }}
 <meta property="og:image" content="{{ . | absURL }}" />
-{{ end -}}
+{{- end -}}
 {{- else -}}
 {{- with $.Site.Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}" />{{ end -}}
 {{- end -}}
@@ -86,7 +86,6 @@
 {{"<!-- Plugin CSS -->" | safeHTML }}
 <link rel="stylesheet" href="{{ . }}" />
 {{ end }}
-
 
 
 {{ "<!-- Micro.blog Values -->" | safeHTML }}
