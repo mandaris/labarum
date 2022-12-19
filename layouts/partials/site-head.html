@@ -44,12 +44,12 @@
 <meta property="og:video" content="{{ . | absURL }}" />
 {{ end }}{{ end }}
 {{- with .Params.images -}}
-	{{ "<!-- .Params.images -->" | safeHTML }}
-	<meta name="twitter:card" content="summary_large_image" />
-	{{- range first 6 . }}
-	<meta property="og:image" content="{{ . | absURL }}" />
-	<meta itemprop="image" content="{{ . | absURL }}" />
-	{{- end -}}
+{{ "<!-- .Params.images -->" | safeHTML }}
+<meta name="twitter:card" content="summary_large_image" />
+{{- range first 6 . }}
+<meta property="og:image" content="{{ . | absURL }}" />
+<meta itemprop="image" content="{{ . | absURL }}" />
+{{- end -}}
 {{- else -}}
 {{ "<!-- $.Site.Params.images -->" | safeHTML }}
 <meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
