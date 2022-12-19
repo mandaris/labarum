@@ -49,7 +49,7 @@
 <meta property="og:image" content="{{ . | absURL }}" />
 {{ end -}}
 {{- else -}}
-{{- with $.Site.Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}"/>{{ end -}}
+{{- with $.Site.Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}" />{{ end -}}
 {{- end -}}
 {{ end }}
 
