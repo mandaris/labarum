@@ -44,7 +44,6 @@
 <meta property="og:video" content="{{ . | absURL }}" />
 {{ end }}{{ end }}
 {{- with $.Params.images -}}
-<meta name="twitter:card" content="summary_large_image" />
 {{- range first 6 . }}
 <meta property="og:image" content="{{ . | absURL }}" />
 {{- end -}}
