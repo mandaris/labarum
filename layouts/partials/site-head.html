@@ -1,5 +1,5 @@
 <head>
-<meta theme_version="0.66" />
+<meta theme_version="0.661" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -43,21 +43,19 @@
 {{- with .Params.videos }}{{- range . }}
 <meta property="og:video" content="{{ . | absURL }}" />
 {{ end }}{{ end }}
-{{- with $.Params.images -}}
-	{{ "<!-- $.Params.images -->" | safeHTML }}
+{{- with .Params.images -}}
+	{{ "<!-- .Params.images -->" | safeHTML }}
 	<meta name="twitter:card" content="summary_large_image" />
 	{{- range first 6 . }}
 	<meta property="og:image" content="{{ . | absURL }}" />
 	<meta itemprop="image" content="{{ . | absURL }}" />
 	{{- end -}}
 {{- else -}}
-	{{ "<!-- $.Site.Params.images -->" | safeHTML }}
-	<meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
-	<meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
-	<meta name="twitter:card" content="summary" />
+{{ "<!-- $.Site.Params.images -->" | safeHTML }}
+<meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+<meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+<meta name="twitter:card" content="summary" />
 {{- end -}}
-
-
 {{ end }}
 
 
