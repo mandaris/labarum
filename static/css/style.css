@@ -162,6 +162,7 @@ footer {
 
 blockquote {
     border-left: 2px solid var(--background-alt);
+    border-left-color: var(--accent);
     padding-left: 1rem;
     margin-left: 1rem;
 }
@@ -237,4 +238,8 @@ iframe {
 .nav_next {
     grid-column: 2;
     text-align: right;
+}
+
+li::marker {
+    color: var(--accent);
 }
