@@ -29,7 +29,7 @@
 html {
     background-color: var(--background);
     color: var(--text);
-    font-family: "Verdana", -apple-system-body, sans-serif;
+    font-family: Verdana, "-apple-system-body", "-apple-system", sans-serif;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -68,10 +68,6 @@ article header {
     border-top-left-radius: inherit;
 }
 
-
-article header h1 a {
-    color: var(--accent);
-}
 
 article header h1 {
     margin-top: 0;
@@ -191,7 +187,7 @@ iframe {
 }
 
 .microblog_time a {
-    color: var(--text-alt);
+    color: var(--accent-alt);
 }
 
 .bookshelf_book {

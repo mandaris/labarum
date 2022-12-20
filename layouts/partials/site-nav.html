@@ -1,7 +1,9 @@
 {{ "<!-- site-nav.html -->" | safeHTML }}
 <nav>
 	<menu>
+		{{ if ne .IsHome true }}
 		<li><a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">Home</a></li>
+		{{ end }}
 		{{- range .Site.Menus.main }} 
 		<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
 		{{ end -}}
