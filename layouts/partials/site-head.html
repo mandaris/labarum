@@ -1,5 +1,5 @@
 <head>
-<meta theme_version="0.661" />
+<meta theme_version="0.662" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -15,7 +15,7 @@
 <meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
 <meta name="twitter:card" content="summary" />
 {{ else }}
-{{ if isset .Params "Title" }}
+{{ if isset .Params "title" }}
 <title>{{ .Title }}</title>
 <meta property="og:title" content="{{ .Site.Title}} - {{ .Title }}" />
 <meta itemprop="name" content="{{ .Site.Title }} - {{ .Title }}" />
