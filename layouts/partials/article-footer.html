@@ -44,26 +44,24 @@
 {{ "<!-- Debugging Details --> " | safeHTML }}
 	<details>
 		<summary>Debug</summary>
-		<h3>Site Properties</h3>
+		<h1>Site Properties</h1>
 		<pre>
+		{{ "<!-- $.Site Properties -->" | safeHTML }}
 		{{ printf "%#v \n" $.Site  }}
-		Second Site
-
+		
+		{{ "<!-- site.Params Properties -->" | safeHTML }}
 		{{ printf "%#v" site.Params }}
 		
 		Permalink
 		{{ printf "%#v \n" .Permalink }}
 		
 		Page Information
-		
 		{{ range .Pages }}
 			{{/* The context, ".", is now each one of the pages as it goes through the loop */}}
 			{{ printf "%#v" . }}
 		{{ end }}
 		
-		</pre>
-		<h3>Params</h3>
-		<pre>
+		Params
 		{{ printf "%s" $.Params }}
 		</pre>
 	</details>
