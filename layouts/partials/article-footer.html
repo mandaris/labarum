@@ -7,7 +7,8 @@
 		{{- if gt $CategoryArray 0 -}}
 		<span> •</span>
 		{{- end }}
-		<a href="/categories/{{ $Category | urlize }}">{{ $Category }}</a>
+		<a href="/categories/{{ $Category | urlize }}" class="p-category">
+			<span itemprop="articleSection">{{ $Category }}</span></a>
 		{{- end }}
 	{{- end }}
 
@@ -17,19 +18,20 @@
 	{{ with $.Param "categories"}}
 	<br />
 	{{ end }}
-		Tags: 
+		Tags: <span itemprop="keywords">
   		{{ range $index, $tag := (. | sort) }} 
   			{{ with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
-  				<a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+  				<a href="{{ .Permalink }}" class="tag">{{ $tag | urlize }}</a>
   			{{ end }}
   		{{ end }}
+		</span>
 	{{- end }}
 		
 	</p>
 	
 	<p>Published: 
 		<a href="{{ .Permalink }}" class="u-url">
-		<time class="dt-publised"
+		<time class="dt-publised" itemprop="dateCreated datePublished"
 			{{ 
 			printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") 
 			| safeHTMLAttr }}>

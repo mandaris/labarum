@@ -1,12 +1,14 @@
-<article class="h-entry">
 {{- if .Title }}
-<header>
-<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+<article class="h-entry blog-post">
+<header class="post-header">
+<h1><a href="{{ .Permalink }}" class="p-name">{{ .Title }}</a></h1>
 </header>
+{{ else }}
+<article class="h-entry note-summary-view">
 {{ end }}
-<section class="e-content post-body">
+<div class="e-content post-body">
 {{ .Content -}}
-</section>
+</div>
 
 {{ partial "article-footer.html" . }}
 
