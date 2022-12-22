@@ -1,5 +1,5 @@
 <head>
-<meta theme_version="0.662" />
+<meta theme_version="0.665" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -25,7 +25,7 @@
 <meta itemprop="name" content="{{ .Site.Title }} - MicroPost" />
 {{ end }}
 <meta name="description" content="{{ .Summary }}" />
-<meta name="keywords" content="{{ range .Params.categories }}{{ . }},{{ end }}" />
+<meta name="keywords" content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
 <meta property="og:description" content="{{ .Summary | safeHTML }}" />
 <meta property="og:type" content="article" />
 <meta property="article:section" content="Post" />
@@ -64,8 +64,8 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
 
-{{ with $.Site.Params.Author }}
-<meta name="author" content="{{ .Name }}" />
+{{ with .Site.Author.name }}
+<meta name="author" content="{{ . }}" />
 {{ end }}
 {{ with .Site.Params.twitter_username }}
 <link rel="me" href="https://twitter.com/{{ . }}" />
