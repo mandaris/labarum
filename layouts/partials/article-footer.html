@@ -46,23 +46,27 @@
 		<summary>Debug</summary>
 		<h1>Site Properties</h1>
 		<pre>
-		{{ "<!-- $.Site Properties -->" | safeHTML }}
 		{{ printf "%#v \n" $.Site  }}
-		
-		{{ "<!-- site.Params Properties -->" | safeHTML }}
+		</pre>
+
+		<h1>site.Params Properties</h1>
+		<pre>
 		{{ printf "%#v" site.Params }}
-		
-		Permalink
+		</pre>
+
+		<h1>Permalink</h1>
+		<pre>
 		{{ printf "%#v \n" .Permalink }}
+		</pre>
 		
-		Page Information
-		{{ range .Pages }}
-			{{/* The context, ".", is now each one of the pages as it goes through the loop */}}
-			{{ printf "%#v" . }}
-		{{ end }}
-		
-		Params
+		<h1>Params</h1>
+		<pre>
 		{{ printf "%s" $.Params }}
+		</pre>
+
+		<h2>All variables scoped to the current context</h2>
+		<pre>
+		{{ printf "%#v" . }}	
 		</pre>
 	</details>
 			
