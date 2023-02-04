@@ -76,9 +76,6 @@ article header h1 {
     border-top-left-radius: inherit;
 }
 
-article footer time {
-    color: var(--accent-alt);
-}
 
 article section {
     margin-top: 0px;
@@ -105,6 +102,10 @@ article footer {
 article footer p {
     margin-bottom: 0;
     margin-top: 0;
+}
+
+article footer time {
+    color: var(--accent-alt);
 }
 
 article footer p:last-of-type {
