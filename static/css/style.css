@@ -156,14 +156,12 @@ footer {
     margin-top: 2rem;
 }
 
-
 blockquote {
     border-left: 2px solid var(--background-alt);
     border-left-color: var(--accent);
     padding-left: 1rem;
     margin-left: 1rem;
 }
-
 
 img,
 video,
@@ -239,4 +237,8 @@ iframe {
 
 li::marker {
     color: var(--accent);
+}
+
+.highlight {
+    overflow: auto;
 }
