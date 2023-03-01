@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary" />
 {{ else }}
 {{ if isset .Params "title" }}
-<title>{{ .Title }}</title>
+<title>{{ .Site.Title}} - {{ .Title }}</title>
 <meta property="og:title" content="{{ .Site.Title}} - {{ .Title }}" />
 <meta itemprop="name" content="{{ .Site.Title }} - {{ .Title }}" />
 {{ else }}
@@ -79,19 +79,7 @@
 <link rel="me" href="https://instagram.com/{{ . }}" />
 {{ end }}
 
-{{ "<!-- CSS Links -->" | safeHTML }}
-<link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
-{{- if isset .Site.Params "customcss" }}
-<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customCSS }}" />
-{{ end }}
-{{- if isset .Site.Params "customdarkcss" }}
-<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
-{{ end }}
-{{ range .Site.Params.plugins_css }}
-{{"<!-- Plugin CSS -->" | safeHTML }}
-<link rel="stylesheet" href="{{ . }}" />
-{{ end }}
+
 
 
 {{ "<!-- Micro.blog Values -->" | safeHTML }}
@@ -129,12 +117,20 @@
 {{- end -}}
 
 
-
+{{ "<!-- CSS Links -->" | safeHTML }}
+<link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+{{- if isset .Site.Params "customcss" }}
+<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customCSS }}" />
+{{ end }}
+{{- if isset .Site.Params "customdarkcss" }}
+<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
+{{ end }}
 {{ range .Site.Params.plugins_css }}
+{{"<!-- Plugin CSS -->" | safeHTML }}
 <link rel="stylesheet" href="{{ . }}" />
 {{ end }}
 {{ range $filename := .Site.Params.plugins_html }}
 {{ partial $filename $ }}
 {{ end -}}
-
 </head>
