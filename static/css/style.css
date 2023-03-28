@@ -288,3 +288,7 @@ li::marker {
 .highlight {
     overflow: auto;
 }
+
+code {
+	/* color: var(--text-alt); */
+}

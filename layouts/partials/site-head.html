@@ -39,7 +39,7 @@
 <meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 <meta itemprop="dateModified" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
-{{- with .Params.audio }}<meta property="og:audio" content="{{ . | absURL }}" />{{ end }}
+{{- with .Params.audio }}{{- range . }}<meta property="og:audio" content="{{ . | absURL }}" />{{ end }}{{ end }}
 {{- with .Params.videos }}{{- range . }}
 <meta property="og:video" content="{{ . | absURL }}" />
 {{ end }}{{ end }}
