@@ -36,7 +36,7 @@
 <meta itemprop="datePublished" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
 {{- with .Lastmod }}
-<meta property="article:modified_time"{{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 <meta itemprop="dateModified" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
 {{- with .Params.audio }}<meta property="og:audio" content="{{ . | absURL }}" />{{ end }}
@@ -51,7 +51,7 @@
 <meta itemprop="image" content="{{ . | absURL }}" />
 {{- end -}}
 {{- else -}}
-{{ "<!-- $.Site.Params.images -->" | safeHTML }}
+{{ "<!-- No .Params.images -->" | safeHTML }}
 <meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
 <meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
 <meta name="twitter:card" content="summary" />
