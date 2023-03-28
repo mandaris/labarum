@@ -84,6 +84,7 @@ a:hover {
 }
 
 article {
+    background-color: var(--background-alt);
     border: 1px solid;
     margin: 0em 0em 1em;
     padding: .5em 1em .5em;
@@ -289,6 +290,6 @@ li::marker {
     overflow: auto;
 }
 
-code {
-	/* color: var(--text-alt); */
+mark {
+	background-color: var(--accent-alt);
 }
