@@ -1,10 +1,35 @@
 :root {
-    --background: white;
-    --background-alt: #e6e6e6;
-    --text: #222222;
-    --text-alt: #666666;
-    --accent: blue;
-    --accent-alt: #6495ed;
+	/* Nord colour palette from: 
+	https://github.com/arcticicestudio/nord/blob/develop/src/nord.css
+	* Used here under MIT License
+	
+	Formated by Jessica Smith (jayeless.net)
+	*/
+
+	--nordDark1: #2e3440; /* Polar Night - darkest */
+	--nordDark2: #3b4252; /* Polar Night - second-darkest */
+	--nordDark3: #434c5e; /* Polar Night - third-darkest */
+	--nordDark4: #4c566a; /* Polar Night - fourth-darkest */
+	--nordLight1: #d8dee9; /* Snow Storm - third-lightest */
+	--nordLight2: #e5e9f0; /* Snow Storm - second-lightest */
+	--nordLight3: #eceff4; /* Snow Storm - lightest */
+	--nordTeal: #8fbcbb; /* Frost - teal accent colour */
+	--nordAqua: #88c0d0; /* Frost - aqua accent colour */
+	--nordLightBlue: #81a1c1; /* Frost - lighter blue accent colour */
+	--nordBlue: #5e81ac; /* Frost - darker blue accent colour */
+	--nordRed: #bf616a; /* Aurora - red accent colour */
+	--nordOrange: #d08770; /* Aurora - orange accent colour */
+	--nordYellow: #ebcb8b; /* Aurora - yellow accent colour */
+	--nordGreen: #a3be8c; /* Aurora - green accent colour */
+	--nordPurple: #b48ead; /* Aurora - purple accent colour */
+
+
+    --background: var(--nordLight1);
+    --background-alt: var(--nordLight2);
+    --text: var(--nordDark1);
+    --text-alt: var(--nordDark2);
+    --accent: var(--nordBlue);
+    --accent-alt: var(--nordTeal);
 
     --box-shadow-color-1: rgba(0, 0, 0, 0.4);
     --box-shadow-color-2: rgba(0, 0, 0, 0.3);
@@ -13,12 +38,12 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: black;
-        --background-alt: #121212;
-        --text: #eeeeee;
-        --text-alt: #bbbbbb;
-        --accent: #ff003f;
-        --accent-alt: #ec8230;
+        --background: var(--nordDark1);
+        --background-alt: var(--nordDark2);
+        --text: var(--nordLight1);
+        --text-alt: var(--nordLight2);
+        --accent: var(--nordRed);
+        --accent-alt: var(--nordOrange);
 
         --box-shadow-color-1: rgba(255, 255, 255, 0.4);
         --box-shadow-color-2: rgba(255, 255, 255, 0.3);
@@ -29,7 +54,7 @@
 html {
     background-color: var(--background);
     color: var(--text);
-    font-family: Verdana, "-apple-system-body", "-apple-system", sans-serif;
+    font-family: "Verdana", "-apple-system-body", "-apple-system", sans-serif;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -48,6 +73,14 @@ h3 {
 
 a {
     color: var(--accent);
+    text-decoration: none;
+    box-shadow: inset 0 -2px 0 var(--accent-alt);
+	transition: all .5s;
+  transition-timing-function: cubic-bezier(.7, 0, .3, 1);
+}
+
+a:hover {
+    box-shadow: inset 0 -1.2em 0 var(--accent-alt);
 }
 
 article {
@@ -77,17 +110,28 @@ article header h1 {
 }
 
 
-article section {
+article div {
     margin-top: 0px;
     margin-bottom: .5rem;
 }
 
-article section p:first-of-type {
+article div p:first-of-type {
     margin-top: .5rem;
 }
 
-article section p:last-child {
+article div p:last-child {
     margin-bottom: 0px;
+}
+
+article div img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.microblog_avatar {
+	display: inline;
+	margin-left: inherit;
 }
 
 article footer {
@@ -185,9 +229,11 @@ iframe {
     border-radius: 1rem;
 }
 
+/* 
 .microblog_time a {
     color: var(--accent-alt);
 }
+ */
 
 .bookshelf_book {
     min-height: 140px;
