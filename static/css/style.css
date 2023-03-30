@@ -149,9 +149,6 @@ article footer p {
     margin-top: 0;
 }
 
-article footer time {
-    color: var(--accent-alt);
-}
 
 article footer p:last-of-type {
     grid-column: 2;
