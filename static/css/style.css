@@ -293,3 +293,26 @@ li::marker {
 mark {
 	background-color: var(--accent-alt);
 }
+
+table {
+	width: 100%;
+	margin: 1 em;
+	border-collapse: collapse;
+	line-height: 1.5em;
+}
+
+th,td {
+	text-align: left;
+	vertical-align: top;
+}
+
+tr:nth-child(odd of :not([hidden]))>td {
+	background: var(--background);
+}
+
+thead th,th {
+	font-weight: bold;
+	color: var(--accent);
+	border-bottom: 1px solid var(--accent-alt);
+	white-space: nowrap;
+}
