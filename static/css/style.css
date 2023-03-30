@@ -80,11 +80,11 @@ a {
 }
 
 a:hover {
-    box-shadow: inset 0 -1.2em 0 var(--accent-alt);
+    box-shadow: inset 0 -1.2rem 0 var(--accent-alt);
 }
 
 article {
-    background-color: var(--background-alt);
+	background-color: var(--background-alt);
     border: 1px solid;
     margin: 0em 0em 1em;
     padding: .5em 1em .5em;
