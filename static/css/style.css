@@ -283,9 +283,6 @@ li::marker {
     color: var(--accent);
 }
 
-article ul > li::marker {
-	content: "\2751";
-}
 
 .highlight {
     overflow: auto;
@@ -317,6 +314,12 @@ thead th,th {
 	border-bottom: 1px solid var(--accent-alt);
 	white-space: nowrap;
 }
+
+/*
+article ul > li::marker {
+	content: "\2751"; 
+}
+*/
 
 /* task list and its checkboxes */
 article ul > li:has(> input[type="checkbox"]) {
