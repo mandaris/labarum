@@ -287,6 +287,22 @@ li::marker {
     color: var(--accent);
 }
 
+details summary::marker {
+	color: var(--accent);
+}
+
+/* Summary marker coloring for Safari
+found on the following page
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
+*/
+summary::-webkit-details-marker {
+	color: var(--accent);
+}
+
+details {
+	background-color: var(--backgroud);
+}
+
 
 .highlight {
     overflow: auto;
