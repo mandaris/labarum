@@ -19,10 +19,16 @@
 <title>{{ .Site.Title}} - {{ .Title }}</title>
 <meta property="og:title" content="{{ .Site.Title}} - {{ .Title }}" />
 <meta itemprop="name" content="{{ .Site.Title }} - {{ .Title }}" />
+<title>{{ .Title }} - {{ .Site.Title}}</title>
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title}}" />
+<meta itemprop="name" content="{{ .Title }} - {{ .Site.Title}}" />
 {{ else }}
 <title>{{ .Site.Title }} - MicroPost</title>
 <meta property="og:title" content="{{ .Site.Title}} - MicroPost" />
 <meta itemprop="name" content="{{ .Site.Title }} - MicroPost" />
+<title>MicroPost - {{ .Site.Title}}</title>
+<meta property="og:title" content="MicroPost - {{ .Site.Title}}" />
+<meta itemprop="name" content="MicroPost - {{ .Site.Title}}" />
 {{ end }}
 <meta name="description" content="{{ substr (.Summary | markdownify) 0 160 }}" />
 <meta name="keywords" content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
