@@ -424,3 +424,27 @@ a.footnote-ref::before {
 a.footnote-ref::after {
     content: ']';
 }
+
+
+del {
+	text-decoration-line: line-through;
+	text-decoration-style: wavy;
+	text-decoration-thickness: .08rem;
+	text-decoration-color: tomato;
+	padding: .1rem;
+}
+
+ins {
+	text-decoration-line: underline;
+	text-decoration-style: dashed;
+	text-decoration-thickness: .08rem;
+	text-decoration-color: limegreen;
+}
+
+ins[cite]:after,
+del[cite]:after {
+  content: " (" attr(cite) ")";
+  font-size: 75%;
+  line-height: 0;
+  color: var(--text-alt);
+}
