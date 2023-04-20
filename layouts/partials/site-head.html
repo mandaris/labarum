@@ -62,7 +62,8 @@
 <base href="{{ .Site.BaseURL }}" />
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="article:publisher" content="{{ .Site.BaseURL }}" />
 
 {{ with .Site.Author.name }}
 <meta name="author" content="{{ . }}" />
