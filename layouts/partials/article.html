@@ -8,8 +8,8 @@
 {{ end }}
 <div class="e-content post-body">
 {{ .Content -}}
-{{ if Params.transcript -}}
-<p>Transcript is here: <a href="{{ .Params.transcript }}">click here</a></p>
+{{ if .Params.transcript -}}
+<p>Transcript is here: <a href="{{ .Params.transcript }}" title="Transcript to audio.">click here</a></p>
 {{ end }}
 </div>
 
