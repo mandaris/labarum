@@ -10,27 +10,7 @@
 {{ block "main" .}}{{ end }}
 </main>
 
-
-<footer class="style-box">
-	{{- with  .Site.Params.description }}
-	<p>{{ . | safeHTML }}</p>
-	{{ end -}}
-	
-	<p>
-	{{- with .Site.Copyright }}
-	{{ . | safeHTML }}
-	{{- else }}
-	&copy; {{ now.Year }}
-	{{ end -}}
-	</p>
-	<details open itemprop="author" itemscope itemtype="https://schema.org/Person" class="author h-card p-author" role="contentinfo" style="display: none;">
-		<summary itemprop="name" class="p-name">{{ .Site.Author.name }}</summary>
-		<div class="microblog_user" style="display: grid;">
-		<img itemprop="image" class="u-photo" loading="lazy" src="{{ .Site.Author.avatar }}" style="grid-column: 1;"/>
-		<p class="bio p-note" style="grid-column: 2;">{{ .Params.itunes_description }}</p>
-	</div>
-	</details>
-</footer>
+{{ partial "site-footer.html" . }}
 
 {{ partial "custom_footer.html" . }}
 {{ range .Site.Params.plugins_js }}
