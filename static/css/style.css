@@ -89,7 +89,6 @@ h1 a:hover {
 
 article {
 	background-color: var(--background-alt);
-    border: 1px solid;
     margin: 0em 0em 1em;
     padding: .5em 1em .5em;
     border-radius: 5px;
@@ -409,6 +408,7 @@ article ul > li > input[type="checkbox"]:checked::before {
 
 figure {
 	background-color: var(--background);
+    
 	padding: 1rem;
 	border-radius: 5px;
     box-shadow: 0px 2px 7px var(--box-shadow-color-1),
@@ -448,3 +448,15 @@ del[cite]:after {
   line-height: 0;
   color: var(--text-alt);
 }
+
+
+.style-box {
+    background-color: var(--background-alt);
+	padding: 3px;
+	border-radius: 5px;
+    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
+    text-align: center;
+}
+
