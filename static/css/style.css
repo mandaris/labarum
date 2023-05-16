@@ -1,27 +1,27 @@
 :root {
-	/* Nord colour palette from: 
-	https://github.com/arcticicestudio/nord/blob/develop/src/nord.css
-	* Used here under MIT License
-	
-	Formated by Jessica Smith (jayeless.net)
-	*/
+    /* Nord colour palette from: 
+    https://github.com/arcticicestudio/nord/blob/develop/src/nord.css
+    * Used here under MIT License
+    
+    Formated by Jessica Smith (jayeless.net)
+    */
 
-	--nordDark1: #2e3440; /* Polar Night - darkest */
-	--nordDark2: #3b4252; /* Polar Night - second-darkest */
-	--nordDark3: #434c5e; /* Polar Night - third-darkest */
-	--nordDark4: #4c566a; /* Polar Night - fourth-darkest */
-	--nordLight1: #d8dee9; /* Snow Storm - third-lightest */
-	--nordLight2: #e5e9f0; /* Snow Storm - second-lightest */
-	--nordLight3: #eceff4; /* Snow Storm - lightest */
-	--nordTeal: #8fbcbb; /* Frost - teal accent colour */
-	--nordAqua: #88c0d0; /* Frost - aqua accent colour */
-	--nordLightBlue: #81a1c1; /* Frost - lighter blue accent colour */
-	--nordBlue: #5e81ac; /* Frost - darker blue accent colour */
-	--nordRed: #bf616a; /* Aurora - red accent colour */
-	--nordOrange: #d08770; /* Aurora - orange accent colour */
-	--nordYellow: #ebcb8b; /* Aurora - yellow accent colour */
-	--nordGreen: #a3be8c; /* Aurora - green accent colour */
-	--nordPurple: #b48ead; /* Aurora - purple accent colour */
+    --nordDark1: #2e3440; /* Polar Night - darkest */
+    --nordDark2: #3b4252; /* Polar Night - second-darkest */
+    --nordDark3: #434c5e; /* Polar Night - third-darkest */
+    --nordDark4: #4c566a; /* Polar Night - fourth-darkest */
+    --nordLight1: #d8dee9; /* Snow Storm - third-lightest */
+    --nordLight2: #e5e9f0; /* Snow Storm - second-lightest */
+    --nordLight3: #eceff4; /* Snow Storm - lightest */
+    --nordTeal: #8fbcbb; /* Frost - teal accent colour */
+    --nordAqua: #88c0d0; /* Frost - aqua accent colour */
+    --nordLightBlue: #81a1c1; /* Frost - lighter blue accent colour */
+    --nordBlue: #5e81ac; /* Frost - darker blue accent colour */
+    --nordRed: #bf616a; /* Aurora - red accent colour */
+    --nordOrange: #d08770; /* Aurora - orange accent colour */
+    --nordYellow: #ebcb8b; /* Aurora - yellow accent colour */
+    --nordGreen: #a3be8c; /* Aurora - green accent colour */
+    --nordPurple: #b48ead; /* Aurora - purple accent colour */
 
 
     --background: var(--nordLight1);
@@ -75,7 +75,7 @@ a {
     color: var(--accent);
     text-decoration: none;
     box-shadow: inset 0 -2px 0 var(--accent-alt);
-	transition: all .5s;
+    transition: all .5s;
     transition-timing-function: cubic-bezier(.7, 0, .3, 1);
 }
 
@@ -84,11 +84,11 @@ a:hover {
 }
 
 h1 a:hover {
-	box-shadow: inset 0 -2.2rem 0 var(--accent-alt);
+    box-shadow: inset 0 -2.2rem 0 var(--accent-alt);
 }
 
 article {
-	background-color: var(--background-alt);
+    background-color: var(--background-alt);
     margin: 0em 0em 1em;
     padding: .5em 1em .5em;
     border-radius: 5px;
@@ -128,14 +128,14 @@ article div p:last-child {
 }
 
 article div img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .microblog_avatar {
-	display: inline;
-	margin-left: inherit;
+    display: inline;
+    margin-left: inherit;
 }
 
 article footer {
@@ -287,7 +287,7 @@ li::marker {
 }
 
 details summary::marker {
-	color: var(--accent);
+    color: var(--accent);
 }
 
 /* Summary marker coloring for Safari
@@ -295,11 +295,11 @@ found on the following page
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
 */
 summary::-webkit-details-marker {
-	color: var(--accent);
+    color: var(--accent);
 }
 
 details {
-	background-color: var(--backgroud);
+    background-color: var(--backgroud);
 }
 
 
@@ -308,7 +308,7 @@ details {
 }
 
 mark {
-	background-color: var(--accent-alt);
+    background-color: var(--accent-alt);
 }
 
 /* Making the mark tag more accessible.
@@ -331,31 +331,31 @@ mark::after {
 }
 
 table {
-	width: 100%;
-	margin: 1 em;
-	border-collapse: collapse;
-	line-height: 1.5em;
+    width: 100%;
+    margin: 1 em;
+    border-collapse: collapse;
+    line-height: 1.5em;
 }
 
 th,td {
-	text-align: left;
-	vertical-align: top;
+    text-align: left;
+    vertical-align: top;
 }
 
 tr:nth-child(odd of :not([hidden]))>td {
-	background: var(--background);
+    background: var(--background);
 }
 
 thead th,th {
-	font-weight: bold;
-	color: var(--accent);
-	border-bottom: 1px solid var(--accent-alt);
-	white-space: nowrap;
+    font-weight: bold;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent-alt);
+    white-space: nowrap;
 }
 
 /*
 article ul > li::marker {
-	content: "\2751"; 
+    content: "\2751"; 
 }
 */
 
@@ -407,13 +407,13 @@ article ul > li > input[type="checkbox"]:checked::before {
 }
 
 figure {
-	background-color: var(--background);
-	padding: 1rem;
-	border-radius: 5px;
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: 5px;
     box-shadow: 0px 2px 7px var(--box-shadow-color-1),
         0px 7px 13px -3px var(--accent),
         inset 0px -3px 0px var(--box-shadow-color-3);
-	text-align: center;
+    text-align: center;
 }
 
 a.footnote-ref::before {
@@ -426,18 +426,18 @@ a.footnote-ref::after {
 
 
 del {
-	text-decoration-line: line-through;
-	text-decoration-style: wavy;
-	text-decoration-thickness: .08rem;
-	text-decoration-color: tomato;
-	padding: .1rem;
+    text-decoration-line: line-through;
+    text-decoration-style: wavy;
+    text-decoration-thickness: .08rem;
+    text-decoration-color: tomato;
+    padding: .1rem;
 }
 
 ins {
-	text-decoration-line: underline;
-	text-decoration-style: dashed;
-	text-decoration-thickness: .08rem;
-	text-decoration-color: limegreen;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: .08rem;
+    text-decoration-color: limegreen;
 }
 
 ins[cite]:after,
@@ -451,11 +451,15 @@ del[cite]:after {
 
 .style-box {
     background-color: var(--background-alt);
-	padding: 3px;
-	border-radius: 5px;
+    padding: 3px;
+    border-radius: 5px;
     box-shadow: 0px 2px 7px var(--box-shadow-color-1),
         0px 7px 13px -3px var(--accent),
         inset 0px -3px 0px var(--box-shadow-color-3);
     text-align: center;
+}
+
+audio {
+    width: 100%;
 }
 

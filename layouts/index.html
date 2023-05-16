@@ -2,7 +2,7 @@
 
 {{- range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
 {{ partial "article.html" . }}
-	
+    
 {{ end }}
 
 {{ partial "site-pagination.html" . }}
@@ -16,7 +16,7 @@
 
     <h2>All variables scoped to the current context</h2>
     <pre>
-    {{ printf "%#v" . }}	
+    {{ printf "%#v" . }}    
     </pre>
 </details>
 {{ end }}

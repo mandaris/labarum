@@ -1,73 +1,73 @@
 {{ "<!-- article-footer.html -->" | safeHTML }}
 <footer id="post-meta">
-	<p>
-	{{- with .Param "categories" -}}
-	Categories:
-	{{ range $CategoryArray, $Category := (. | sort) -}}
-		{{- if gt $CategoryArray 0 -}}
-		<span> •</span>
-		{{- end }}
-		<a href="/categories/{{ $Category | urlize }}" class="p-category">
-			<span itemprop="articleSection">{{ $Category }}</span></a>
-		{{- end }}
-	{{- end }}
+    <p>
+    {{- with .Param "categories" -}}
+    Categories:
+    {{ range $CategoryArray, $Category := (. | sort) -}}
+        {{- if gt $CategoryArray 0 -}}
+        <span> •</span>
+        {{- end }}
+        <a href="/categories/{{ $Category | urlize }}" class="p-category">
+            <span itemprop="articleSection">{{ $Category }}</span></a>
+        {{- end }}
+    {{- end }}
 
-			
-	
-	{{- with .Param "tags" }}
-	{{ with $.Param "categories"}}
-	<br />
-	{{ end }}
-		Tags: <span itemprop="keywords">
-  		{{ range $index, $tag := (. | sort) }} 
-  			{{ with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
-  				<a href="{{ .Permalink }}" class="tag">{{ $tag | urlize }}</a>
-  			{{ end }}
-  		{{ end }}
-		</span>
-	{{- end }}
-		
-	</p>
-	
-	<p>Published: 
-		<a href="{{ .Permalink }}" class="u-url">
-		<time class="dt-publised" itemprop="dateCreated datePublished"
-			{{ 
-			printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") 
-			| safeHTMLAttr }}>
-			{{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) }}
-		</time>
-		</a>
-	</p>
-		
-	
+            
+    
+    {{- with .Param "tags" }}
+    {{ with $.Param "categories"}}
+    <br />
+    {{ end }}
+        Tags: <span itemprop="keywords">
+          {{ range $index, $tag := (. | sort) }} 
+              {{ with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
+                  <a href="{{ .Permalink }}" class="tag">{{ $tag | urlize }}</a>
+              {{ end }}
+          {{ end }}
+        </span>
+    {{- end }}
+        
+    </p>
+    
+    <p>Published: 
+        <a href="{{ .Permalink }}" class="u-url">
+        <time class="dt-publised" itemprop="dateCreated datePublished"
+            {{ 
+            printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") 
+            | safeHTMLAttr }}>
+            {{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) }}
+        </time>
+        </a>
+    </p>
+        
+    
 {{ "<!-- Debugging Details --> " | safeHTML }}
-	<details>
-		<summary>Debug</summary>
-		<h1>Site Properties</h1>
-		<pre>
-		{{ printf "%#v \n" $.Site  }}
-		</pre>
+    <details>
+        <summary>Debug Information</summary>
+        <h1>Site Properties</h1>
+        <pre>
+        {{ printf "%#v \n" $.Site  }}
+        </pre>
 
-		<h1>site.Params Properties</h1>
-		<pre>
-		{{ printf "%#v" site.Params }}
-		</pre>
+        <h1>site.Params Properties</h1>
+        <pre>
+        {{ printf "%#v" site.Params }}
+        </pre>
 
-		<h1>Permalink</h1>
-		<pre>
-		{{ printf "%#v \n" .Permalink }}
-		</pre>
-		
-		<h1>Params</h1>
-		<pre>
-		{{ printf "%s" $.Params }}
-		</pre>
+        <h1>Permalink</h1>
+        <pre>
+        {{ printf "%#v \n" .Permalink }}
+        </pre>
+        
+        <h1>Params</h1>
+        <pre>
+        {{ printf "%s" $.Params }}
+        </pre>
 
-		<h2>All variables scoped to the current context</h2>
-		<pre>
-		{{ printf "%#v" . }}	
-		</pre>
-	</details>
-			
+        <h2>All variables scoped to the current context</h2>
+        <pre>
+        {{ printf "%#v" . }}    
+        </pre>
+    </details>
+            
 </footer>
