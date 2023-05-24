@@ -152,8 +152,12 @@ article footer p {
     margin-top: 0;
 }
 
+.left-column {
+    grid-column: 1;
+    text-align: left;
+}
 
-article footer p:last-of-type {
+.right-column {
     grid-column: 2;
     text-align: right;
 }

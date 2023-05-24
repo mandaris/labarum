@@ -1,6 +1,6 @@
 {{ "<!-- article-footer.html -->" | safeHTML }}
 <footer id="post-meta">
-    <p>
+    <p class="left-column">
     {{- with .Param "categories" -}}
     Categories:
     {{ range $CategoryArray, $Category := (. | sort) -}}
@@ -29,7 +29,7 @@
         
     </p>
     
-    <p>Published: 
+    <p class="right-column">Published: 
         <a href="{{ .Permalink }}" class="u-url">
         <time class="dt-publised" itemprop="dateCreated datePublished"
             {{ 
