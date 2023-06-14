@@ -1,0 +1,14 @@
+<aside itemprop="author" itemscope itemtype="https://schema.org/Person" 
+    class="author h-card p-author" 
+    role="contentinfo"
+    style="display: none;">
+    <div class="author-image">
+	    <img class="u-photo" loading="lazy" itemprop="image"
+	        src="{{ .Site.Author.avatar }}"
+	        alt="Profile image of {{ .Site.Author.name }}"/>	
+        <p itemprop="name" class="p-name">{{ .Site.Author.name }}</p>
+    </div>
+	<div class="author-bio bio p-note">
+        {{ .Site.Params.itunes_description | safeHTML }}
+    </div>
+</aside>
