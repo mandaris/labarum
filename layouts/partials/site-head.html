@@ -1,5 +1,5 @@
 <head>
-<meta theme_version="1.4.0" />
+<meta theme_version="1.5.0" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -7,9 +7,11 @@
 <title>{{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Site.Title }}" />
 <meta itemprop="name" content="{{ .Site.Title }}" />
-<meta name="description" content="{{ .Params.Description | safeHTML }}" />
-<meta property="og:description" content="{{ .Params.Description | safeHTML}}" />
-<meta itemprop="description" content="{{ .Params.Description | safeHTML}}" />
+
+<meta name="description" content="{{ .Site.Params.itunes_description | safeHTML }}" />
+<meta property="og:description" content="{{ .Site.Params.itunes_description | safeHTML}}" />
+<meta itemprop="description" content="{{ .Site.Params.itunes_description | safeHTML}}" />
+
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
 <meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
@@ -32,17 +34,24 @@
 <meta itemprop="wordCount" content="{{ .WordCount }}" />
 {{ $iso8601 := "2006-01-02T15:04:05Z07:00" }}
 {{- with .PublishDate }}
-<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
-<meta itemprop="datePublished" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta property="article:published_time" 
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta itemprop="datePublished"
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
 {{- with .Lastmod }}
-<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
-<meta itemprop="dateModified" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta property="article:modified_time" 
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta itemprop="dateModified"
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
-{{- with .Params.audio }}{{- range . }}<meta property="og:audio" content="{{ . | absURL }}" />{{ end }}{{ end }}
-{{- with .Params.videos }}{{- range . }}
-<meta property="og:video" content="{{ . | absURL }}" />
-{{ end }}{{ end }}
+{{- with .Params.audio }}
+{{- range . }}<meta property="og:audio" content="{{ . | absURL }}" />{{ end }}
+{{ end }}
+{{- with .Params.videos }}
+{{- range . }}<meta property="og:video" content="{{ . | absURL }}" />{{ end }}
+{{ end }}
+
 {{- with .Params.images -}}
 {{ "<!-- .Params.images -->" | safeHTML }}
 <meta name="twitter:card" content="summary_large_image" />
@@ -52,8 +61,10 @@
 {{- end -}}
 {{- else -}}
 {{ "<!-- No .Params.images -->" | safeHTML }}
-<meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
-<meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+<meta property="og:image"
+    content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+<meta itemprop="image"
+    content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
 <meta name="twitter:card" content="summary" />
 {{- end -}}
 {{ end }}
@@ -116,9 +127,11 @@
 {{- end -}}
 
 
-{{ "<!-- CSS Links -->" | safeHTML }}
+{{ "<!-- CSS Links  and Themes-->" | safeHTML }}
 <link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+<meta name="theme-color" content="#5e81ac" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#bf616a" media="(prefers-color-scheme: dark)" />
 {{- if isset .Site.Params "customcss" }}
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customCSS }}" />
 {{ end }}

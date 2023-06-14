@@ -8,14 +8,7 @@
 {{ end }}
 <div class="e-content post-body">
 {{ .Content -}}
-{{ if .Params.transcript -}}
-<p>Transcript is here: <a href="{{ .Params.transcript }}" title="Transcript to audio.">click here</a></p>
-{{ end }}
 </div>
 
 {{ partial "article-footer.html" . }}
-
-{{ if .Site.Params.include_conversation }}
-<script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}" defer></script>
-{{ end }}
 </article>
