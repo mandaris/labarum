@@ -241,11 +241,9 @@ iframe {
     border-radius: 1rem;
 }
 
-
-.microblog_time a {
+.microblog_time {
     text-align: right;
 }
-
 
 .bookshelf_book {
     min-height: 140px;
