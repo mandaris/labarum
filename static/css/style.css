@@ -219,6 +219,7 @@ iframe {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
+    margin: 10px;
 }
 
 .microblog_conversation {
