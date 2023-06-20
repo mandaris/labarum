@@ -1,6 +1,6 @@
 {{ "<!-- site-nav.html -->" | safeHTML }}
 <nav>
-    <menu>
+    <menu class="style-box">
         {{ if ne .IsHome true }}
         <li><a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">Home</a></li>
         {{ end }}

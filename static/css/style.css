@@ -181,8 +181,6 @@ body>header h1 {
 
 menu {
     text-align: center;
-    margin-inline-start: 1rem;
-    margin-inline-end: 1rem;
     list-style: none;
     padding: 0;
 }
@@ -202,10 +200,6 @@ menu li:last-child:after {
 
 header {
     margin-bottom: 1rem;
-}
-
-menu {
-    margin-bottom: 2rem;
 }
 
 footer {
