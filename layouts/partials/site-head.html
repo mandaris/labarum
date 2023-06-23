@@ -138,10 +138,11 @@
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
 {{ end }}
 {{ range .Site.Params.plugins_css }}
-{{"<!-- Plugin CSS -->" | safeHTML }}
+{{ "<!-- Plugin CSS -->" | safeHTML }}
 <link rel="stylesheet" href="{{ . }}" />
 {{ end }}
 {{ range $filename := .Site.Params.plugins_html }}
+{{ "<!-- Plugin html -->" | safeHTML }}
 {{ partial $filename $ }}
 {{ end -}}
 </head>
