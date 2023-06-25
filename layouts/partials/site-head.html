@@ -8,9 +8,12 @@
 <meta property="og:title" content="{{ .Site.Title }}" />
 <meta itemprop="name" content="{{ .Site.Title }}" />
 
-<meta name="description" content="{{ .Site.Params.itunes_description | safeHTML }}" />
-<meta property="og:description" content="{{ .Site.Params.itunes_description | safeHTML}}" />
-<meta itemprop="description" content="{{ .Site.Params.itunes_description | safeHTML}}" />
+<meta name="description" 
+    content="{{ .Site.Params.itunes_description | safeHTML }}" />
+<meta property="og:description" 
+    content="{{ .Site.Params.itunes_description | safeHTML}}" />
+<meta itemprop="description" 
+    content="{{ .Site.Params.itunes_description | safeHTML}}" />
 
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
@@ -127,15 +130,21 @@
 
 
 {{ "<!-- CSS Links  and Themes-->" | safeHTML }}
-<link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
-<meta name="theme-color" content="#5e81ac" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#bf616a" media="(prefers-color-scheme: dark)" />
+<link rel="stylesheet" 
+    href="{{ "css/normalize.css" | relURL }}" />
+<link rel="stylesheet" 
+    href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+<meta name="theme-color" 
+    content="#5e81ac" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" 
+    content="#bf616a" media="(prefers-color-scheme: dark)" />
 {{- if isset .Site.Params "customcss" }}
-<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customCSS }}" />
+<link rel="stylesheet" 
+    href="{{ $.Site.BaseURL }}{{ .Site.Params.customCSS }}" />
 {{ end }}
 {{- if isset .Site.Params "customdarkcss" }}
-<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
+<link rel="stylesheet" 
+    href="{{ $.Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
 {{ end }}
 {{ range .Site.Params.plugins_css }}
 {{ "<!-- Plugin CSS -->" | safeHTML }}
