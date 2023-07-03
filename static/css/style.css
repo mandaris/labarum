@@ -34,6 +34,8 @@
     --box-shadow-color-1: rgba(0, 0, 0, 0.4);
     --box-shadow-color-2: rgba(0, 0, 0, 0.3);
     --box-shadow-color-3: rgba(0, 0, 0, 0.2);
+    
+    --max-width-value: 700px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,7 +62,7 @@ html {
 }
 
 body {
-    max-width: 700px;
+    max-width: var(--max-width-value);
     margin-left: auto;
     margin-right: auto;
 }
@@ -309,6 +311,13 @@ details {
 
 .highlight {
     overflow: auto;
+    max-width: calc( var(--max-width-value) - 2rem);
+    height: auto;
+    border-radius: 5px;
+}
+
+.highlight > div {
+    width: fit-content;
 }
 
 mark {
@@ -336,6 +345,7 @@ mark::after {
 
 table {
     width: 100%;
+    height: auto;
     margin: 1 em;
     border-collapse: collapse;
     line-height: 1.5em;
@@ -484,3 +494,22 @@ audio {
 .author-bio {
     grid-column: 2;
 }
+
+pre {
+    width: fit-content;
+    overflow: auto;
+    margin-top: 0em;
+    
+    margin-bottom: 0em;
+    padding: 0rem .5rem;
+    border: thin solid var(--accent-alt);
+}
+
+p > code, kbd {
+	background-color: var(--background);
+	color: var(--text-alt);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+
