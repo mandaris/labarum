@@ -322,7 +322,8 @@ details {
 
 mark {
     background-color: var(--accent-alt);
-    padding: 4px 8px;
+    padding: 3px;
+    border-radius: 5px;
 }
 
 /* Making the mark tag more accessible.
