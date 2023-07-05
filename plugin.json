@@ -2,5 +2,11 @@
   "version": "1.1.1",
   "title": "Labarum",
   "description": "A theme to help me learn how to make themes.",
+  "fields": [
+    {
+      "field": "params.showTableOfContents",
+      "label": "Show Table of Contents",
+      "type": "boolean"
+    }
   ]
 }
