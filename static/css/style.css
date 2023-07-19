@@ -53,18 +53,23 @@
     }
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 html {
-    background-color: var(--background);
-    color: var(--text);
     font-family: "Verdana", "-apple-system-body", "-apple-system", sans-serif;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    box-sizing: border-box;
 }
 
 body {
-    max-width: var(--max-width-value);
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--background);
+    color: var(--text);
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-width: 70em;
 }
 
 h1,
@@ -211,6 +216,7 @@ footer {
 blockquote {
     border-left: 7px solid var(--background-alt);
     border-left-color: var(--accent);
+    border-radius: 5px;
     padding-left: 1rem;
     margin-left: 1rem;
 }
@@ -292,6 +298,13 @@ li::marker {
     color: var(--accent);
 }
 
+
+details {
+    background-color: var(--background);
+    padding: 3px;
+    border-radius: 5px;
+}
+
 details summary::marker {
     color: var(--accent);
 }
@@ -302,22 +315,6 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
 */
 summary::-webkit-details-marker {
     color: var(--accent);
-}
-
-details {
-    background-color: var(--backgroud);
-}
-
-
-.highlight {
-    overflow: auto;
-    max-width: calc( var(--max-width-value) - 2rem);
-    height: auto;
-    border-radius: 5px;
-}
-
-.highlight > div {
-    width: fit-content;
 }
 
 mark {
@@ -346,30 +343,30 @@ mark::after {
 }
 
 table {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin: 1 em;
+    margin: 1em;
     border-collapse: collapse;
-    line-height: 1.5em;
+    border-spacing: 10px;
 }
 
 th,td {
-    text-align: left;
     vertical-align: top;
 }
 
-tr:nth-child(odd of :not([hidden]))>td {
+
+tr:nth-child(even of :not([hidden]))>td {
     background: var(--background);
 }
+
 
 thead th,th {
     font-weight: bold;
     color: var(--accent);
     border-bottom: 1px solid var(--accent-alt);
-    white-space: nowrap;
 }
 
-/*
+/* This was to make the marker look different didn't work in Safari
 article ul > li::marker {
     content: "\2751"; 
 }
@@ -424,7 +421,7 @@ article ul > li > input[type="checkbox"]:checked::before {
 
 figure {
     background-color: var(--background);
-    max-width: calc( var(--max-width-value) - 2rem);
+    max-width: 90%;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0px 2px 7px var(--box-shadow-color-1),
@@ -481,7 +478,8 @@ audio {
 }
 
 .post-body {
-    display: inline-block;
+    display: block;
+    overflow-y: auto;
 }
 
 .author {
@@ -498,21 +496,22 @@ audio {
     grid-column: 2;
 }
 
-pre {
-    width: fit-content;
-    overflow: auto;
-    margin-top: 0em;
-    
-    margin-bottom: 0em;
-    padding: 0rem .5rem;
-    border: thin solid var(--accent-alt);
-}
-
-p > code, kbd {
+p > code, kbd, samp {
 	background-color: var(--background);
 	color: var(--text-alt);
     padding: 3px;
     border-radius: 5px;
 }
 
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+.highlight {
+    max-width: 100%;
+    border-radius: 5px;
+    overflow-x: auto;
+}
 
