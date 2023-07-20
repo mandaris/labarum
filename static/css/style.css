@@ -67,9 +67,9 @@ html {
 body {
     background-color: var(--background);
     color: var(--text);
-    margin-left: .5rem;
-    margin-right: .5rem;
-    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60ch;
 }
 
 h1,
