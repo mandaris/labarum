@@ -30,6 +30,7 @@
     --text-alt: var(--nordDark2);
     --accent: var(--nordBlue);
     --accent-alt: var(--nordTeal);
+    --accent-opposite: var(--nordRed);
 
     --box-shadow-color-1: rgba(0, 0, 0, 0.4);
     --box-shadow-color-2: rgba(0, 0, 0, 0.3);
@@ -46,6 +47,7 @@
         --text-alt: var(--nordLight2);
         --accent: var(--nordRed);
         --accent-alt: var(--nordOrange);
+        --accent-opposite: var(--nordBlue);
 
         --box-shadow-color-1: rgba(255, 255, 255, 0.4);
         --box-shadow-color-2: rgba(255, 255, 255, 0.3);
@@ -76,22 +78,28 @@ h1,
 h2,
 h3 {
     font-family: Garamond, Georgia, serif;
+    color: var(--text-alt);
 }
 
 a {
     color: var(--accent);
     text-decoration: none;
-    box-shadow: inset 0 -2px 0 var(--accent-alt);
+    box-shadow: inset 0 -0.12em 0 var(--accent-alt);
     transition: all .5s;
     transition-timing-function: cubic-bezier(.7, 0, .3, 1);
 }
 
 a:hover {
-    box-shadow: inset 0 -1.2rem 0 var(--accent-alt);
+	padding: 5px;
+    box-shadow: inset 0 -1.5em 0 var(--accent-alt);
+}
+
+a:active {
+    color: var(--accent-opposite);
 }
 
 h1 a:hover {
-    box-shadow: inset 0 -2.2rem 0 var(--accent-alt);
+    box-shadow: inset 0 -2.2em 0 var(--accent-alt);
 }
 
 article {
@@ -199,7 +207,7 @@ header {
 }
 
 footer {
-    margin-top: 0rem;
+    margin-top: 1rem;
 }
 
 footer p {
@@ -218,11 +226,17 @@ blockquote {
 
 img,
 video,
-iframe {
+iframe,
+lite-youtube {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
     margin: 10px;
+}
+
+audio {
+    width: 100%;
+    border-radius: 7px;
 }
 
 .microblog_conversation {
@@ -314,7 +328,7 @@ summary::-webkit-details-marker {
 
 mark {
     background-color: var(--accent-alt);
-    padding: 3px;
+    padding: 3px 5px;
     border-radius: 5px;
 }
 
@@ -468,9 +482,6 @@ del[cite]:after {
     text-align: center;
 }
 
-audio {
-    width: 100%;
-}
 
 .post-body {
     display: block;
