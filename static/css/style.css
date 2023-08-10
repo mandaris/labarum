@@ -214,8 +214,6 @@ footer p {
 margin-top: 0px;
 }
 
-
-
 blockquote {
     border-left: 7px solid var(--background-alt);
     border-left-color: var(--accent);
@@ -351,12 +349,28 @@ mark::after {
   content:" [highlight end] ";
 }
 
+code, kbd, samp {
+    font-family: "Courier New", "Courier", monospace;
+}
+
+.highlight {
+    width: 100%;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 0;
+}
+
+div.highlight div {
+width: fit-content;
+}
+
 table {
-    max-width: 100%;
+	max-width: 100%;
     height: auto;
-    margin: 1em;
+    margin: auto;
     border-collapse: collapse;
     border-spacing: 10px;
+    table-layout: auto;
 }
 
 th,td {
@@ -373,6 +387,11 @@ thead th,th {
     font-weight: bold;
     color: var(--accent);
     border-bottom: 1px solid var(--accent-alt);
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 /* This was to make the marker look different didn't work in Safari
@@ -482,6 +501,19 @@ del[cite]:after {
     text-align: center;
 }
 
+.style-box-alt {
+	background-color: var(--background);
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 
+    	0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
+}
+
+aside.style-box-alt:has(> nav) {
+	display: hidden;
+}
 
 .post-body {
     display: block;
@@ -510,19 +542,5 @@ p > code, kbd, samp {
     border: solid var(--accent) 1px;
 }
 
-code, kbd, samp {
-    font-family: "Courier New", "Courier", monospace;
-}
 
-pre {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-
-.highlight {
-    max-width: 100%;
-    border-radius: 5px;
-    overflow-x: auto;
-}
 
