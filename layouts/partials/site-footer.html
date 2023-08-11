@@ -1,10 +1,10 @@
 {{ "<!-- site-footer.html -->" | safeHTML }}
-<footer class="style-box">
+<footer class="[ style-box ]">
     {{- with  .Site.Params.description }}
-    <p>{{ . | safeHTML }}</p>
+    <p class="[ text-center ]">{{ . | safeHTML }}</p>
     {{ end -}}
     
-    <p>
+    <p class="[ text-center ]">
     {{- with .Site.Copyright }}
     {{ . | safeHTML }}
     {{- else }}
@@ -14,4 +14,27 @@
     {{ if .IsHome -}}
     {{ partial "author.html" . }}
     {{- end }}
+    {{ if $.Param "debugInfo" }}
+    <details class="[ debug ]">
+    <summary>Site Debug Information</summary>
+    <h1>Site Properties</h1>
+    <code>
+    {{ printf "%#v \n" $.Site  }}
+    </code>
+
+        <h1>site.Params Properties</h1>
+        <code>
+        {{ printf "%#v" .Site.Params }}
+        </code>
+    {{ range .Pages }}
+    {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+    {{ printf "%#v" . }}
+    {{ end }}
+
+    <h2>All variables scoped to the current context</h2>
+    <pre>
+    {{ printf "%#v" . }}    
+    </pre>
+</details>
+{{ end }}
 </footer>

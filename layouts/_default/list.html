@@ -4,10 +4,10 @@
 {{ end }}
 
 {{ range .Paginator.Pages    }}
-    <article class="h-entry">
+    <article class="[ h-entry ]">
         <header>
             {{ if .Title }}
-            <h2 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <h2 class="[ p-name ]"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             {{ end }}
         </header>
         {{ .Content }}

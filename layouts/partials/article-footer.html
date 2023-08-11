@@ -1,6 +1,6 @@
 {{ "<!-- article-footer.html -->" | safeHTML }}
-<footer id="post-meta">
-    <p class="left-column">
+<footer id="[ post-meta ]">
+    <p class="[ left-column ]">
     {{- with .Param "categories" -}}
     Categories:
     {{ range $CategoryArray, $Category := (. | sort) -}}
@@ -29,7 +29,7 @@
         
     </p>
     
-    <p class="right-column">
+    <p class="[ right-column ]">
         <a href="{{ .Permalink }}" class="u-url">
         <time class="dt-publised" itemprop="dateCreated datePublished"
             {{ 
@@ -40,33 +40,34 @@
         </a>
     </p>
     {{ partial "author.html" .}}
-{{ "<!-- Debugging Details --> " | safeHTML }}
-    <details style="display: none;">
+    {{ if $.Param "debugInfo" }}
+    {{ "<!-- Debugging Details --> " | safeHTML }}
+    <details class="[ debug ]">
         <summary>Debug Information</summary>
         <h1>Site Properties</h1>
-        <pre>
+         <code>
         {{ printf "%#v \n" $.Site  }}
-        </pre>
+        </code>
 
         <h1>site.Params Properties</h1>
-        <pre>
+        <code>
         {{ printf "%#v" .Site.Params }}
-        </pre>
+        </code>
 
         <h1>Permalink</h1>
-        <pre>
+        <code>
         {{ printf "%#v \n" .Permalink }}
-        </pre>
+        </code>
         
         <h1>Params</h1>
-        <pre>
+        <code>
         {{ printf "%s" $.Params }}
-        </pre>
+        </code>
 
         <h2>All variables scoped to the current context</h2>
-        <pre>
+        <code>
         {{ printf "%#v" . }}    
-        </pre>
+        </code>
     </details>
-            
+    {{ end }}
 </footer>

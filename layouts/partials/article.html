@@ -1,12 +1,12 @@
 {{- if .Title }}
-<article class="post h-entry hentry">
-<header class="post-header">
-<h1><a href="{{ .Permalink }}" class="p-name">{{ .Title }}</a></h1>
+<article class="[ post ] [ h-entry ] [ hentry ]">
+<header class="[ post-header ]">
+<h1><a href="{{ .Permalink }}" class="[ p-name ]">{{ .Title }}</a></h1>
 </header>
 {{ else }}
-<article class="h-entry note-summary-view">
+<article class="[ h-entry ]  [ note-summary-view ]">
 {{ end }}
-<div class="entry-content e-content post-body">
+<div class="[ entry-content] [ e-content ] [ post-body ]">
 {{ .Content -}}
 </div>
 

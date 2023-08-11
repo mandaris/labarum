@@ -112,6 +112,17 @@ article {
         inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
+nav {
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 1em;
+}
+
+nav menu {
+	margin:0px;
+	padding: 0px;
+}
+
 article header {
     /* background: var(--background-alt); */
     margin: 0em 0em 0em 0em;
@@ -143,6 +154,25 @@ article div img {
     margin-right: auto;
 }
 
+.style-box {
+    background-color: var(--background-alt);
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
+}
+
+.style-box-alt {
+	background-color: var(--background);
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 
+    	0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
+}
+
 .microblog_avatar {
     display: inline;
     margin-left: inherit;
@@ -154,7 +184,8 @@ article footer {
     grid-template-rows: auto;
     grid-template-areas:
         "leftside rightside"
-        "author author";
+        "author author"
+        "debug debug";
     margin: 0em 0em 0em 0em;
     padding: 0em;
     border-bottom-left-radius: inherit;
@@ -211,7 +242,8 @@ footer {
 }
 
 footer p {
-margin-top: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 blockquote {
@@ -238,17 +270,23 @@ audio {
 }
 
 .microblog_conversation {
-    margin: 16px 0;
+
 }
 
 .microblog_post {
-    padding-top: 16px;
-    margin: 16px 0;
-    border-top: 1px solid var(--background-alt);
+    padding: 1rem;
+    margin: 1rem;
+    /* border-top: 1px solid var(--background-alt); */
+    background-color: var(--background-alt);
+    border-radius: 5px;
+    box-shadow: 
+    	0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
 .microblog_avatar {
-    border-radius: 1rem;
+/*     border-radius: .5rem; */
 }
 
 .microblog_time {
@@ -366,10 +404,8 @@ width: fit-content;
 
 table {
 	max-width: 100%;
-    height: auto;
+	min-width: 75%;
     margin: auto;
-    border-collapse: collapse;
-    border-spacing: 10px;
     table-layout: auto;
 }
 
@@ -383,11 +419,18 @@ tr:nth-child(even of :not([hidden]))>td {
 }
 
 
+
 thead th,th {
     font-weight: bold;
     color: var(--accent);
     border-bottom: 1px solid var(--accent-alt);
 }
+
+/* Allow for gist to have their own styling */
+div.gist td {
+	background: var(--color-canvas-default) !important;
+}
+ 
 
 pre {
     max-width: 100%;
@@ -470,7 +513,7 @@ a.footnote-ref::after {
 del {
     text-decoration-line: line-through;
     text-decoration-style: wavy;
-    text-decoration-thickness: .08rem;
+    text-decoration-thickness: .09em;
     text-decoration-color: tomato;
     padding: .1rem;
 }
@@ -478,7 +521,7 @@ del {
 ins {
     text-decoration-line: underline;
     text-decoration-style: dashed;
-    text-decoration-thickness: .08rem;
+    text-decoration-thickness: .09em;
     text-decoration-color: limegreen;
 }
 
@@ -491,28 +534,12 @@ del[cite]:after {
 }
 
 
-.style-box {
-    background-color: var(--background-alt);
-    padding: 3px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
+.text-center {
     text-align: center;
 }
 
-.style-box-alt {
-	background-color: var(--background);
-    padding: 3px;
-    border-radius: 5px;
-    box-shadow: 
-    	0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
-}
-
-aside.style-box-alt:has(> nav) {
-	display: hidden;
+aside.style-box-alt:not(:has(> nav)) {
+	display: none;
 }
 
 .post-body {
@@ -540,6 +567,10 @@ p > code, kbd, samp {
     padding: 3px;
     border-radius: 5px;
     border: solid var(--accent) 1px;
+}
+
+.debug {
+	grid-area: debug;
 }
 
 

@@ -1,8 +1,8 @@
 {{ "<!-- Site Pagination -->" | safeHTML }}
 {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
-<nav role="navigation" id="pagination" class="pagination">
+<nav role="navigation" id="pagination" class="[ pagination ]">
     {{- if $paginator.HasPrev -}}
-    <p class="nav_prev">
+    <p class="[ nav_prev ]">
         <a href="{{ $paginator.Prev.URL }}" title="Previous Page" rel="prev">
         ← Newer Posts
         </a>
@@ -10,7 +10,7 @@
     {{- end }}
 
     {{ if $paginator.HasNext -}}
-    <p class="nav_next">
+    <p class="[ nav_next ]">
         <a href="{{ $paginator.Next.URL }}" title="Next Page" rel="next">
         Older Posts →
         </a>
