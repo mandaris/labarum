@@ -40,7 +40,7 @@
         </a>
     </p>
     {{ partial "author.html" .}}
-    {{ if $.Param "debugInfo" }}
+    {{ if $.Param "showDebugInfo" }}
     {{ "<!-- Debugging Details --> " | safeHTML }}
     <details class="[ debug ]">
         <summary>Debug Information</summary>
