@@ -7,6 +7,16 @@
       "field": "params.showTableOfContents",
       "label": "Show Table of Contents",
       "type": "boolean"
+    },
+	{
+      "field": "params.showAuthorInfo",
+      "label": "Show Author profile information",
+      "type": "boolean"
+    },
+    {
+      "field": "params.showDebugInfo",
+      "label": "Show debug information on page",
+      "type": "boolean"
     }
   ]
 }
