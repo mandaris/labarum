@@ -14,8 +14,10 @@
     {{ if .IsHome -}}
     {{ partial "author.html" . }}
     {{- end }}
-    {{ if $.Param "showDebugInfo" }}
-    <details class="[ debug ]">
+    
+    <details 
+    {{ if not .Params.showDebugInfo }}style="display: none;"{{ end }} 
+    class="[ debug ]">
     <summary>Site Debug Information</summary>
     <h1>Site Properties</h1>
     <code>
@@ -36,5 +38,5 @@
     {{ printf "%#v" . }}    
     </pre>
 </details>
-{{ end }}
+
 </footer>

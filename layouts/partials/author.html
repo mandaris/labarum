@@ -1,6 +1,6 @@
-{{ if $.Param "showAuthorInfo" }}
 <aside itemprop="author" itemscope itemtype="https://schema.org/Person" 
-    class="[ author ] [ h-card ] [ p-author ]"  
+    class="[ author ] [ h-card ] [ p-author ]"
+    {{ if not .Params.showAuthorInfo }}style="display: none;"{{ end }}
     role="contentinfo">
     <div class="[ author-image ]">
 	    <img class="[ u-photo ]" loading="lazy" itemprop="image"
@@ -12,4 +12,3 @@
         {{ .Site.Params.itunes_description | safeHTML }}
     </div>
 </aside>
-{{ end }}

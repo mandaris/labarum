@@ -1,7 +1,7 @@
 {
     "params": {
         "showTableOfContents": false,
-        "showAuthorInfo": true,
-        "showDebugInfo": true
+        "showAuthorInfo": false,
+        "showDebugInfo": false
     }
 }

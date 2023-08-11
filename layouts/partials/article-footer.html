@@ -40,9 +40,11 @@
         </a>
     </p>
     {{ partial "author.html" .}}
-    {{ if $.Param "showDebugInfo" }}
+    
     {{ "<!-- Debugging Details --> " | safeHTML }}
-    <details class="[ debug ]">
+    <details
+    {{ if not .Params.showDebugInfo }}style="display: none;"{{ end }}
+    class="[ debug ]">
         <summary>Debug Information</summary>
         <h1>Site Properties</h1>
          <code>
@@ -69,5 +71,4 @@
         {{ printf "%#v" . }}    
         </code>
     </details>
-    {{ end }}
 </footer>
