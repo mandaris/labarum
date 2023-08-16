@@ -391,25 +391,23 @@ code, kbd, samp {
 }
 
 .highlight {
-    width: 100%;
+    max-width: 100%;
     border-radius: 5px;
-    overflow-x: auto;
+    overflow: auto;
     margin: 0;
 }
 
-div.highlight div {
-width: fit-content;
+div.highlight > div {
+  overflow: auto;
 }
 
-table {
-	max-width: 100%;
-	min-width: 75%;
-    margin: auto;
-    table-layout: auto;
+div.highlight span {
+  display: flex; 
 }
  table {
      margin: auto;
      min-width: 50%;}
+}
 
 th,td {
     vertical-align: top;
@@ -529,10 +527,10 @@ ins {
 
 ins[cite]:after,
 del[cite]:after {
-  content: " (" attr(cite) ")";
-  font-size: 75%;
-  line-height: 0;
-  color: var(--text-alt);
+    content: " (" attr(cite) ")";
+    font-size: 75%;
+    line-height: 0;
+    color: var(--text-alt);
 }
 
 
