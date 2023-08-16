@@ -404,9 +404,10 @@ div.highlight > div {
 div.highlight span {
   display: flex; 
 }
- table {
+
+table {
      margin: auto;
-     min-width: 50%;}
+     min-width: 50%;
 }
 
 th,td {
