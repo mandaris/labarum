@@ -525,6 +525,11 @@ ins {
     text-decoration-color: limegreen;
 }
 
+s {
+    text-decoration-thickness: .09em;
+    text-decoration-color: tomato;
+}
+
 ins[cite]:after,
 del[cite]:after {
     content: " (" attr(cite) ")";
