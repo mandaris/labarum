@@ -3,5 +3,10 @@
         "showTableOfContents": false,
         "showAuthorInfo": false,
         "showDebugInfo": false
+    },
+    "markup": {
+    	"highlight": {
+    		"noClasses": false
+    	}
     }
 }
