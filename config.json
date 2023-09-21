@@ -4,9 +4,9 @@
         "showAuthorInfo": false,
         "showDebugInfo": true
     },
-   "markup": {
-      "highlight": {
-         "noClasses": true
-      }
-   }
+    "markup": {
+    	"highlight": {
+    		"noClasses": false
+    	}
+    }
 }
