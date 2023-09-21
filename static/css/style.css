@@ -78,7 +78,7 @@ h1,
 h2,
 h3 {
     font-family: Garamond, Georgia, serif;
-    color: var(--text-alt);
+    color: var(--accent);
 }
 
 a {
@@ -260,7 +260,7 @@ lite-youtube {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
-    margin: 10px;
+    margin: 1em;
 }
 
 audio {
@@ -397,13 +397,6 @@ code, kbd, samp {
     margin: 0;
 }
 
-div.highlight > div {
-  overflow: auto;
-}
-
-div.highlight span {
-  display: flex; 
-}
 
 table {
      margin: auto;
@@ -415,7 +408,7 @@ th,td {
 }
 
 
-tr:nth-child(even of :not([hidden]))>td {
+tr:nth-child(even of :not([hidden])) > td {
     background: var(--background);
 }
 
@@ -544,9 +537,41 @@ del[cite]:after {
     text-align: center;
 }
 
+/* 
 aside.style-box-alt:not(:has(> nav)) {
 	display: none;
 }
+ */
+
+.TableOfContents {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.TableOfContents ul {
+    margin-top: 0;
+}
+
+.TableOfContents:has(ul) {
+	display: block;
+	/* margin-bottom: 1em; */
+	/* padding-right: 1em; */
+	
+}
+
+.TableOfContentsHeader {
+    margin: 0;
+    padding: 0;
+}
+
+.FloatRight {
+	max-width: calc( 50% - 1em);
+    float: right;
+    margin-left: 1em;
+	margin-right: 1em;
+}
+
 
 .post-body {
     display: block;
@@ -578,3 +603,21 @@ p > code, kbd, samp {
 .debug {
 	grid-area: debug;
 }
+
+.chroma {
+    overflow-x: auto;
+}
+
+.chroma .lnt {
+    display: flex;
+}
+
+.chroma .hl {
+    background-color: #3c3d38;
+    display: flex;
+}
+
+.lnlinks, .lnlinks:hover {
+    box-shadow: none;
+}
+

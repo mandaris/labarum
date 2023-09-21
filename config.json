@@ -1,12 +1,12 @@
 {
     "params": {
-        "showTableOfContents": false,
+        "showTableOfContents": true,
         "showAuthorInfo": false,
-        "showDebugInfo": false
+        "showDebugInfo": true
     },
-    "markup": {
-    	"highlight": {
-    		"noClasses": false
-    	}
-    }
+   "markup": {
+      "highlight": {
+         "noClasses": true
+      }
+   }
 }

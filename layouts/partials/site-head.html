@@ -126,14 +126,29 @@
     href="{{ "feed.json" | absURL }}" />
 <link rel="EditURI" type="application/rsd+xml" 
     href="{{ "rsd.xml" | absURL }}" />
-{{- end -}}
+{{- end }}
+
+{{ "<!-- Microblog header begin-->" | safeHTML }}
+{{ partial "microblog_head.html" . }}
+{{ "<!-- Microblog header end -->" | safeHTML }}
+
+{{ "<!-- Default meta begin -->" | safeHTML }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ "<!-- Default meta end -->" | safeHTML }}
 
 
-{{ "<!-- CSS Links  and Themes-->" | safeHTML }}
+{{ "<!-- CSS Links  and Themes -->" | safeHTML }}
 <link rel="stylesheet" 
     href="{{ "css/normalize.css" | relURL }}" />
+
+<link rel="stylesheet" 
+    href="{{ "css/syntax.css" | relURL }}" />
+    
 <link rel="stylesheet" 
     href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+
 <meta name="theme-color" 
     content="#5e81ac" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" 
