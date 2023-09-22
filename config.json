@@ -1,6 +1,5 @@
 {
     "params": {
-        "showTableOfContents": true,
         "showAuthorInfo": false,
         "showDebugInfo": true
     },

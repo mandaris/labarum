@@ -397,6 +397,9 @@ code, kbd, samp {
     margin: 0;
 }
 
+.lntable {
+width: 100%
+}
 
 table {
      margin: auto;
@@ -555,9 +558,6 @@ aside.style-box-alt:not(:has(> nav)) {
 
 .TableOfContents:has(ul) {
 	display: block;
-	/* margin-bottom: 1em; */
-	/* padding-right: 1em; */
-	
 }
 
 .TableOfContentsHeader {

@@ -1,5 +1,5 @@
 {{ "<!-- site-footer.html -->" | safeHTML }}
-<footer class="[ style-box ]">
+<footer class="[ style-box ]" aria-label="Site">
     {{- with  .Site.Params.description }}
     <p class="[ text-center ]">{{ . | safeHTML }}</p>
     {{ end -}}

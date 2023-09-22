@@ -1,16 +1,16 @@
 {{ "<!-- site-nav.html -->" | safeHTML }}
-<nav class="[ style-box ]">
-    <menu>
+<nav class="[ style-box ]" id="Site" aria-label="Site">
+    <menu aria-label="Navigation Menu" title="Site Navigation">
         <li>
-        <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">Home</a>
+        <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}" role="menuitem">Home</a>
         </li>
         {{- range .Site.Menus.main }} 
         <li>
-        <a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
+        <a href="{{ .URL | relLangURL | safeURL }}" role="menuitem">{{ .Name }}</a>
         </li>
         {{ end }}
         <li>
-        <a href="{{ "feed.xml" | absURL }}" rel="feed"
+        <a href="{{ "feed.xml" | absURL }}" rel="feed" role="menuitem"
         type="application/rss+xml" title="{{ $.Site.Title }}">
         	RSS
         </a>

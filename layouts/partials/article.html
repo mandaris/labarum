@@ -1,10 +1,10 @@
 {{- if .Title }}
-<article class="[ post ] [ h-entry ] [ hentry ]">
+<article class="[ post ] [ h-entry ] [ hentry ]" aria-label="{{ .Title }}">
 <header class="[ post-header ]">
-<h1><a href="{{ .Permalink }}" class="[ p-name ]">{{ .Title }}</a></h1>
+<h1 id="article-title"><a href="{{ .Permalink }}" class="[ p-name ]">{{ .Title }}</a></h1>
 </header>
 {{ else }}
-<article class="[ h-entry ]  [ note-summary-view ]">
+<article class="[ h-entry ] [ note-summary-view ]" aria-label="MicroPost">
 {{ end }}
 <div class="[ entry-content] [ e-content ] [ post-body ]">
 {{ .Content -}}
