@@ -565,13 +565,14 @@ aside.style-box-alt:not(:has(> nav)) {
     padding: 0;
 }
 
-.FloatRight {
-	max-width: calc( 50% - 1em);
+@media(min-width: 60ch) {
+  .FloatRight {
+    max-width: calc( 50% - 1em);
     float: right;
     margin-left: 1em;
 	margin-right: 1em;
+  }
 }
-
 
 .post-body {
     display: block;
