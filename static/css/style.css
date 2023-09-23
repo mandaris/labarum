@@ -607,6 +607,11 @@ p > code, kbd, samp {
 
 .chroma {
     overflow-x: auto;
+    border-radius: 5px;
+}
+
+.lntd .chroma {
+    border-radius: 0px;
 }
 
 .chroma .lnt {
