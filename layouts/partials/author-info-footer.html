@@ -1,6 +1,6 @@
 <aside itemprop="author" itemscope itemtype="https://schema.org/Person" 
     class="[ author ] [ h-card ] [ p-author ]" 
-    style="display: none;"
+    {{ if not (.Param "showAuthorInfo") }}style="display: none;"{{ end }}
     role="contentinfo">
     <div class="[ author-image ]">
 	    <img class="[ u-photo ]" loading="lazy" itemprop="image"

@@ -580,17 +580,20 @@ aside.style-box-alt:not(:has(> nav)) {
 }
 
 .author {
-    grid-area: author;
     display: grid;
-    grid-gap: 1rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "author-image author-bio";
 }
 
 .author-image {
-    grid-column: 1;
+    grid-area: author-image;
+    justify-self: center;
 }
 
 .author-bio {
-    grid-column: 2;
+    grid-area: author-bio;
+    justify-self: flex-start;
 }
 
 p > code, kbd, samp {

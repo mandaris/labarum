@@ -1,7 +1,7 @@
 {
   "version": "1.2.1",
   "title": "Labarum",
-  "description": "A theme to help me learn how to make themes.",
+  "description": "A theme to help me learn how to make themes that is accessible and enjoyable to read.",
   "fields": [
 	{
       "field": "params.showAuthorInfo",

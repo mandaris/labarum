@@ -13,19 +13,41 @@ I created this to learn more about Micro.blog and hugo and I'm pretty proud of i
 
 ![Labarum theme with sample text moving from light to dark mode](media/labarum-basic-syntax.gif)
 
-## block quotes
+## Block quotes
 
 ![Block quotes going from light to dark mode](media/labarum-block-quote.gif)
 
-## lists
+## Lists
 
 ![Lists going from light to dark mode](media/labarum-lists.gif)
 
-## tasks lists
+## Task lists
 
 ![Task list going from light to dark mode](media/labarum-tasklist.gif)
 
+
+## Table of Contents
+
+The first one is activated by adding <code>{{ toc }}</code> to your text and will float in the center of the article.
+
+![Labarum table of contents changing from light mode to dark](media/labarum-table-of-contents-center.gif)
+
+The second one is activated by adding <code>{{ floating-toc }}</code> to your text and will float in the right of the article. 
+
+
+![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
+
 ## Release notes
+
+### v1.2.1
+    * Adjustments to the README
+    * Turn on Profile information at the bottom of the site
+
+### v1.2.0
+    * Rewritten Code blocks
+        Wrote about the change on [my blog](https://mandarismoore.com/2023/09/22/labarum-code-blocks.html). Incorporated a significant amount of work to understand the Hugo system
+    * Table of Contents short codes
+    * Moved to Micro.blog standard head
 
 ### v1.1.4
 

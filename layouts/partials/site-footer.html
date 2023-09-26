@@ -1,5 +1,6 @@
 {{ "<!-- site-footer.html -->" | safeHTML }}
 <footer class="[ style-box ]" aria-label="Site">
+	{{ partial "author-info-footer.html" . }}
     {{- with  .Site.Params.description }}
     <p class="[ text-center ]">{{ . | safeHTML }}</p>
     {{ end -}}
@@ -11,10 +12,7 @@
     &copy; {{ now.Year }}
     {{ end -}}
     </p>
-    {{ if .IsHome -}}
-    {{ partial "author.html" . }}
-    {{- end }}
-    
+
     <details 
     {{ if not .Params.showDebugInfo }}style="display: none;"{{ end }} 
     class="[ debug ]">

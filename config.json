@@ -1,6 +1,6 @@
 {
     "params": {
-        "showAuthorInfo": false,
+        "showAuthorInfo": true,
         "showDebugInfo": false
     },
     "markup": {
