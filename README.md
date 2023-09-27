@@ -39,7 +39,7 @@ The second one is activated by adding <code>{{ floating-toc }}</code> to your te
 
 ## Release notes
 
-### v1.2.1
+### v1.2.5
     * Adjustments to the README
     * Turn on Profile information at the bottom of the site
 
