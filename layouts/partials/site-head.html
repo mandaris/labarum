@@ -78,9 +78,9 @@
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="article:publisher" content="{{ .Site.BaseURL }}" />
 
-{{ with .Site.Author.name }}
+{{ with .Site.Author.name -}}
 <meta name="author" content="{{ . }}" />
-{{ end }}
+{{- end }}
 {{ with .Site.Params.twitter_username }}
 <link rel="me" href="https://twitter.com/{{ . }}" />
 <meta name="twitter:site" content="@{{ . }}" />
