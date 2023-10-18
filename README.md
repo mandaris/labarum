@@ -1,7 +1,7 @@
 # Labarum
 A Hugo/Micro.blog theme based on html and schema tags.
 
-![Basic Header of Labarum](media/labarum-basic-header.png)
+![Basic Header of Labarum](media/labarum-example-post.png)
 
 I created this to learn more about Micro.blog and hugo and I'm pretty proud of it. It handles all of the basic Goldmark syntax and has both a light and dark mode. 
 
