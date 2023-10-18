@@ -1,7 +1,6 @@
 <aside itemprop="author" itemscope itemtype="https://schema.org/Person" 
     class="[ author ] [ h-card ] [ p-author ]" 
-    {{ if not (.Param "showAuthorInfo") }}style="display: none;"{{ end }}
-    role="contentinfo">
+    {{ if not (.Param "showAuthorInfo") }}style="display: none;"{{ end }}>
     <div class="[ author-image ]">
 	    <img class="[ u-photo ]" loading="lazy" itemprop="image"
 	        src="{{ .Site.Author.avatar }}"
