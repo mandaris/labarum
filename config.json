@@ -2,7 +2,7 @@
     "params": {
         "themeVersion": "1.2.7",
         "showAuthorInfo": true,
-        "showDebugInfo": true
+        "showDebugInfo": false
     },
     "markup": {
     	"highlight": {
