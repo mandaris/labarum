@@ -28,17 +28,21 @@ I created this to learn more about Micro.blog and hugo and I'm pretty proud of i
 
 ## Table of Contents
 
-The first one is activated by adding <code>{{ toc }}</code> to your text and will float in the center of the article.
+The first one is activated by adding <code>{{< toc >}}</code> to your text and will float in the center of the article.
 
 ![Labarum table of contents changing from light mode to dark](media/labarum-table-of-contents-center.gif)
 
-The second one is activated by adding <code>{{ floating-toc }}</code> to your text and will float in the right of the article. 
+The second one is activated by adding <code>{{< floating-toc >}}</code> to your text and will float in the right of the article. 
 
 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
 
+### v1.2.8
+  * Accessibility improvements using [WAVE](https://wave.webaim.org "WAVE Web Accessibility Evaluation Tools") to test 
+  * Validation improvements to schema tags. Using https://validator.w3.org/nu/ as the tool to validate
+  
 ### v1.2.7
   * Enable [Mermaid.js](https://mermaid.js.org/)
   * Set the version in the `config.json` file
