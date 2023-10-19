@@ -27,7 +27,7 @@
     --background: var(--nordLight1);
     --background-alt: var(--nordLight3);
     --text: var(--nordDark1);
-    --text-alt: var(--nordDark2);
+    --text-alt: var(--nordDark3);
     --accent: var(--nordBlue);
     --accent-alt: var(--nordTeal);
     --accent-opposite: var(--nordRed);
@@ -44,7 +44,7 @@
         --background: var(--nordDark1);
         --background-alt: var(--nordDark2);
         --text: var(--nordLight1);
-        --text-alt: var(--nordLight2);
+        --text-alt: var(--nordLight3);
         --accent: var(--nordRed);
         --accent-alt: var(--nordOrange);
         --accent-opposite: var(--nordBlue);
@@ -82,14 +82,14 @@ h3 {
 }
 
 a {
-    color: var(--accent);
+    color: var(--text-alt);
     text-decoration: none;
     box-shadow: inset 0 -0.12em 0 var(--accent-alt);
     transition: all .5s;
     transition-timing-function: cubic-bezier(.7, 0, .3, 1);
 }
 
-a:hover {
+a:hover, a:focus {
     box-shadow: inset 0 -1.5em 0 var(--accent-alt);
 }
 
