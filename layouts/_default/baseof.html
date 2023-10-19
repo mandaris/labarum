@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-US" }}" prefix="og: https://ogp.me/ns#">
+<html lang="{{ .Site.LanguageCode | default "en-US" }}" 
+  prefix="og: https://ogp.me/ns#"
+  itemscope itemtype="http://schema.org/WebPage" >
 {{ partial "site-head.html" . }}
 
 <body>
@@ -13,6 +15,7 @@
 {{ partial "site-footer.html" . }}
 
 {{ partial "custom_footer.html" . }}
+
 {{ range .Site.Params.plugins_js }}
 <script src="{{ . }}"></script>
 {{ end }}
