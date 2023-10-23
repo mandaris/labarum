@@ -540,12 +540,6 @@ del[cite]:after {
     text-align: center;
 }
 
-/* 
-aside.style-box-alt:not(:has(> nav)) {
-	display: none;
-}
- */
-
 .TableOfContents {
 	display: block;
 	margin: 0 auto;
