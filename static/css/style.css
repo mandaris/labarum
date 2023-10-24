@@ -628,3 +628,6 @@ p > code, kbd, samp {
 	box-shadow: none;
 }
 
+.p-name {
+  font-weight: 500;
+}
