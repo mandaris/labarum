@@ -588,6 +588,7 @@ del[cite]:after {
 .author-bio {
     grid-area: author-bio;
     justify-self: flex-start;
+    margin-top: 1em;
 }
 
 p > code, kbd, samp {
