@@ -624,3 +624,7 @@ p > code, kbd, samp {
     box-shadow: none;
 }
 
+.photos-grid-container>a {
+	box-shadow: none;
+}
+
