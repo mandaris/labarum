@@ -248,7 +248,6 @@ footer p {
 blockquote {
     border-left: 7px solid var(--background-alt);
     border-left-color: var(--accent);
-    border-radius: 5px;
     padding-left: 1rem;
     margin-left: 1rem;
 }
@@ -303,9 +302,10 @@ audio {
     width: 80px !important;
     min-width: 80px !important;
     max-height: 140px !important;
-    margin-right: 8px;
+    margin-right: 1em !important;
+    margin-top: 0;
     padding-right: 0 !important;
-    border-radius: 6px !important;
+    border-radius: 5px !important;
     background-color: var(--background-alt);
     justify-content: center;
 }
@@ -573,21 +573,42 @@ del[cite]:after {
     overflow-y: auto;
 }
 
+
 .author {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "author-image author-bio";
+    "author-image"
+    "author-bio";
+}
+
+@media(min-width: 60ch) {
+    .author {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "author-image author-bio";
+    }
 }
 
 .author-image {
     grid-area: author-image;
     justify-self: center;
+    align-self: center;
 }
+
+.author-image img {
+    max-width: 100%;
+}
+
 
 .author-bio {
     grid-area: author-bio;
-    justify-self: flex-start;
+}
+
+.author-bio h1 {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 p > code, kbd, samp {
@@ -624,3 +645,10 @@ p > code, kbd, samp {
     box-shadow: none;
 }
 
+.photos-grid-container>a {
+	box-shadow: none;
+}
+
+.p-name {
+  font-weight: 500;
+}

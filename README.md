@@ -38,7 +38,12 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
-
+### v1.2.9
+  * Remove bottom border in photos page
+  * Adjust spacing in books page
+  * Make author information more responsive
+  * Remove border radius on blockquote
+  
 ### v1.2.8
   * Accessibility improvements using [WAVE](https://wave.webaim.org "WAVE Web Accessibility Evaluation Tools") to test 
   * Validation improvements to schema tags. Using https://validator.w3.org/nu/ as the tool to validate
