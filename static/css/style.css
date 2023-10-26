@@ -248,7 +248,6 @@ footer p {
 blockquote {
     border-left: 7px solid var(--background-alt);
     border-left-color: var(--accent);
-    border-radius: 5px;
     padding-left: 1rem;
     margin-left: 1rem;
 }
