@@ -574,22 +574,42 @@ del[cite]:after {
     overflow-y: auto;
 }
 
+
 .author {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "author-image author-bio";
+    "author-image"
+    "author-bio";
+}
+
+@media(min-width: 60ch) {
+    .author {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "author-image author-bio";
+    }
 }
 
 .author-image {
     grid-area: author-image;
     justify-self: center;
+    align-self: center;
 }
+
+.author-image img {
+    max-width: 100%;
+}
+
 
 .author-bio {
     grid-area: author-bio;
-    justify-self: flex-start;
-    margin-top: 1em;
+}
+
+.author-bio h1 {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 p > code, kbd, samp {
