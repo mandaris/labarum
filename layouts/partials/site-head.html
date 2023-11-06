@@ -7,37 +7,46 @@
 <title>{{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Site.Title }}" />
 <meta itemprop="name" content="{{ .Site.Title }}" />
-<meta name="description" property="og:description" itemprop="description" 
-  content="{{ .Site.Params.itunes_description | safeHTML}}" />
+
+<meta name="description" 
+    content="{{ .Site.Params.itunes_description | safeHTML }}" />
+<meta property="og:description" 
+    content="{{ .Site.Params.itunes_description | safeHTML}}" />
+<meta itemprop="description" 
+    content="{{ .Site.Params.itunes_description | safeHTML}}" />
+
 <meta property="og:type" content="website" />
-<meta property="og:image" itemprop="image" 
-  content="https://micro.blog/{{ .Site.Author.username }}/podcast.png" />
+<meta property="og:image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+<meta itemprop="image" content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
 <meta name="twitter:card" content="summary" />
 {{ else }}
 {{ if isset .Params "title" }}
 <title>{{ .Title }} - {{ .Site.Title}}</title>
-<meta property="og:title" itemprop="name" 
-  content="{{ .Title }} - {{ .Site.Title}}" />
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title}}" />
+<meta itemprop="name" content="{{ .Title }} - {{ .Site.Title}}" />
 {{ else }}
 <title>MicroPost - {{ .Site.Title}}</title>
-<meta property="og:title" itemprop="name" 
-  content="MicroPost - {{ .Site.Title}}" />
+<meta property="og:title" content="MicroPost - {{ .Site.Title}}" />
+<meta itemprop="name" content="MicroPost - {{ .Site.Title}}" />
 {{ end }}
-<meta name="description" property="og:description" itemprop="description"
-  content="{{ .Summary | safeHTMLAttr }}" />
-<meta name="keywords" 
-  content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
+<meta name="description" content="{{ (substr .Summary 0 150) | safeHTML }}" />
+<meta name="keywords" content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
+<meta property="og:description" content="{{ (substr .Summary 0 150) | safeHTML }}" />
 <meta property="og:type" content="article" />
 <meta property="article:section" content="Post" />
 <meta itemprop="wordCount" content="{{ .WordCount }}" />
 {{ $iso8601 := "2006-01-02T15:04:05Z07:00" }}
 {{- with .PublishDate }}
-<meta property="article:published_time" itemprop="datePublished"
-  {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta property="article:published_time" 
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta itemprop="datePublished"
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
 {{- with .Lastmod }}
-<meta property="article:modified_time" itemprop="dateModified" 
-  {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta property="article:modified_time" 
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
+<meta itemprop="dateModified"
+    {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
 {{- with .Params.audio }}
 {{- range . }}<meta property="og:audio" content="{{ . | absURL }}" />{{ end }}
@@ -50,15 +59,20 @@
 {{ "<!-- .Params.images -->" | safeHTML }}
 <meta name="twitter:card" content="summary_large_image" />
 {{- range first 6 . }}
-<meta property="og:image" itemprop="image" content="{{ . | absURL }}" />
+<meta property="og:image" content="{{ . | absURL }}" />
+<meta itemprop="image" content="{{ . | absURL }}" />
 {{- end -}}
 {{- else -}}
 {{ "<!-- No .Params.images -->" | safeHTML }}
-<meta property="og:image" itemprop="image" 
-  content="https://micro.blog/{{ .Site.Author.username }}/podcast.png" />
+<meta property="og:image"
+    content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
+<meta itemprop="image"
+    content="https://micro.blog/{{ .Site.Author.username }}/favicon.png" />
 <meta name="twitter:card" content="summary" />
 {{- end -}}
 {{ end }}
+
+
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
@@ -73,18 +87,19 @@
 <meta name="twitter:creator" content="@{{ . }}" />
 {{ end }}
 
+
+
 {{ "<!-- CSS Links  and Themes -->" | safeHTML }}
 <link rel="stylesheet" 
-  href="{{ "css/normalize.css" | relURL }}" />
+    href="{{ "css/normalize.css" | relURL }}" />
 <link rel="stylesheet" 
-  href="{{ "css/syntax.css" | relURL }}" />    
+    href="{{ "css/syntax.css" | relURL }}" />    
 <link rel="stylesheet" 
-  href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
-<meta name="supported-color-schemes" content="light dark"/>
+    href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
 <meta name="theme-color" 
-  content="#5e81ac" media="(prefers-color-scheme: light)" />
+    content="#5e81ac" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" 
-  content="#bf616a" media="(prefers-color-scheme: dark)" />
+    content="#bf616a" media="(prefers-color-scheme: dark)" />
 
 {{ "<!-- Microblog header begin-->" | safeHTML }}
 {{ partial "microblog_head.html" . }}
