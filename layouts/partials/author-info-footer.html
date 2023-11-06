@@ -1,15 +1,15 @@
 <aside itemprop="author" itemscope itemtype="https://schema.org/Person" 
-    class="[ author ] [ h-card ] [ p-author ]" 
-    {{- if not (.Param "showAuthorInfo") }}style="display: none;"{{ end -}}>
-    <div class="[ author-image ]">
-	    <img class="[ u-photo ]" loading="lazy" itemprop="image"
-	        src="{{ .Site.Author.avatar }}"
-	        alt="Profile image of {{ .Site.Author.name }}"/>	
+  class="[ author ] [ h-card ] [ p-author ]" 
+  {{- if not (.Param "showAuthorInfo") }}style="display: none;"{{ end -}}>
+  <div class="[ author-image ]">
+    <img class="[ u-photo ]" loading="lazy" itemprop="image"
+      src="{{ .Site.Author.avatar }}"
+      alt="Profile image of {{ .Site.Author.name }}"/>  
+  </div>
+  <div class="[ author-bio ]">
+    <h1 itemprop="name" class="[ p-name ]">{{ .Site.Author.name }}</h1>
+    <div class="[ bio ] [ p-note ]" itemprop="description">
+    {{ .Site.Params.itunes_description | safeHTML }}
     </div>
-	<div class="[ author-bio ]">
-        <h1 itemprop="name" class="[ p-name ]">{{ .Site.Author.name }}</h1>
-        <div class="[ bio ] [ p-note ]" itemprop="description">
-        {{ .Site.Params.itunes_description | safeHTML }}
-        </div>
-    </div>
+  </div>
 </aside>
