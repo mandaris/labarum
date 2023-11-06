@@ -655,3 +655,9 @@ p > code, kbd, samp {
 .p-name {
   font-weight: 500;
 }
+
+hr {
+color: var(--accent);
+height: initial;
+overflow: auto;
+}
