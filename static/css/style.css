@@ -657,7 +657,6 @@ p > code, kbd, samp {
 }
 
 hr {
-color: var(--accent);
-height: initial;
-overflow: auto;
+  color: var(--accent);
+  overflow: auto;
 }
