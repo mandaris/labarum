@@ -38,6 +38,12 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.2.10
+  * Add css for `<hr>`
+  * Change default image for `og:image` and `itemprop="image"`
+  * Move meta `wordCount` to article
+  * Become displeased with how version numbers work
+  
 ### v1.2.9
   * Remove bottom border in photos page
   * Adjust spacing in books page
