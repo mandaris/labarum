@@ -276,7 +276,7 @@ audio {
 
 .microblog_post {
     padding: 1rem;
-    margin: 1rem;
+    margin-top: 1rem;
     /* border-top: 1px solid var(--background-alt); */
     background-color: var(--background-alt);
     border-radius: 5px;
