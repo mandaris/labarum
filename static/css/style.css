@@ -186,7 +186,7 @@ article footer {
         "leftside rightside"
         "author author"
         "debug debug";
-    margin: 0em 0em 0em 0em;
+    margin: 0.4em 0em 0em 0em;
     padding: 0em;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
@@ -287,7 +287,16 @@ audio {
 }
 
 .microblog_avatar {
-/*     border-radius: .5rem; */
+    display: inline;
+    margin-left: inherit;
+	vertical-align: middle;
+	width: 100px;
+	max-width: 100px !important;
+    margin: 0 10px 0 0;
+    box-shadow: 
+    	0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
 .microblog_time {
@@ -592,6 +601,7 @@ del[cite]:after {
         grid-template-areas: 
         "author-image author-bio";
     }
+
 }
 
 .author-image {
