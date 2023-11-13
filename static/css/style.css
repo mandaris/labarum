@@ -672,3 +672,7 @@ hr {
   color: var(--accent);
   overflow: auto;
 }
+
+dt {
+	font-weight: bold;
+}
