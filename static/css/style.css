@@ -292,6 +292,15 @@ audio {
         inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
+.microblog_fullname {
+	font-weight: bold;
+	color: var(--accent);
+}
+
+.microblog_text p {
+	margin-top: 0px;
+}
+
 .microblog_time {
     text-align: right;
 }
