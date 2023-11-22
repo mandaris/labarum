@@ -7,6 +7,14 @@
     "markup": {
     	"highlight": {
     		"noClasses": false
-    	}
+    	},
+    	"goldmark": {
+      		"parser": {
+       			"wrapStandAloneImageWithinParagraph": false,
+        		"attribute": {
+          			"block": true
+        }
+      }
+    }
     }
 }

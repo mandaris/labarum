@@ -69,11 +69,38 @@ html {
 body {
     background-color: var(--background);
     color: var(--text);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60ch;
+	display: flex;
+	flex-direction: column;
+    max-width: 40em;
+    justify-content: center;
+	margin:  auto;
+	padding: 0 1em;
+
 }
 
+@media(max-width: 400px) {
+  body {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+.style-box {
+    background-color: var(--background-alt);
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
+}
+
+.style-box-alt {
+	background-color: var(--background);
+    border-radius: 5px;
+    box-shadow: 
+    	0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
+}
 h1,
 h2,
 h3 {
@@ -101,15 +128,7 @@ h1 a:hover {
     box-shadow: inset 0 -2.2em 0 var(--accent-alt);
 }
 
-article {
-    background-color: var(--background-alt);
-    margin: 0em 0em 1em;
-    padding: .5em 1em .5em;
-    border-radius: 5px;
-    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
-}
+
 
 nav {
 	margin: 0px;
@@ -117,11 +136,21 @@ nav {
 	margin-bottom: 1em;
 }
 
+
 nav menu {
 	margin:0px;
 	padding: 0px;
 }
 
+nav p {
+  margin: 0px;
+}
+
+article {
+    margin: 0em 0em 1em;
+    padding: .5em 1em .5em;
+}
+ 
 article header {
     /* background: var(--background-alt); */
     margin: 0em 0em 0em 0em;
@@ -148,30 +177,8 @@ article div p:last-child {
     margin-bottom: 0px;
 }
 
-article div img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.style-box {
-    background-color: var(--background-alt);
-    padding: 3px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
-}
 
-.style-box-alt {
-	background-color: var(--background);
-    padding: 3px;
-    border-radius: 5px;
-    box-shadow: 
-    	0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
-}
 
 .microblog_avatar {
     display: inline;
@@ -252,10 +259,19 @@ img,
 video,
 iframe,
 lite-youtube {
+	display: block;
     border-radius: 10px;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    margin: 1em;
+    margin: 10px auto;
+    box-shadow: 
+    	0px 2px 7px var(--box-shadow-color-1),
+        0px 7px 13px -3px var(--accent),
+        inset 0px -3px 0px var(--box-shadow-color-3);
+}
+
+p>img {
+display: inline-block;
 }
 
 audio {
@@ -337,6 +353,7 @@ audio {
 
 .pagination {
     margin-top: 1rem;
+    margin-bottom: 0px;
     display: grid;
     grid-template-columns: 2;
 
@@ -418,10 +435,12 @@ width: 100%
 table {
      margin: auto;
      min-width: 50%;
+     border-collapse: collapse;
 }
 
 th,td {
     vertical-align: top;
+    padding: .38em;
 }
 
 
@@ -504,7 +523,7 @@ article ul > li > input[type="checkbox"]:checked::before {
 figure {
     background-color: var(--background);
     max-width: 90%;
-    padding: 1rem;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 7px var(--box-shadow-color-1),
         0px 7px 13px -3px var(--accent),
@@ -524,21 +543,21 @@ a.footnote-ref::after {
 del {
     text-decoration-line: line-through;
     text-decoration-style: wavy;
-    text-decoration-thickness: .09em;
+    text-decoration-thickness: .1em;
     text-decoration-color: tomato;
     padding: .1rem;
 }
 
 ins {
     text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-decoration-thickness: .09em;
+    text-decoration-style: wavy;
+    text-decoration-thickness: .1em;
     text-decoration-color: limegreen;
 }
 
 s {
-    text-decoration-thickness: .09em;
-    text-decoration-color: tomato;
+    text-decoration-thickness: .1em;
+    text-decoration-color: red;
 }
 
 ins[cite]:after,
@@ -573,7 +592,10 @@ del[cite]:after {
     padding: 0;
 }
 
+
 @media(min-width: 60ch) {
+
+  
   .FloatRight {
     max-width: calc( 50% - 1em);
     float: right;
@@ -603,7 +625,6 @@ del[cite]:after {
         grid-template-areas: 
         "author-image author-bio";
     }
-
 }
 
 .author-image {
@@ -613,6 +634,7 @@ del[cite]:after {
 }
 
 .author-image img {
+	margin-top: .5em;
     max-width: 100%;
     box-shadow: 
     	0px 2px 7px var(--box-shadow-color-1),
@@ -620,11 +642,13 @@ del[cite]:after {
         inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
+/* 
 @media(min-width: 60ch) {
     .author-bio h1 {
         text-align: center;
     }
 }
+ */
 
 .author-bio {
     grid-area: author-bio;
@@ -633,6 +657,7 @@ del[cite]:after {
 .author-bio h1 {
     margin-bottom: 0;
     margin-top: 0;
+    text-align: center;
 }
 
 p > code, kbd, samp {
@@ -666,11 +691,11 @@ p > code, kbd, samp {
 }
 
 .lnlinks, .lnlinks:hover {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .photos-grid-container>a {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 .p-name {
@@ -683,5 +708,11 @@ hr {
 }
 
 dt {
-	font-weight: bold;
+  font-weight: bold;
 }
+
+/* 
+rt {
+  color: var(--accent);
+}
+ */
