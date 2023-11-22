@@ -543,21 +543,21 @@ a.footnote-ref::after {
 del {
     text-decoration-line: line-through;
     text-decoration-style: wavy;
-    text-decoration-thickness: .09em;
+    text-decoration-thickness: .1em;
     text-decoration-color: tomato;
     padding: .1rem;
 }
 
 ins {
     text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-decoration-thickness: .09em;
+    text-decoration-style: wavy;
+    text-decoration-thickness: .1em;
     text-decoration-color: limegreen;
 }
 
 s {
-    text-decoration-thickness: .09em;
-    text-decoration-color: tomato;
+    text-decoration-thickness: .1em;
+    text-decoration-color: red;
 }
 
 ins[cite]:after,
