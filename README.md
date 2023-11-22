@@ -38,6 +38,14 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.2.12
+  * Adjust margins on for smaller viewports
+  * Adjust lines and colors for `<del>`, `<ins>`, and `<s>`
+  * Remove normalize.css
+  * Move styling from elements to classes
+  * Configure Goldmark parser to not wrap `<img>` in `<p>` tags
+  * Part one of CSS rewrite
+  
 ### v1.2.11
   * Add styling to comments
   
