@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.2.13
+  * Adjust margin on avatar images
+  * Add mastodon username and server to head
+  
 ### v1.2.12
   * Adjust margins on for smaller viewports
   * Adjust lines and colors for `<del>`, `<ins>`, and `<s>`
