@@ -645,6 +645,7 @@ del[cite]:after {
 
 .author-bio {
     grid-area: author-bio;
+    margin: 10px;
 }
 
 .author-bio h1 {
