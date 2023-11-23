@@ -178,13 +178,6 @@ article div p:last-child {
 }
 
 
-
-
-.microblog_avatar {
-    display: inline;
-    margin-left: inherit;
-}
-
 article footer {
     display: grid;
     grid-template-columns: 2;
