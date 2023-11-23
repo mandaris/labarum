@@ -635,13 +635,6 @@ del[cite]:after {
         inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
-/* 
-@media(min-width: 60ch) {
-    .author-bio h1 {
-        text-align: center;
-    }
-}
- */
 
 .author-bio {
     grid-area: author-bio;
