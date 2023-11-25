@@ -85,8 +85,8 @@
 <meta name="twitter:creator" content="@{{ . }}" />
 {{ end }}
 
-{{ with .Params.mastodon.id }}
-<link rel="me" content="https://{{ $.Params.mastodon.hostname }}/@{{ $.Params.mastodon.username }}" />
+{{ if isset .Params.mastodon "id" }}
+<link rel="me" content="https://{{ .Params.mastodon.hostname }}/@{{ .Params.mastodon.username }}" />
 {{- end }}
 
 {{ "<!-- CSS Links  and Themes -->" | safeHTML }}
