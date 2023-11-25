@@ -38,6 +38,9 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.2.14
+  * Revert to use `{{ .Site.Author.avatar }}` for OpenGraph images
+  
 ### v1.2.13
   * Adjust margin on avatar images
   * Add mastodon username and server to head
