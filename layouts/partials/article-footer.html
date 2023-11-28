@@ -76,12 +76,12 @@
 </footer>
 {{ if .Page.Store.Get "hasMermaid" }}
 <script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-let mermaidTheme = (isDark) ? 'dark' : 'default';
-let mermaidConfig = {
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let mermaidTheme = (isDark) ? 'dark' : 'default';
+  let mermaidConfig = {
     theme: mermaidTheme,
     startOnLoad: true }
-mermaid.initialize(mermaidConfig);
+  mermaid.initialize(mermaidConfig);
 </script>
 {{ end }}
