@@ -30,9 +30,11 @@
 <meta itemprop="name" content="MicroPost - {{ .Site.Title}}" />
 {{ end }}
 <meta name="description" content="{{ .Summary | safeHTML }}" />
+{{- if isset .Params "categories" }}
 <meta name="keywords" 
   content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
-<meta property="og:description" content="{{  .Summary | safeHTML }}" />
+{{- end -}}
+<meta property="og:description" content="{{ .Summary | safeHTML }}" />
 <meta property="og:type" content="article" />
 <meta property="article:section" content="Post" />
 {{ $iso8601 := "2006-01-02T15:04:05Z07:00" }}
