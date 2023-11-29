@@ -88,7 +88,7 @@
 {{ end }}
 
 {{ if isset .Params.mastodon "username" }}
-<link rel="me" content="https://{{ .Params.mastodon.hostname }}/@{{ .Params.mastodon.username }}" />
+<link rel="me" href="https://{{ .Params.mastodon.hostname }}/@{{ .Params.mastodon.username }}" />
 {{- end }}
 
 {{ "<!-- CSS Links  and Themes -->" | safeHTML }}
