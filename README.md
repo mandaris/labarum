@@ -38,6 +38,9 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.2.16
+  * Update link to mastodon account
+  
 ### v1.2.15
   * Move link to outside of headers
   * Add `u-url` class and `rel="me"` to link found in author footer
