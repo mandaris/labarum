@@ -29,14 +29,21 @@
 <meta property="og:title" content="MicroPost - {{ .Site.Title}}" />
 <meta itemprop="name" content="MicroPost - {{ .Site.Title}}" />
 {{ end }}
+<link rel="canonical" href="{{ .Permalink }}" />
+
 <meta name="description" content="{{ .Summary | safeHTML }}" />
-{{- if isset .Params "categories" }}
-<meta name="keywords" 
-  content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
-{{- end -}}
 <meta property="og:description" content="{{ .Summary | safeHTML }}" />
+
+{{ if isset .Params "categories" -}}
+<meta name="keywords" content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
+{{- end }}
+{{- with .Params.categories }}
+{{- range . }}
+<meta property="article:section" content="{{ . }}" />
+{{- end }}
+{{ end }}
 <meta property="og:type" content="article" />
-<meta property="article:section" content="Post" />
+
 {{ $iso8601 := "2006-01-02T15:04:05Z07:00" }}
 {{- with .PublishDate }}
 <meta property="article:published_time" 
@@ -50,6 +57,7 @@
 <meta itemprop="dateModified"
   {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />
 {{ end }}
+
 {{- with .Params.audio }}
 {{- range . }}<meta property="og:audio" content="{{ . | absURL }}" />{{ end }}
 {{ end }}
@@ -57,7 +65,7 @@
 {{- range . }}<meta property="og:video" content="{{ . | absURL }}" />{{ end }}
 {{ end }}
 
-{{- with .Params.images -}}
+{{ with .Params.images -}}
 {{ "<!-- .Params.images -->" | safeHTML }}
 <meta name="twitter:card" content="summary_large_image" />
 {{- range first 6 . }}
@@ -76,7 +84,7 @@
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="article:publisher" content="{{ .Site.BaseURL }}" />
+<meta property="article:author" content="{{ .Site.BaseURL }}" />
 
 {{ with .Site.Author.name -}}
 <meta name="author" content="{{ . }}" />
@@ -87,19 +95,16 @@
 <meta name="twitter:creator" content="@{{ . }}" />
 {{ end }}
 
-{{ if isset .Params.mastodon "username" }}
-<link rel="me" href="https://{{ .Params.mastodon.hostname }}/@{{ .Params.mastodon.username }}" />
+{{ with .Params.mastodon.username }}
+<link rel="me" href="https://{{ .Params.mastodon.hostname }}/@{{ . }}" />
 {{- end }}
 
 {{ "<!-- CSS Links  and Themes -->" | safeHTML }}
-<link rel="stylesheet" 
-  href="{{ "css/syntax.css" | relURL }}" />    
-<link rel="stylesheet" 
-  href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
-<meta name="theme-color" 
-  content="#5e81ac" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" 
-  content="#bf616a" media="(prefers-color-scheme: dark)" />
+<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />    
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" />
+<meta name="supported-color-schemes" content="light dark" />
+<meta name="theme-color" content="#5e81ac" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#bf616a" media="(prefers-color-scheme: dark)" />
 
 {{ "<!-- Microblog header begin-->" | safeHTML }}
 {{ partial "microblog_head.html" . }}

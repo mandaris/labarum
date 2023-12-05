@@ -3,7 +3,7 @@
   "title": "Labarum",
   "description": "A theme to help me learn how to make themes that is accessible and enjoyable to read.",
   "fields": [
-	{
+  {
       "field": "params.showAuthorInfo",
       "label": "Show Author profile information",
       "type": "boolean"
