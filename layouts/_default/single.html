@@ -6,9 +6,6 @@
 <div class="[ style-box ] [ optional ] [ text-center ]">
 {{ "<!-- Connection plugins -->" | safeHTML }}
 {{ "<!-- Found out about this from https://github.com/MattSLangford/Tiny-Theme-for-Micro.blog/ -->" | safeHTML }}
-{{ if templates.Exists "partials/tinylytics.html" -}}
-  {{ partial "tinylytics.html" . }}
-{{- end }}
 {{ if templates.Exists "partials/reply-by-email.html" -}}
   {{ partial "reply-by-email.html" . }}
 {{- end }}
