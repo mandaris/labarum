@@ -3,7 +3,7 @@
   aria-label="{{ .Title }}"
   itemscope itemtype="https://schema.org/BlogPosting">
 <header class="[ post-header ]">
-<a href="{{ .Permalink }}"><h1 class="p-name">{{ .Title }}</h1></a>
+<a href="{{ .Permalink }}"><h1 itemprop="headline" class="p-name">{{ .Title }}</h1></a>
 </header>
 {{ else }}
 <article class="[ h-entry ] [ hentry ] [ note-summary-view ] [ style-box ]"
