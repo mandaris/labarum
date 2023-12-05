@@ -12,15 +12,15 @@
 {{ block "main" .}}{{ end }}
 </main>
 
-<div class="[ style-box ] [ optional ]">
-{{ if templates.Exists "partials/custom_footer.html" }}
-{{ partial "custom_footer.html" . }}
-{{ end }}
-</div>
+
 
 {{ partial "site-footer.html" . }}
 
-
+<div class="[ style-box ] [ optional ]">
+{{ if templates.Exists "partials/custom_footer.html" -}}
+{{ partial "custom_footer.html" . }}
+{{ end -}}
+</div>
 {{ range .Site.Params.plugins_js }}
 <script src="{{ . }}"></script>
 {{ end }}
