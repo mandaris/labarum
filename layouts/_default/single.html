@@ -3,20 +3,19 @@
 {{ partial "article.html" . }}
 
 
-<div class="[ style-box ] [ text-center ]">
+<div class="[ style-box ] [ optional ] [ text-center ]">
 {{ "<!-- Connection plugins -->" | safeHTML }}
 {{ "<!-- Found out about this from https://github.com/MattSLangford/Tiny-Theme-for-Micro.blog/ -->" | safeHTML }}
-
-{{ if templates.Exists "partials/plugin_tinylytics.html" }}
-      <button class="tinylytics_kudos">Kudos</button>
-{{ end }}
-{{ if templates.Exists "partials/reply-by-email.html" }}
-    {{ partial "reply-by-email.html" . }}
-{{ end }}
-{{ if templates.Exists "partials/conversation-link.html" }}
+{{ if templates.Exists "partials/tinylytics.html" -}}
+  {{ partial "tinylytics.html.html" . }}
+{{- end }}
+{{ if templates.Exists "partials/reply-by-email.html" -}}
+  {{ partial "reply-by-email.html" . }}
+{{- end }}
+{{ if templates.Exists "partials/conversation-link.html" -}}
   {{ partial "conversation-link.html" . }}
 {{ end }}
-{{ if templates.Exists "partials/reply-on-mastodon.html" }}
+{{ if templates.Exists "partials/reply-on-mastodon.html" -}}
   {{ partial "reply-on-mastodon.html" . }}
 {{ end }}
 </div>
