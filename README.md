@@ -38,6 +38,12 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.2.17
+  * Copied code from [Tiny Theme]() to implement optional plugins for micro.blog
+  * Changed tabs to spaces in project
+  * Added additional schema tags to headers and urls
+  * Added styling for custom footer
+  
 ### v1.2.16
   * Update link to mastodon account
   
