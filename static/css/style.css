@@ -718,5 +718,6 @@ rt {
  */
 
 .optional {
-margin-top: 1rem;
+  margin-top: 1rem;
+  padding: 5px;
 }
