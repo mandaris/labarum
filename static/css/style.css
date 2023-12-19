@@ -306,12 +306,12 @@ audio {
 }
 
 .microblog_avatar {
-    display: inline;
-    margin-left: inherit;
+  display: inline;
   vertical-align: middle;
-  width: 100px;
-  max-width: 100px !important;
-    margin: 0 10px 10px 0;
+  width: 75px;
+  max-width: 75px !important;
+  margin: 0 10px 10px 0;
+  float: left;
 }
 
 .microblog_fullname {
