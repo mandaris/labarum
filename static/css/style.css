@@ -1,78 +1,78 @@
 :root {
-    /* Nord colour palette from: 
-    https://github.com/arcticicestudio/nord/blob/develop/src/nord.css
-    * Used here under MIT License
-    
-    Formated by Jessica Smith (jayeless.net)
-    */
+  /* Nord colour palette from: 
+  https://github.com/arcticicestudio/nord/blob/develop/src/nord.css
+  * Used here under MIT License
+  
+  Formated by Jessica Smith (jayeless.net)
+  */
 
-    --nordDark1: #2e3440; /* Polar Night - darkest */
-    --nordDark2: #3b4252; /* Polar Night - second-darkest */
-    --nordDark3: #434c5e; /* Polar Night - third-darkest */
-    --nordDark4: #4c566a; /* Polar Night - fourth-darkest */
-    --nordLight1: #d8dee9; /* Snow Storm - third-lightest */
-    --nordLight2: #e5e9f0; /* Snow Storm - second-lightest */
-    --nordLight3: #eceff4; /* Snow Storm - lightest */
-    --nordTeal: #8fbcbb; /* Frost - teal accent colour */
-    --nordAqua: #88c0d0; /* Frost - aqua accent colour */
-    --nordLightBlue: #81a1c1; /* Frost - lighter blue accent colour */
-    --nordBlue: #5e81ac; /* Frost - darker blue accent colour */
-    --nordRed: #bf616a; /* Aurora - red accent colour */
-    --nordOrange: #d08770; /* Aurora - orange accent colour */
-    --nordYellow: #ebcb8b; /* Aurora - yellow accent colour */
-    --nordGreen: #a3be8c; /* Aurora - green accent colour */
-    --nordPurple: #b48ead; /* Aurora - purple accent colour */
+  --nordDark1: #2e3440; /* Polar Night - darkest */
+  --nordDark2: #3b4252; /* Polar Night - second-darkest */
+  --nordDark3: #434c5e; /* Polar Night - third-darkest */
+  --nordDark4: #4c566a; /* Polar Night - fourth-darkest */
+  --nordLight1: #d8dee9; /* Snow Storm - third-lightest */
+  --nordLight2: #e5e9f0; /* Snow Storm - second-lightest */
+  --nordLight3: #eceff4; /* Snow Storm - lightest */
+  --nordTeal: #8fbcbb; /* Frost - teal accent colour */
+  --nordAqua: #88c0d0; /* Frost - aqua accent colour */
+  --nordLightBlue: #81a1c1; /* Frost - lighter blue accent colour */
+  --nordBlue: #5e81ac; /* Frost - darker blue accent colour */
+  --nordRed: #bf616a; /* Aurora - red accent colour */
+  --nordOrange: #d08770; /* Aurora - orange accent colour */
+  --nordYellow: #ebcb8b; /* Aurora - yellow accent colour */
+  --nordGreen: #a3be8c; /* Aurora - green accent colour */
+  --nordPurple: #b48ead; /* Aurora - purple accent colour */
 
 
-    --background: var(--nordLight1);
-    --background-alt: var(--nordLight3);
-    --text: var(--nordDark1);
-    --text-alt: var(--nordDark3);
-    --accent: var(--nordBlue);
-    --accent-alt: var(--nordTeal);
-    --accent-opposite: var(--nordRed);
+  --background: var(--nordLight1);
+  --background-alt: var(--nordLight3);
+  --text: var(--nordDark1);
+  --text-alt: var(--nordDark3);
+  --accent: var(--nordBlue);
+  --accent-alt: var(--nordTeal);
+  --accent-opposite: var(--nordRed);
 
-    --box-shadow-color-1: rgba(0, 0, 0, 0.4);
-    --box-shadow-color-2: rgba(0, 0, 0, 0.3);
-    --box-shadow-color-3: rgba(0, 0, 0, 0.2);
-    
-    --max-width-value: 700px;
+  --box-shadow-color-1: rgba(0, 0, 0, 0.4);
+  --box-shadow-color-2: rgba(0, 0, 0, 0.3);
+  --box-shadow-color-3: rgba(0, 0, 0, 0.2);
+  
+  --max-width-value: 700px;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: var(--nordDark1);
-        --background-alt: var(--nordDark2);
-        --text: var(--nordLight1);
-        --text-alt: var(--nordLight3);
-        --accent: var(--nordRed);
-        --accent-alt: var(--nordOrange);
-        --accent-opposite: var(--nordBlue);
+  :root {
+    --background: var(--nordDark1);
+    --background-alt: var(--nordDark2);
+    --text: var(--nordLight1);
+    --text-alt: var(--nordLight3);
+    --accent: var(--nordRed);
+    --accent-alt: var(--nordOrange);
+    --accent-opposite: var(--nordBlue);
 
-        --box-shadow-color-1: rgba(255, 255, 255, 0.4);
-        --box-shadow-color-2: rgba(255, 255, 255, 0.3);
-        --box-shadow-color-3: rgba(255, 255, 255, 0.2);
-    }
+    --box-shadow-color-1: rgba(255, 255, 255, 0.4);
+    --box-shadow-color-2: rgba(255, 255, 255, 0.3);
+    --box-shadow-color-3: rgba(255, 255, 255, 0.2);
+  }
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    font-family: "Verdana", "-apple-system-body", "-apple-system", sans-serif;
-    line-height: 1.6;
-    font-size: 1.3rem;
-    box-sizing: border-box;
+  font-family: "Verdana", "-apple-system-body", "-apple-system", sans-serif;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--text);
+  background-color: var(--background);
+  color: var(--text);
   display: flex;
   flex-direction: column;
-    max-width: 40em;
-    justify-content: center;
+  max-width: 40em;
+  justify-content: center;
   margin:  auto;
   padding: 0 1em;
 
@@ -80,71 +80,71 @@ body {
 
 @media(max-width: 400px) {
   body {
-    margin-right: 5px;
-    margin-left: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
   }
 }
 
 .style-box {
-    background-color: var(--background-alt);
-    border-radius: 5px;
-    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
+  background-color: var(--background-alt);
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px var(--box-shadow-color-1),
+    0px 7px 13px -3px var(--accent),
+    inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
 .style-box-alt {
   background-color: var(--background);
-    border-radius: 5px;
-    box-shadow: 
-      0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
+  border-radius: 5px;
+  box-shadow: 
+    0px 2px 7px var(--box-shadow-color-1),
+    0px 7px 13px -3px var(--accent),
+    inset 0px -3px 0px var(--box-shadow-color-3);
 }
 h1,
 h2,
 h3 {
-    font-family: Garamond, Georgia, serif;
-    color: var(--accent);
+  font-family: Garamond, Georgia, serif;
+  color: var(--accent);
 }
 
 h1 {
-      font-size: 2em;
-      font-weight: 500;
+    font-size: 2em;
+    font-weight: 500;
 }
 
 a {
-    color: var(--text-alt);
-    text-decoration: none;
-    box-shadow: inset 0 -0.12em 0 var(--accent-alt);
-    transition: all .5s;
-    transition-timing-function: cubic-bezier(.7, 0, .3, 1);
+  color: var(--text-alt);
+  text-decoration: none;
+  box-shadow: inset 0 -0.12em 0 var(--accent-alt);
+  transition: all .5s;
+  transition-timing-function: cubic-bezier(.7, 0, .3, 1);
 }
 
 a:hover, a:focus {
-    box-shadow: inset 0 -1.5em 0 var(--accent-alt);
+  box-shadow: inset 0 -1.5em 0 var(--accent-alt);
 }
 
 a:active {
-    color: var(--accent-opposite);
+  color: var(--accent-opposite);
 }
 
 h1 a:hover {
-    box-shadow: inset 0 -2.2em 0 var(--accent-alt);
+  box-shadow: inset 0 -2.2em 0 var(--accent-alt);
 }
 
 a h1 {
-    color: var(--text-alt);
-    text-decoration: none;
-    box-shadow: inset 0 -0.2em 0 var(--accent-alt);
-    transition: all .5s;
-    transition-timing-function: cubic-bezier(.7, 0, .3, 1);
-    width: fit-content;
+  color: var(--text-alt);
+  text-decoration: none;
+  box-shadow: inset 0 -0.2em 0 var(--accent-alt);
+  transition: all .5s;
+  transition-timing-function: cubic-bezier(.7, 0, .3, 1);
+  width: fit-content;
 }
 
 a:hover h1 , a:focus h1 {
-    box-shadow: inset 0 -2.2em 0 var(--accent-alt);
-    background: var(--accent-alt);
+  box-shadow: inset 0 -2.2em 0 var(--accent-alt);
+  background: var(--accent-alt);
  
 }
 
@@ -165,92 +165,92 @@ nav p {
 }
 
 article {
-    margin: 0em 0em 1em;
-    padding: .5em 1em .5em;
+  margin: 0em 0em 1em;
+  padding: .5em 1em .5em;
 }
  
 article header {
-    /* background: var(--background-alt); */
-    margin: 0em 0em 0em 0em;
-    padding: 0em;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
+  /* background: var(--background-alt); */
+  margin: 0em 0em 0em 0em;
+  padding: 0em;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
 }
 
 
 article header h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
 }
 
 
 article div p:first-of-type {
-    margin-top: .5rem;
+  margin-top: .5rem;
 }
 
 article div p:last-child {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 
 article footer {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "leftside rightside"
-        "author author"
-        "debug debug";
-    margin: 0.4em 0em 0em 0em;
-    padding: 0em;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "leftside rightside"
+    "author author"
+    "debug debug";
+  margin: 0.4em 0em 0em 0em;
+  padding: 0em;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 
 .left-column {
-    grid-column: 1;
-    text-align: left;
-    grid-area: leftside;
+  grid-column: 1;
+  text-align: left;
+  grid-area: leftside;
 }
 
 .right-column {
-    grid-column: 2;
-    text-align: right;
-    grid-area: rightside;
+  grid-column: 2;
+  text-align: right;
+  grid-area: rightside;
 }
 
 article:last-of-type {
-    margin-bottom: inherit;
+  margin-bottom: inherit;
 }
 
 menu {
-    text-align: center;
-    list-style: none;
-    padding: 0;
+  text-align: center;
+  list-style: none;
+  padding: 0;
 }
 
 menu li {
-    display: inline;
+  display: inline;
 }
 
 menu li:after {
-    content: ' | ';
-    color: var(--background-alt);
+  content: ' | ';
+  color: var(--background-alt);
 }
 
 menu li:last-child:after {
-    content: '';
+  content: '';
 }
 
 header {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 footer {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 footer p {
@@ -259,10 +259,10 @@ footer p {
 }
 
 blockquote {
-    border-left: 7px solid var(--background-alt);
-    border-left-color: var(--accent);
-    padding-left: 1rem;
-    margin-left: 1rem;
+  border-left: 7px solid var(--background-alt);
+  border-left-color: var(--accent);
+  padding-left: 1rem;
+  margin-left: 1rem;
 }
 
 img,
@@ -270,14 +270,14 @@ video,
 iframe,
 lite-youtube {
   display: block;
-    border-radius: 10px;
-    max-width: 90%;
-    height: auto;
-    margin: 10px auto;
-    box-shadow: 
-      0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
+  border-radius: 10px;
+  max-width: 90%;
+  height: auto;
+  margin: 10px auto;
+  box-shadow: 
+    0px 2px 7px var(--box-shadow-color-1),
+    0px 7px 13px -3px var(--accent),
+    inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
 p>img {
@@ -285,8 +285,8 @@ display: inline-block;
 }
 
 audio {
-    width: 100%;
-    border-radius: 7px;
+  width: 100%;
+  border-radius: 7px;
 }
 
 .microblog_conversation {
@@ -294,15 +294,15 @@ audio {
 }
 
 .microblog_post {
-    padding: 1rem;
-    margin-top: 1rem;
-    /* border-top: 1px solid var(--background-alt); */
-    background-color: var(--background-alt);
-    border-radius: 5px;
-    box-shadow: 
-      0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
+  padding: 1rem;
+  margin-top: 1rem;
+  /* border-top: 1px solid var(--background-alt); */
+  background-color: var(--background-alt);
+  border-radius: 5px;
+  box-shadow: 
+    0px 2px 7px var(--box-shadow-color-1),
+    0px 7px 13px -3px var(--accent),
+    inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
 .microblog_avatar {
@@ -324,70 +324,70 @@ audio {
 }
 
 .microblog_time {
-    text-align: right;
+  text-align: right;
 }
 
 .bookshelf_book {
-    min-height: 140px;
-    margin-top: 4px;
-    margin-bottom: 8px;
+  min-height: 140px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .bookshelf_book img {
-    min-height: 100px;
-    width: 80px !important;
-    min-width: 80px !important;
-    max-height: 140px !important;
-    margin-right: 1em !important;
-    margin-top: 0;
-    padding-right: 0 !important;
-    border-radius: 5px !important;
-    background-color: var(--background-alt);
-    justify-content: center;
+  min-height: 100px;
+  width: 80px !important;
+  min-width: 80px !important;
+  max-height: 140px !important;
+  margin-right: 1em !important;
+  margin-top: 0;
+  padding-right: 0 !important;
+  border-radius: 5px !important;
+  background-color: var(--background-alt);
+  justify-content: center;
 }
 
 .bookshelf_author {
-    color: var(--text-alt);
-    font-weight: 500;
-    font-size: 1rem;
+  color: var(--text-alt);
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .bookshelf_title {
-    font-weight: 600;
-    font-size: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .pagination {
-    margin-top: 1rem;
-    margin-bottom: 0px;
-    display: grid;
-    grid-template-columns: 2;
+  margin-top: 1rem;
+  margin-bottom: 0px;
+  display: grid;
+  grid-template-columns: 2;
 
 }
 
 .nav_prev {
-    grid-column: 1;
-    text-align: left;
+  grid-column: 1;
+  text-align: left;
 }
 
 .nav_next {
-    grid-column: 2;
-    text-align: right;
+  grid-column: 2;
+  text-align: right;
 }
 
 li::marker {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 
 details {
-    background-color: var(--background);
-    padding: 3px;
-    border-radius: 5px;
+  background-color: var(--background);
+  padding: 3px;
+  border-radius: 5px;
 }
 
 details summary::marker {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* Summary marker coloring for Safari
@@ -395,13 +395,13 @@ found on the following page
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
 */
 summary::-webkit-details-marker {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 mark {
-    background-color: var(--accent-alt);
-    padding: 3px 5px;
-    border-radius: 5px;
+  background-color: var(--accent-alt);
+  padding: 3px 5px;
+  border-radius: 5px;
 }
 
 /* Making the mark tag more accessible.
@@ -424,42 +424,42 @@ mark::after {
 }
 
 code, kbd, samp {
-    font-family: "Courier New", "Courier", monospace;
+  font-family: "Courier New", "Courier", monospace;
 }
 
 .highlight {
-    max-width: 100%;
-    border-radius: 5px;
-    overflow: auto;
-    margin: 0;
+  max-width: 100%;
+  border-radius: 5px;
+  overflow: auto;
+  margin: 0;
 }
 
 .lntable {
-width: 100%
+  width: 100%
 }
 
 table {
-     margin: auto;
-     min-width: 50%;
-     border-collapse: collapse;
+  margin: auto;
+  min-width: 50%;
+  border-collapse: collapse;
 }
 
 th,td {
-    vertical-align: top;
-    padding: .38em;
+  vertical-align: top;
+  padding: .38em;
 }
 
 
 tr:nth-child(even of :not([hidden])) > td {
-    background: var(--background);
+  background: var(--background);
 }
 
 
 
 thead th,th {
-    font-weight: bold;
-    color: var(--accent);
-    border-bottom: 1px solid var(--accent-alt);
+  font-weight: bold;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent-alt);
 }
 
 /* Allow for gist to have their own styling */
@@ -469,114 +469,114 @@ div.gist td {
  
 
 pre {
-    max-width: 100%;
-    overflow-x: auto;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 /* This was to make the marker look different didn't work in Safari
 article ul > li::marker {
-    content: "\2751"; 
+  content: "\2751"; 
 }
 */
 
 /* task list and its checkboxes */
 article ul > li:has(> input[type="checkbox"]) {
-    list-style: none;
-    margin-inline-start: -1rem;
+  list-style: none;
+  margin-inline-start: -1rem;
 }
 
 article ul > li:has(> input[type="checkbox"])::before {
-    content: "\200B"; /* accessibilty for Safari https://developer.mozilla.org/en-US/docs/Web/CSS/list-style */
+  content: "\200B"; /* accessibilty for Safari https://developer.mozilla.org/en-US/docs/Web/CSS/list-style */
 }
 
 /* Taken from the Hugo Relearn Theme */
 /* https://themes.gohugo.io/themes/hugo-theme-relearn/ */
 /* https://moderncss.dev/pure-css-custom-checkbox-style/ */
 article ul > li > input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    /* For iOS < 15 */
-    background-color: var(--INTERNAL-MAIN-BG-color); /* box background */
-    border: 0.15rem solid currentColor;
-    border-radius: 0.15rem;
-    color: var(--INTERNAL-MAIN-TEXT-color);
-    display: inline-grid;
-    font: inherit;
-    height: 1.15rem;
-    margin: 0;
-    place-content: center;
-    transform: translateY(-0.075rem);
-    width: 1.15rem;
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--INTERNAL-MAIN-BG-color); /* box background */
+  border: 0.15rem solid currentColor;
+  border-radius: 0.15rem;
+  color: var(--INTERNAL-MAIN-TEXT-color);
+  display: inline-grid;
+  font: inherit;
+  height: 1.15rem;
+  margin: 0;
+  place-content: center;
+  transform: translateY(-0.075rem);
+  width: 1.15rem;
 }
 
 article ul > li > input[type="checkbox"]::before {
-    box-shadow: inset 1rem 1rem var(--accent);
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-    content: "";
-    height: 0.65rem;
-    transform: scale(0);
-    transform-origin: bottom left;
-    transition: 120ms transform ease-in-out;
-    width: 0.65rem;
-    /* Windows High Contrast Mode fallback must be last */
-    background-color: CanvasText;
+  box-shadow: inset 1rem 1rem var(--accent);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  content: "";
+  height: 0.65rem;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  width: 0.65rem;
+  /* Windows High Contrast Mode fallback must be last */
+  background-color: CanvasText;
 }
 
 article ul > li > input[type="checkbox"]:checked::before {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 figure {
-    background-color: var(--background);
-    max-width: 90%;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
-    text-align: center;
+  background-color: var(--background);
+  max-width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px var(--box-shadow-color-1),
+    0px 7px 13px -3px var(--accent),
+    inset 0px -3px 0px var(--box-shadow-color-3);
+  text-align: center;
 }
 
 a.footnote-ref::before {
-    content: '[';
+  content: '[';
 }
 
 a.footnote-ref::after {
-    content: ']';
+  content: ']';
 }
 
 
 del {
-    text-decoration-line: line-through;
-    text-decoration-style: wavy;
-    text-decoration-thickness: .1em;
-    text-decoration-color: tomato;
-    padding: .1rem;
+  text-decoration-line: line-through;
+  text-decoration-style: wavy;
+  text-decoration-thickness: .1em;
+  text-decoration-color: tomato;
+  padding: .1rem;
 }
 
 ins {
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: .1em;
-    text-decoration-color: limegreen;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: .1em;
+  text-decoration-color: limegreen;
 }
 
 s {
-    text-decoration-thickness: .1em;
-    text-decoration-color: red;
+  text-decoration-thickness: .1em;
+  text-decoration-color: red;
 }
 
 ins[cite]:after,
 del[cite]:after {
-    content: " (" attr(cite) ")";
-    font-size: 75%;
-    line-height: 0;
-    color: var(--text-alt);
+  content: " (" attr(cite) ")";
+  font-size: 75%;
+  line-height: 0;
+  color: var(--text-alt);
 }
 
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .TableOfContents {
@@ -586,7 +586,7 @@ del[cite]:after {
 }
 
 .TableOfContents ul {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .TableOfContents:has(ul) {
@@ -594,78 +594,76 @@ del[cite]:after {
 }
 
 .TableOfContentsHeader {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
 @media(min-width: 60ch) {
-
-  
   .FloatRight {
     max-width: calc( 50% - 1em);
     float: right;
     margin-left: 1em;
-  margin-right: 1em;
+    margin-right: 1em;
   }
 }
 
 .post-body {
-    display: block;
-    overflow-y: auto;
+  display: block;
+  overflow-y: auto;
 }
 
 
 .author {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "author-image"
-    "author-bio";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "author-image"
+  "author-bio";
 }
 
 @media(min-width: 60ch) {
-    .author {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: 
-        "author-image author-bio";
-    }
+  .author {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "author-image author-bio";
+  }
 }
 
 .author-image {
-    grid-area: author-image;
-    justify-self: center;
-    align-self: center;
+  grid-area: author-image;
+  justify-self: center;
+  align-self: center;
 }
 
 .author-image img {
   margin-top: .5em;
-    max-width: 100%;
-    box-shadow: 
-      0px 2px 7px var(--box-shadow-color-1),
-        0px 7px 13px -3px var(--accent),
-        inset 0px -3px 0px var(--box-shadow-color-3);
+  max-width: 100%;
+  box-shadow: 
+    0px 2px 7px var(--box-shadow-color-1),
+    0px 7px 13px -3px var(--accent),
+    inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
 
 .author-bio {
-    grid-area: author-bio;
-    margin: 10px;
+  grid-area: author-bio;
+  margin: 10px;
 }
 
 .author-bio h1 {
-    margin-bottom: 0;
-    margin-top: 0;
-    text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
 }
 
 p > code, kbd, samp {
   background-color: var(--background);
   color: var(--text-alt);
-    padding: 3px;
-    border-radius: 5px;
-    border: solid var(--accent) 1px;
+  padding: 3px;
+  border-radius: 5px;
+  border: solid var(--accent) 1px;
 }
 
 .debug {
@@ -673,21 +671,21 @@ p > code, kbd, samp {
 }
 
 .chroma {
-    overflow-x: auto;
-    border-radius: 5px;
+  overflow-x: auto;
+  border-radius: 5px;
 }
 
 .lntd .chroma {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .chroma .lnt {
-    display: flex;
+  display: flex;
 }
 
 .chroma .hl {
-    background-color: #3c3d38;
-    display: flex;
+  background-color: #3c3d38;
+  display: flex;
 }
 
 .lnlinks, .lnlinks:hover {
