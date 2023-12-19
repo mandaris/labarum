@@ -40,6 +40,7 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ## Release notes
 ### v1.2.19
   * Center contents of custom footer
+  * Add padding to top and bottom of optional boxes
   
 ### v1.2.18
   * Revert change of mastodon logic
