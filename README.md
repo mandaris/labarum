@@ -41,6 +41,7 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ### v1.2.20
   * Shrink and float avatars
   * Make white space in css more consistent
+  * Fix for warning about isset
   
 ### v1.2.19
   * Center contents of custom footer

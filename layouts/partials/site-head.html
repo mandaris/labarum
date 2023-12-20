@@ -93,9 +93,9 @@
 <link rel="me" href="https://twitter.com/{{ . }}" />
 <meta name="twitter:site" content="@{{ . }}" />
 <meta name="twitter:creator" content="@{{ . }}" />
-{{ end }}
+{{- end }}
 
-{{ if isset .Params.mastodon "username" -}}
+{{ with .Params.mastodon.username -}}
 <link rel="me" href="https://{{ .Params.mastodon.hostname }}/@{{ .Params.mastodon.username }}" />
 {{- end }}
 
