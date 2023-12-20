@@ -549,20 +549,19 @@ a.footnote-ref::after {
 del {
   text-decoration-line: line-through;
   text-decoration-style: wavy;
-  text-decoration-thickness: .1em;
-  text-decoration-color: tomato;
-  padding: .1rem;
+  text-decoration-thickness: .08em;
+  text-decoration-color: red;
 }
 
 ins {
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-thickness: .1em;
+  text-decoration-thickness: .05em;
   text-decoration-color: limegreen;
 }
 
 s {
-  text-decoration-thickness: .1em;
+  text-decoration-thickness: .075em;
   text-decoration-color: red;
 }
 
@@ -709,11 +708,9 @@ dt {
   font-weight: bold;
 }
 
-/* 
 rt {
   color: var(--accent);
 }
- */
 
 .optional {
   margin-top: 1rem;
