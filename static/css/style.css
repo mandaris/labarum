@@ -716,3 +716,7 @@ rt {
   margin-top: 1rem;
   padding: 5px;
 }
+
+.archive_categories {
+  columns: 100px 2;
+}
