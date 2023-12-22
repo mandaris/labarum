@@ -4,8 +4,9 @@
   aria-label="Pagination" class="[ pagination ]">
   {{- if $paginator.HasPrev -}}
   <p class="[ nav_prev ]">
+	  <a href="{{ $paginator.Prev.URL }}" class="[ no-decoration ]" role="presentation" aria-hidden="true">←</a>
     <a href="{{ $paginator.Prev.URL }}" title="Previous Page" rel="prev">
-        ← Newer Posts
+      Newer Posts
     </a>
   </p>
     {{- end }}
@@ -13,8 +14,9 @@
     {{ if $paginator.HasNext -}}
   <p class="[ nav_next ]">
     <a href="{{ $paginator.Next.URL }}" title="Next Page" rel="next">
-        Older Posts →
+        Older Posts 
     </a>
+	<a href="{{ $paginator.Next.URL }}" class="[ no-decoration ]" role="presentation" aria-hidden="true">→</a>
   </p>
     {{- end }}
 </nav>
