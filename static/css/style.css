@@ -125,9 +125,15 @@ a:hover, a:focus {
   box-shadow: inset 0 -1.5em 0 var(--accent-alt);
 }
 
+a.no-decoration {
+  color: var(--accent);
+  box-shadow: none;
+}
+
 a:active {
   color: var(--accent-opposite);
 }
+
 
 h1 a:hover {
   box-shadow: inset 0 -2.2em 0 var(--accent-alt);
@@ -145,7 +151,6 @@ a h1 {
 a:hover h1 , a:focus h1 {
   box-shadow: inset 0 -2.2em 0 var(--accent-alt);
   background: var(--accent-alt);
- 
 }
 
 nav {

@@ -41,6 +41,7 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ### v1.3.00
   * Add styling to .archive_category class from baseline
   * Adjust `text-decoration-color` and `text-decoration-thickness` on `ins`, `del`, and `s` elements
+  * Add `a.no-decoration` to style and pagination
   
 ### v1.2.20
   * Shrink and float avatars
