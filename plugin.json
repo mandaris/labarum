@@ -12,6 +12,11 @@
       "field": "params.showDebugInfo",
       "label": "Show debug information on page",
       "type": "boolean"
-    }
+  },
+  {
+      "field": "params.themeDebug",
+      "label": "Generate the debug information",
+      "type": "boolean"
+  }
   ]
 }

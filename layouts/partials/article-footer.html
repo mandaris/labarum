@@ -42,7 +42,7 @@
     </p>
     
     {{ partial "author.html" .}}
-    
+    {{ if .Params.themeDebug }}   
     {{ "<!-- Debugging Details --> " | safeHTML }}
     <details
     {{ if not .Params.showDebugInfo }}style="display: none;"{{ end }}
@@ -73,6 +73,7 @@
         {{ printf "%#v" . }}    
         </code>
     </details>
+    {{- end -}}
 </footer>
 {{ if .Page.Store.Get "hasMermaid" }}
 <script type="module">
