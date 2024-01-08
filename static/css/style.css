@@ -730,3 +730,9 @@ rt {
 .archive_categories {
   columns: 100px 2;
 }
+
+abbr {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--accent);
+}
