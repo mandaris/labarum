@@ -40,6 +40,7 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ## Release notes
 ### v1.3.01
   * Add style to `<abbr>`
+  * Remove some whitespace around optional components
   
 ### v1.3.00
   * Add styling to .archive_category class from baseline
