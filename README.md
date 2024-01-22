@@ -38,6 +38,9 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.03
+  * Use `article.html` in `list.html`
+
 ### v1.3.02
   * Add masonry to `photos-grid-container`
   
