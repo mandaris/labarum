@@ -739,4 +739,5 @@ abbr {
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--accent);
+  cursor: help;
 }
