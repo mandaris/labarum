@@ -38,6 +38,9 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.04
+  * Move the 404 page to proper location according to [documentation](https://help.micro.blog/t/custom-404-page/73)
+
 ### v1.3.03
   * Use `article.html` in `list.html`
 
