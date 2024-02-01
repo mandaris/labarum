@@ -31,6 +31,9 @@
   --accent: var(--nordBlue);
   --accent-alt: var(--nordTeal);
   --accent-opposite: var(--nordRed);
+  --accent-opposite-alt: var(--nordOrange);
+  
+  accent-color: var(--accent);
 
   --box-shadow-color-1: rgba(0, 0, 0, 0.4);
   --box-shadow-color-2: rgba(0, 0, 0, 0.3);
@@ -48,6 +51,9 @@
     --accent: var(--nordRed);
     --accent-alt: var(--nordOrange);
     --accent-opposite: var(--nordBlue);
+    --accent-opposite-alt: var(--nordTeal);
+    
+    accent-color: var(--accent);
 
     --box-shadow-color-1: rgba(255, 255, 255, 0.4);
     --box-shadow-color-2: rgba(255, 255, 255, 0.3);
@@ -61,7 +67,7 @@
 
 html {
   font-family: "Verdana", "-apple-system-body", "-apple-system", sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 1.3rem;
   box-sizing: border-box;
 }
@@ -101,11 +107,10 @@ body {
     0px 7px 13px -3px var(--accent),
     inset 0px -3px 0px var(--box-shadow-color-3);
 }
-h1,
-h2,
-h3 {
+
+h1, h2, h3, h4, h5, h6 {
   font-family: Garamond, Georgia, serif;
-  color: var(--accent);
+  color: var(--text-alt);
 }
 
 h1 {
@@ -115,19 +120,23 @@ h1 {
 
 a {
   color: var(--text-alt);
-  text-decoration: none;
-  box-shadow: inset 0 -0.12em 0 var(--accent-alt);
+  text-underline-offset: 0.15em;
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent-alt);
+  text-decoration-thickness: .05em;
   transition: all .5s;
   transition-timing-function: cubic-bezier(.7, 0, .3, 1);
 }
 
 a:hover, a:focus {
   box-shadow: inset 0 -1.5em 0 var(--accent-alt);
+  text-decoration-color: var(--accent-opposite-alt);
 }
 
 a.no-decoration {
   color: var(--accent);
   box-shadow: none;
+  text-decoration: none;
 }
 
 a:active {
@@ -135,22 +144,17 @@ a:active {
 }
 
 
-h1 a:hover {
-  box-shadow: inset 0 -2.2em 0 var(--accent-alt);
-}
-
 a h1 {
   color: var(--text-alt);
-  text-decoration: none;
-  box-shadow: inset 0 -0.2em 0 var(--accent-alt);
   transition: all .5s;
   transition-timing-function: cubic-bezier(.7, 0, .3, 1);
   width: fit-content;
 }
 
-a:hover h1 , a:focus h1 {
-  box-shadow: inset 0 -2.2em 0 var(--accent-alt);
-  background: var(--accent-alt);
+a:hover h1, a:focus h1 {
+  box-shadow: none;
+  color: var(--accent-opposite);
+  text-decoration-color: var(--accent-opposite-alt);
 }
 
 nav {
@@ -463,7 +467,7 @@ tr:nth-child(even of :not([hidden])) > td {
 
 thead th,th {
   font-weight: bold;
-  color: var(--accent);
+  color: var(--text-alt);
   border-bottom: 1px solid var(--accent-alt);
 }
 
@@ -554,7 +558,7 @@ a.footnote-ref::after {
 del {
   text-decoration-line: line-through;
   text-decoration-style: wavy;
-  text-decoration-thickness: .08em;
+  text-decoration-thickness: .075em;
   text-decoration-color: red;
 }
 
@@ -562,6 +566,7 @@ ins {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: .05em;
+  text-underline-offset: 0.15em;
   text-decoration-color: limegreen;
 }
 
@@ -694,14 +699,16 @@ p > code, kbd, samp {
 
 .lnlinks, .lnlinks:hover {
   box-shadow: none;
+  text-decoration: none;
 }
 
 .photos-grid-container {
   grid-template-rows: masonry;
 }
 
-.photos-grid-container>a {
+.photos-grid-container > a {
   box-shadow: none;
+  text-decoration: none;
 }
 
 .p-name {
@@ -715,10 +722,11 @@ hr {
 
 dt {
   font-weight: bold;
+  color: var(--text-alt);
 }
 
 rt {
-  color: var(--accent);
+  color: var(--text-alt);
 }
 
 .optional {
@@ -736,8 +744,11 @@ rt {
 }
 
 abbr {
+/*   box-shadow: inset 0 -0.12em 0 var(--accent-alt); */
+  text-underline-offset: 0.15em;
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--accent);
+  text-decoration-thickness: .05em;
   cursor: help;
 }

@@ -38,6 +38,15 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+
+### v1.3.05
+  * Improve `h*` tags by changing color to `--text-alt`
+  * Make changes to `text-decoration` inspired by [12 Modern CSS One-Line Upgrades](https://moderncss.dev/12-modern-css-one-line-upgrades/#text-underline-offset) to various elements
+  * Turn on debugging by default temporarily
+  * Modify cursor on `<abbr>`
+  * Adjust `line-height` to make `sub`, `sup`, and `ruby` elements less obtrusive
+  * Add `accent-color` to `root` of CSS
+
 ### v1.3.04
   * Move the 404 page to proper location according to [documentation](https://help.micro.blog/t/custom-404-page/73)
 

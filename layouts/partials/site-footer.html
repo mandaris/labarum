@@ -24,7 +24,9 @@
 
     <h1>site.Params Properties</h1>
     <pre>
-    {{ printf "%#v" .Site.Params }}
+    {{ printf "%#v \n" .Site.Params }}
+    
+    {{ printf "%#v \n" .Site.Author }}
     </pre>
     {{ range .Pages }}
     {{/* The context, ".", is now each one of the pages as it goes through the loop */}}

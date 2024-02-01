@@ -1,9 +1,9 @@
 {
     "params": {
-        "themeVersion": "1.3.04",
+        "themeVersion": "1.3.05",
         "showAuthorInfo": true,
         "showDebugInfo": false,
-        "themeDebug": false
+        "themeDebug": true
     },
     "markup": {
       "highlight": {
