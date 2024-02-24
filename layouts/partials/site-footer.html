@@ -12,31 +12,33 @@
   &copy; {{ now.Year }}
 {{ end -}}
   </p>
-{{ if .Params.themeDebug }}
-  <details 
-  {{ if not .Params.showDebugInfo }}style="display: none;"{{ end }} 
-    class="[ debug ]">
-    <summary>Site Debug Information</summary>
-    <h1>Site Properties</h1>
-    <pre>
-    {{ printf "%#v \n" $.Site  }}
-    </pre>
+{{ if .Param "themeDebug" }}
+<details 
+{{ if not .Params.showDebugInfo }}style="display: none;"{{ end }} 
+	class="[ debug ]">
+<summary>Site Debug Information</summary>
+<h1>Site Properties</h1>
+<pre>
+{{ printf "%#v \n" $.Site  }}
+</pre>
 
-    <h1>site.Params Properties</h1>
-    <pre>
-    {{ printf "%#v \n" .Site.Params }}
-    
-    {{ printf "%#v \n" .Site.Author }}
-    </pre>
-    {{ range .Pages }}
-    {{/* The context, ".", is now each one of the pages as it goes through the loop */}}
-    {{ printf "%#v" . }}
-    {{ end }}
+<h2>.Site.Params Properties</h2>
+<pre>
+{{ printf "%#v \n" .Site.Params }}
+</pre>
+<h2>.Site.Author Properties</h2>
+<pre>
+{{ printf "%#v \n" .Site.Author }}
+</pre>
+{{ range .Pages }}
+{{/* The context, ".", is now each one of the pages as it goes through the loop */}}
+{{ printf "%#v" . }}
+{{ end }}
 
-    <h2>All variables scoped to the current context</h2>
-    <pre>
-    {{ printf "%#v" . }}    
-    </pre>
-  </details>
+<h2>All variables scoped to the current context</h2>
+<pre>
+{{ printf "%#v" . }}    
+</pre>
+</details>
 {{- end }}
 </footer>

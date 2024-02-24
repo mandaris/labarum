@@ -1,0 +1,10 @@
+{{ if .Get "href" -}}
+	{{ $href := .Get "href" }}
+
+	{{- if .Get "text" -}}
+		<data class="p-rsvp" value="yes" /> <a href="{{ $href }}" class="u-in-reply-to">{{ .Get "text" }}</a>	
+	{{- else -}}
+		<data class="p-rsvp" value="yes" /> <a href="{{ $href }}" class="u-in-reply-to">📅</a>	
+	{{- end -}}
+
+{{- end }}

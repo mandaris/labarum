@@ -38,7 +38,14 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
-
+### v1.3.06
+  * Change the `li` marker color to `--text-alt` in order to match header color
+  * Change padding of `body` to utilize more space
+  * add `text-shadow` to `a.no-decoration` 
+  * Change logic for the debug flags
+  * Create stub for theme example
+  * temporarily add the `rsvp` shortcode 
+  
 ### v1.3.05
   * Improve `h*` tags by changing color to `--text-alt`
   * Make changes to `text-decoration` inspired by [12 Modern CSS One-Line Upgrades](https://moderncss.dev/12-modern-css-one-line-upgrades/#text-underline-offset) to various elements
