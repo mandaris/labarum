@@ -1,21 +1,45 @@
 {
-    "params": {
-        "themeVersion": "1.3.06",
-        "showAuthorInfo": true,
-        "showDebugInfo": false,
-        "themeDebug": true
+  "params": {
+    "themeVersion": "1.3.07",
+    "showAuthorInfo": true,
+    "showDebugInfo": false,
+    "themeDebug": true,
+    "math": false
+  },
+  "markup": {
+    "highlight": {
+      "noClasses": false
     },
-    "markup": {
-      "highlight": {
-        "noClasses": false
+    "goldmark": {
+      "parser": {
+        "wrapStandAloneImageWithinParagraph": false,
+        "attribute": {
+          "block": true
+        }
       },
-      "goldmark": {
-          "parser": {
-             "wrapStandAloneImageWithinParagraph": false,
-            "attribute": {
-                "block": true
+      "extensions": {
+        "passthrough": {
+          "delimiters": {
+            "block": [
+              [
+                "\\[",
+                "\\]"
+              ],
+              [
+                "$$",
+                "$$"
+              ]
+            ],
+            "inline": [
+              [
+                "\\(",
+                "\\)"
+              ]
+            ]
+          },
+          "enable": true
         }
       }
     }
-    }
+  }
 }

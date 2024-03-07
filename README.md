@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.07
+  * Add partials for [upcoming mathematics support in Hugo](https://gohugo.io/content-management/mathematics/ "Mathematics in Markdown"). This has been defaulted to `false` until v0.122 is available.
+  * Use [Modern Font Stacks](https://modernfontstacks.com). [Matt Langford](https://www.mattlangford.com/) discussed this on the [Tiny Theme page on fonts](https://tiny.micro.blog/2024/03/01/changing-fonts.html). I really liked his implementation and you should check it out!
+
 ### v1.3.06
   * Change the `li` marker color to `--text-alt` in order to match header color
   * Change padding of `body` to utilize more space

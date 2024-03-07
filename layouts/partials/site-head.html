@@ -95,6 +95,9 @@
 <meta name="twitter:creator" content="@{{ . }}" />
 {{- end }}
 
+{{ if .Param "math" }}
+{{ partialCached "math.html" . }}
+{{ end }}
 
 {{ "<!-- CSS Links  and Themes -->" | safeHTML }}
 <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />    

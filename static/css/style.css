@@ -66,7 +66,7 @@
 }
 
 html {
-  font-family: "Verdana", "-apple-system-body", "-apple-system", sans-serif;
+  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
   line-height: 1.8;
   font-size: 1.3rem;
   box-sizing: border-box;
@@ -109,7 +109,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Garamond, Georgia, serif;
+  font-family: uperclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   color: var(--text-alt);
 }
 
@@ -434,7 +434,7 @@ mark::after {
 }
 
 code, kbd, samp {
-  font-family: "Courier New", "Courier", monospace;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 }
 
 .highlight {
