@@ -20,14 +20,17 @@
 <meta itemprop="image" content="{{ .Site.Author.avatar }}" />
 <meta name="twitter:card" content="summary" />
 {{ else }}
-{{ if isset .Params "title" }}
+{{ if and (isset .Params "title")  (ne .Params.Title "" )}}
 <title>{{ .Title }} - {{ .Site.Title}}</title>
 <meta property="og:title" content="{{ .Title }} - {{ .Site.Title}}" />
 <meta itemprop="name" content="{{ .Title }} - {{ .Site.Title}}" />
 {{ else }}
-<title>MicroPost - {{ .Site.Title}}</title>
-<meta property="og:title" content="MicroPost - {{ .Site.Title}}" />
-<meta itemprop="name" content="MicroPost - {{ .Site.Title}}" />
+{{ $niceDate := .Date.Format (default "January 2, 2006 3:04 PM" .Site.Params.date_format) }}
+{{- $niceTitle := printf " - %s" $.Site.Title  | printf "MicroPost %s%s" $niceDate | printf "%s"}}
+
+<title>{{ $niceTitle }}</title>
+<meta property="og:title" content="{{ $niceTitle }}" />
+<meta itemprop="name" content="{{ $niceTitle }}" />
 {{ end }}
 <link rel="canonical" href="{{ .Permalink }}" />
 

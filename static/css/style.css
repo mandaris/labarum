@@ -66,7 +66,7 @@
 }
 
 html {
-  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, Verdana, 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
   line-height: 1.8;
   font-size: 1.3rem;
   box-sizing: border-box;
@@ -134,10 +134,10 @@ a:hover, a:focus {
 }
 
 a.no-decoration {
-  color: var(--accent);
+  color: var(--text-alt);
   box-shadow: none;
   text-decoration: none;
-  text-shadow: 1px 1px 1px var(--accent-opposite);
+  text-shadow: 1px 1px 1px var(--accent-alt);
 }
 
 a:active {
@@ -281,7 +281,7 @@ iframe,
 lite-youtube {
   display: block;
   border-radius: 10px;
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   margin: 10px auto;
   box-shadow: 
@@ -292,6 +292,8 @@ lite-youtube {
 
 p>img {
 display: inline-block;
+margin-left: .5rem;
+margin-right: .5rem;
 }
 
 audio {
@@ -394,6 +396,7 @@ details {
   background-color: var(--background);
   padding: 3px;
   border-radius: 5px;
+  overflow-x: scroll;
 }
 
 details summary::marker {
@@ -615,6 +618,13 @@ del[cite]:after {
     margin-left: 1em;
     margin-right: 1em;
   }
+  
+  .FloatLeft {
+    max-width: calc( 50% - 1em);
+    float: left;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
 .post-body {
@@ -751,4 +761,13 @@ abbr {
   text-decoration-color: var(--accent);
   text-decoration-thickness: .05em;
   cursor: help;
+}
+
+
+::selection {
+  background-color: var(--accent-opposite-alt);
+}
+
+.list-title-header {
+  padding-left: .5em;
 }

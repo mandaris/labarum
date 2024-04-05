@@ -5,14 +5,14 @@
 {{ "<!-- Connection plugins -->" | safeHTML }}
 {{ "<!-- Found out about this from https://github.com/MattSLangford/Tiny-Theme-for-Micro.blog/ -->" | safeHTML }}
 <div class="[ style-box ] [ optional ] [ text-center ]">
-{{- if templates.Exists "partials/reply-by-email.html" }}
-  {{ partial "reply-by-email.html" . }}
-{{- end }}
 {{- if templates.Exists "partials/conversation-link.html" }}
   {{ partial "conversation-link.html" . }}
-{{ end }}
+{{end }}
 {{- if templates.Exists "partials/reply-on-mastodon.html" }}
   {{ partial "reply-on-mastodon.html" . }}
+{{- end -}}
+{{- if templates.Exists "partials/reply-by-email.html" }}
+  {{ partial "reply-by-email.html" . }}
 {{- end -}}
 </div>
 

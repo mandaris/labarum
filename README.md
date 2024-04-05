@@ -38,24 +38,36 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.08
+  * Adjust fonts
+  * Make the `a.no-decoration` more accessible by changing contrast
+  * Add `FloatLeft` css class
+  * Add `::selection` background color to match up with theme
+  * Add scrolling for debug output
+  * Change the `title` and `aria-label` for microposts to include the date and time. In the local copy of Hugo, an empty string  `title` is automatically added. 
+  * Add styling to the top of the `list.html` to make it stand out.
+  * Change the date format for the `time` used for published times.
+  * Rearrange reply order options to be Micro.blog, Mastodon, and then email
+  * Add `articleSection` to list of classes for category tags on a post
+  
 ### v1.3.07
-  * Add partials for [upcoming mathematics support in Hugo](https://gohugo.io/content-management/mathematics/ "Mathematics in Markdown"). This has been defaulted to `false` until v0.122 is available.
+  * Add partials for [upcoming mathematics support in Hugo](https://gohugo.io/content-management/mathematics/ "Mathematics in Markdown"). This can be seen when you toggle the `math` parameter. This has been defaulted to false until v0.122 is available. Demos can be seen on the [MathJax demo page](https://www.mathjax.org/#demo).
   * Use [Modern Font Stacks](https://modernfontstacks.com). [Matt Langford](https://www.mattlangford.com/) discussed this on the [Tiny Theme page on fonts](https://tiny.micro.blog/2024/03/01/changing-fonts.html). I really liked his implementation and you should check it out!
 
 ### v1.3.06
   * Change the `li` marker color to `--text-alt` in order to match header color
-  * Change padding of `body` to utilize more space
+  * Change padding of `body` to utilize more space on smaller screens
   * add `text-shadow` to `a.no-decoration` 
   * Change logic for the debug flags
-  * Create stub for theme example
-  * temporarily add the `rsvp` shortcode 
+  * Create stub for theme `example` folder
+  * Temporarily add the `rsvp` shortcode to theme to remove extra whitespace when post is cross posted to mastodon
   
 ### v1.3.05
   * Improve `h*` tags by changing color to `--text-alt`
   * Make changes to `text-decoration` inspired by [12 Modern CSS One-Line Upgrades](https://moderncss.dev/12-modern-css-one-line-upgrades/#text-underline-offset) to various elements
   * Turn on debugging by default temporarily
   * Modify cursor on `<abbr>`
-  * Adjust `line-height` to make `sub`, `sup`, and `ruby` elements less obtrusive
+  * Adjust `line-height` to make `sub`, `sup`, and `ruby` elements less obtrusive to the flow of the document
   * Add `accent-color` to `root` of CSS
 
 ### v1.3.04

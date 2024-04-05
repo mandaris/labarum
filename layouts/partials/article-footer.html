@@ -7,7 +7,7 @@
         {{- if gt $CategoryArray 0 -}}
         <span> •</span>
         {{- end }}
-        <a href="/categories/{{ $Category | urlize }}" class="p-category" rel="tag"
+        <a href="/categories/{{ $Category | urlize }}" class="p-category articleSection" rel="tag"
           aria-label="Archive of post with the {{ $Category }} category.">
             <span itemprop="articleSection">{{ $Category }}</span></a>
         {{- end }}

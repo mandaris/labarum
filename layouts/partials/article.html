@@ -6,11 +6,13 @@
 <a href="{{ .Permalink }}"><h1 itemprop="headline" class="p-name">{{ .Title }}</h1></a>
 </header>
 {{ else }}
+{{ $niceDate := .Date.Format (default "January 2, 2006 3:04 pm" .Site.Params.date_format) }}
+{{ $ariaLabel :=  printf "MicroPost %s" $niceDate | printf "%s" }}
 <article class="[ h-entry ] [ hentry ] [ note-summary-view ] [ style-box ]"
-  aria-label="MicroPost"
+  aria-label="{{ $ariaLabel }}"
   itemscope itemtype="https://schema.org/BlogPosting">
 {{ end }}
-<div class="[ entry-content] [ e-content ] [ post-body ]"
+<div class="[ entry-content ] [ e-content ] [ post-body ]"
   itemprop="articleBody">
 {{ .Content -}}
 </div>
