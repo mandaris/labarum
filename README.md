@@ -38,6 +38,9 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.09
+  * Typo on `dt-published`
+  
 ### v1.3.08
   * Adjust fonts
   * Make the `a.no-decoration` more accessible by changing contrast
