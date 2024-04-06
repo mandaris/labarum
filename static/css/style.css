@@ -480,7 +480,7 @@ div.gist td {
 }
  
 
-pre {
+pre, samp {
   max-width: 100%;
   overflow-x: auto;
 }
@@ -677,7 +677,7 @@ del[cite]:after {
   text-align: center;
 }
 
-p > code, kbd, samp {
+p > code, li > code, kbd, samp {
   background-color: var(--background);
   color: var(--text-alt);
   padding: 3px;

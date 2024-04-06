@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.10
+  * Changes to `samp`. This is catch the edge case where `samp` is being used as a block element
+  * Format `code` in list item. Might have to refactor if there are other edge cases
+  
 ### v1.3.09
   * Typo on `dt-published`
   
