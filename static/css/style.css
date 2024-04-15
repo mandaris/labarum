@@ -763,7 +763,6 @@ abbr {
   cursor: help;
 }
 
-
 ::selection {
   background-color: var(--accent-opposite-alt);
 }
