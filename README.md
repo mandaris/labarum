@@ -38,6 +38,13 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.12
+  * Remove duplicate description from `site-head.html`
+  * Change `keywords` to use `tags` instead of categories. The reason I did this is that although Micro.blog does not support `tags`, it could in the future and `categories` are already denoted for the `article:section`
+  * Added `twitter:domain` for those who are still using the tag to parse things
+  * Remove styling for `p-name`, this class is for meta-data
+  * Adjusted `max-width` for `img, video, iframe,lite-youtube`. The plugin that I use is loaded later and causes the `lite-youtube` object to not render expectedly
+  
 ### v1.3.11
   * Add `headline` to notes that contain a generic title
   

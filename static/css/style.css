@@ -281,7 +281,7 @@ iframe,
 lite-youtube {
   display: block;
   border-radius: 10px;
-  max-width: 80%;
+  max-width: 90% !important;
   height: auto;
   margin: 10px auto;
   box-shadow: 
@@ -719,10 +719,6 @@ p > code, li > code, kbd, samp {
 .photos-grid-container > a {
   box-shadow: none;
   text-decoration: none;
-}
-
-.p-name {
-  font-weight: 500;
 }
 
 hr {

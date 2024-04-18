@@ -12,8 +12,7 @@
   content="{{ .Site.Params.itunes_description | safeHTML }}" />
 <meta property="og:description" 
   content="{{ .Site.Params.itunes_description | safeHTML}}" />
-<meta itemprop="description" 
-  content="{{ .Site.Params.itunes_description | safeHTML}}" />
+
 
 <meta property="og:type" content="website" />
 <meta property="og:image" content="{{ .Site.Author.avatar }}" />
@@ -37,8 +36,8 @@
 <meta name="description" content="{{ .Summary | safeHTML }}" />
 <meta property="og:description" content="{{ .Summary | safeHTML }}" />
 
-{{ if isset .Params "categories" -}}
-<meta name="keywords" content="{{ with .Params.categories }}{{ delimit . ", " }}{{ end }}" />
+{{ if isset .Params "tags" -}}
+<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}" />
 {{- end }}
 {{- with .Params.categories }}
 {{- range . }}
@@ -96,6 +95,7 @@
 <link rel="me" href="https://twitter.com/{{ . }}" />
 <meta name="twitter:site" content="@{{ . }}" />
 <meta name="twitter:creator" content="@{{ . }}" />
+<meta property="twitter:domain" content="{{ (urls.Parse site.BaseURL).Host }}">
 {{- end }}
 
 {{ if .Param "math" }}
