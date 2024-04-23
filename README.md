@@ -38,6 +38,13 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.13
+  * Create archive page to use `<section>` and classes
+  * Change class of link in article footer to use `u-uid`
+  * Remove `article-hidden` for links that have `role="presentation"`
+  * Rearrange classes applied to `<article>`
+  * Add `u-url` to `article` title anchor
+  
 ### v1.3.12
   * Remove duplicate description from `site-head.html`
   * Change `keywords` to use `tags` instead of categories. The reason I did this is that although Micro.blog does not support `tags`, it could in the future and `categories` are already denoted for the `article:section`

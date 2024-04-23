@@ -1,19 +1,19 @@
 {{- if .Title }}
-<article class="[ post ] [ h-entry ] [ hentry ] [ style-box ]"
+<article class="[ style-box ] [ h-entry ] [ hentry ] [ post ]"
   aria-label="{{ .Title }}"
   itemscope itemtype="https://schema.org/BlogPosting">
 <header class="[ post-header ]">
-<a href="{{ .Permalink }}"><h1 itemprop="headline" class="p-name">{{ .Title }}</h1></a>
+<a href="{{ .Permalink }}" class="[ u-url ]"><h1 itemprop="headline" class="p-name">{{ .Title }}</h1></a>
 </header>
 {{ else }}
 {{ $niceDate := .Date.Format (default "January 2, 2006 3:04 pm" .Site.Params.date_format) }}
 {{ $ariaLabel :=  printf "MicroPost %s" $niceDate | printf "%s" }}
-<article class="[ h-entry ] [ hentry ] [ note-summary-view ] [ style-box ]"
+<article class="[ style-box ] [ h-entry ] [ hentry ] [ note-summary-view ]"
   aria-label="{{ $ariaLabel }}"
   itemscope itemtype="https://schema.org/BlogPosting">
   <meta itemprop="headline" content="{{ $ariaLabel }}">
 {{ end }}
-<div class="[ entry-content ] [ e-content ] [ post-body ]"
+<div class="[ post-body ] [ entry-content ] [ e-content ] "
   itemprop="articleBody">
 {{ .Content -}}
 </div>
