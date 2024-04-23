@@ -38,6 +38,9 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.14
+  * Fix styling issues with archive page
+  
 ### v1.3.13
   * Create archive page to use `<section>` and classes
   * Change class of link in article footer to use `u-uid`

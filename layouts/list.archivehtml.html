@@ -3,7 +3,7 @@
 <div class="[ style-box ]"><h1 class="list-title-header">Archive</h1></div>
 	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ if gt (len $list) 0 }}
-		<section class="[ archive_categories] [ style-box ]" style="border-bottom: 1px solid lightgray; padding-bottom: 15px; margin-bottom: 30px;">
+		<section class="[ archive_categories ] [ style-box ]">
 		<h2>Categories</h2>
 			{{ range $list }}
 				<p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
@@ -12,7 +12,7 @@
 	{{ end }}
 	
 	{{ $list := (where .Site.Pages "Type" "post") }}
-	<section class="h-feed">
+	<section class="[ archive_posts ] [ h-feed ] [ style-box ]">
 	<h2 class="p-name">All Posts</h2>
 		{{ range $list }}
 	

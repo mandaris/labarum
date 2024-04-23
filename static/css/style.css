@@ -747,6 +747,12 @@ rt {
 
 .archive_categories {
   columns: 100px 2;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.archive_posts {
+  /* Nothing here yet */
 }
 
 abbr {
