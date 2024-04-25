@@ -16,7 +16,7 @@
 
 {{ partial "site-footer.html" . }}
 
-<div class="[ style-box ] [ optional ] [ text-center ]">
+<div id="custom-footer-container" class="[ style-box ] [ optional ] [ text-center ]">
 {{ if templates.Exists "partials/custom_footer.html" -}}
 {{ partial "custom_footer.html" . }}
 {{ end -}}

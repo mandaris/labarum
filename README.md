@@ -38,6 +38,14 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.15
+  * Change `overflow-x` on `<detail>` element
+  * Make `<section>` use the same padding as article
+  * Make `<a>` tags in the custom footer inline-block to that they flow easier in design
+  * Add id to custom footer
+  * Move the catagory paragraphs in the archive page into a `<div>`
+  * Correct date format on archive page
+  
 ### v1.3.14
   * Fix styling issues with archive page
   
