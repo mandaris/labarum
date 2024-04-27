@@ -16,11 +16,13 @@
 
 {{ partial "site-footer.html" . }}
 
-<div id="custom-footer-container" class="[ style-box ] [ optional ] [ text-center ]">
+<footer id="custom-footer-container" 
+  class="[ style-box ] [ optional ] [ text-center ]"
+  aria-label="Additional content">
 {{ if templates.Exists "partials/custom_footer.html" -}}
 {{ partial "custom_footer.html" . }}
 {{ end -}}
-</div>
+</footer>
 {{ range .Site.Params.plugins_js }}
 <script src="{{ . }}"></script>
 {{ end }}
