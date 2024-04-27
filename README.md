@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.16
+  * Add id to plugin-container
+  * Change `line-height` for `h#` tags
+  
 ### v1.3.15
   * Change `overflow-x` on `<detail>` element
   * Make `<section>` use the same padding as article
