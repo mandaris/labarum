@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.17
+  * Minor changes to aria-labels for footers
+  * Change certain `<div>` to `<aside>` and `<footer>` to denote respective roles
+  
 ### v1.3.16
   * Add id to plugin-container
   * Change `line-height` for `h#` tags
