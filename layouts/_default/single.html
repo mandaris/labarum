@@ -4,7 +4,9 @@
 
 {{ "<!-- Connection plugins -->" | safeHTML }}
 {{ "<!-- Found out about this from https://github.com/MattSLangford/Tiny-Theme-for-Micro.blog/ -->" | safeHTML }}
-<aside id="plugin-container" class="[ style-box ] [ optional ] [ text-center ]">
+<aside id="plugin-container" 
+  class="[ style-box ] [ optional ] [ text-center ]"
+  aria-label="Ways to connect to the author regardimg this article">
 {{- if templates.Exists "partials/conversation-link.html" }}
   {{ partial "conversation-link.html" . }}
 {{end }}
