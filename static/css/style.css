@@ -772,7 +772,7 @@ abbr {
 }
 
 .list-title-header {
-  padding-left: .5em;
+  padding: 5px .5em;
 }
 
 #plugin-container > a {

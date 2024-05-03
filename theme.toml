@@ -1,1 +1,13 @@
+name = "Labarum"
+license = "MIT"
+licenselink = "https://github.com/mandaris/labarum/blob/main/LICENSE"
+tags = ["dark", "dark mode", "light", "light mode"]
+features = ["rss", "categories", "mermaid", "table of contents"]
 
+[module]
+  [module.hugoVersion]
+    min = "0.117"
+
+[author]
+  name = "Mandaris Moore"
+  homepage = "https://MandarisMoore.com"

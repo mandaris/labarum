@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ "<!-- _default/list.html -->" | safeHTML }}
 {{ if .Title }}
-<div class="[ style-box ]"><h1 class="list-title-header">Category: {{ .Title }}</h1></div>
+<div class="[ style-box ]"><h1 class="list-title-header">{{ .Title }}</h1></div>
 {{ end }}
 
 {{ range .Paginator.Pages }}

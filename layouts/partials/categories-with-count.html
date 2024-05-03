@@ -1,0 +1,5 @@
+{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+{{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+<p><a href="{{ .Permalink }}">{{ .Title }} ({{ $taxonomy.Count }})</a></p>
+{{ end }}
+{{ end }}
