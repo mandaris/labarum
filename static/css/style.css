@@ -283,13 +283,17 @@ iframe,
 lite-youtube {
   display: block;
   border-radius: 10px;
-  max-width: 90% !important;
+  max-width: 85%;
   height: auto;
   margin: 10px auto;
   box-shadow: 
     0px 2px 7px var(--box-shadow-color-1),
     0px 7px 13px -3px var(--accent),
     inset 0px -3px 0px var(--box-shadow-color-3);
+}
+
+lite-youtube {
+  max-width: 85% !important;
 }
 
 p>img {
