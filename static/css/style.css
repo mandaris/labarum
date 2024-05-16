@@ -296,10 +296,14 @@ lite-youtube {
   max-width: 85% !important;
 }
 
-p>img {
-display: inline-block;
-margin-left: .5rem;
-margin-right: .5rem;
+.no-box-shadow {
+  box-shadow: none;
+}
+
+p > img {
+  display: inline-block;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 audio {
@@ -417,6 +421,7 @@ summary::-webkit-details-marker {
   color: var(--accent);
 }
 
+::selection,
 mark {
   background-color: var(--accent-alt);
   padding: 3px 5px;
@@ -769,10 +774,6 @@ abbr {
   text-decoration-color: var(--accent);
   text-decoration-thickness: .05em;
   cursor: help;
-}
-
-::selection {
-  background-color: var(--accent-opposite-alt);
 }
 
 .list-title-header {

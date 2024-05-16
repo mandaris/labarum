@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.20
+  * Add css class `no-box-shadow` for instances where it's not needed
+  * Make `::selection` have the same color as `mark`
+  
 ### v1.3.19
   * Change the `!important` to only be on `lite-youtube` class in css
   
