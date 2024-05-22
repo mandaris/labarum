@@ -38,9 +38,15 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.21
+  * Add stylying for responding textbox on blogs. See [this post by Manton](https://www.manton.org/2024/05/18/i-took-the.html) for more information.
+  * Add very basic styling for popovers so that they match the style for the rest of the theme.
+  * Make adjustments to color contrast for dark mode
+  * Move text styling within `<figure>` to `<figcation>`
+  
 ### v1.3.20
   * Add css class `no-box-shadow` for instances where it's not needed
-  * Make `::selection` have the same color as `mark`
+  * Make `::selection` have the same color	 as `mark`
   
 ### v1.3.19
   * Change the `!important` to only be on `lite-youtube` class in css
