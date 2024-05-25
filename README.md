@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.22
+  * Invert background colors for dark mode
+  * Increase `margin-top` for table of contents header
+  
 ### v1.3.21
   * Add stylying for responding textbox on blogs. See [this post by Manton](https://www.manton.org/2024/05/18/i-took-the.html) for more information.
   * Add very basic styling for popovers so that they match the style for the rest of the theme.

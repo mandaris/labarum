@@ -28,6 +28,7 @@
   --background-alt: var(--nordLight3);
   --text: var(--nordDark1);
   --text-alt: var(--nordDark3);
+  
   --accent: var(--nordBlue);
   --accent-alt: var(--nordTeal);
   --accent-opposite: var(--nordRed);
@@ -44,10 +45,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--nordDark1);
-    --background-alt: var(--nordDark3);
+    --background: var(--nordDark3);
+    --background-alt: var(--nordDark1);
     --text: var(--nordLight3);
     --text-alt: var(--nordLight1);
+    
     --accent: var(--nordRed);
     --accent-alt: var(--nordOrange);
     --accent-opposite: var(--nordBlue);
@@ -69,7 +71,7 @@ html {
   font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, Verdana, 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
   line-height: 1.8;
   font-size: 1.3rem;
-  box-sizing: border-box;
+/*   box-sizing: border-box; */
 }
 
 body {
@@ -639,6 +641,7 @@ del[cite]:after {
 .TableOfContentsHeader {
   margin: 0;
   padding: 0;
+  margin-top: 5px;
 }
 
 
