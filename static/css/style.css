@@ -294,6 +294,11 @@ lite-youtube {
     inset 0px -3px 0px var(--box-shadow-color-3);
 }
 
+[popover] {
+  color: var(--text);
+  border: none;
+}
+
 lite-youtube {
   max-width: 85% !important;
 }
@@ -419,9 +424,17 @@ li::marker {
 
 details {
   background-color: var(--background);
-  padding: 3px;
+  padding: .5rem 1rem;
   border-radius: 5px;
   overflow-x: auto;
+}
+
+summary: {
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
 }
 
 details summary::marker {
@@ -576,6 +589,11 @@ figure {
   box-shadow: 0px 2px 7px var(--box-shadow-color-1),
     0px 7px 13px -3px var(--accent),
     inset 0px -3px 0px var(--box-shadow-color-3);
+	
+  & p {
+	  margin-top: 0px;
+	  padding-top: 0px;
+  }
 }
 
 figcaption {

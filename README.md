@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.23
+  * Make some space adjustments for `<details>`
+  * Minor changes to `[popover]`
+  
 ### v1.3.22
   * Invert background colors for dark mode
   * Increase `margin-top` for table of contents header
