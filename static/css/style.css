@@ -201,7 +201,7 @@ article header h1 {
 
 
 article div p:first-of-type {
-  margin-top: .5rem;
+  margin-top: 0px;
 }
 
 article div p:last-child {
