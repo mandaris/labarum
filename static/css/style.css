@@ -32,7 +32,7 @@
   --accent: var(--nordBlue);
   --accent-alt: var(--nordTeal);
   --accent-opposite: var(--nordRed);
-  --accent-opposite-alt: var(--nordOrange);
+  --accent-opposite-alt: var(--nordYellow);
   
   --accent-color: var(--accent);
 
@@ -53,7 +53,7 @@
     --accent: var(--nordRed);
     --accent-alt: var(--nordOrange);
     --accent-opposite: var(--nordBlue);
-    --accent-opposite-alt: var(--nordTeal);
+    --accent-opposite-alt: var(--nordYellow);
     
     --accent-color: var(--accent);
 
@@ -83,7 +83,7 @@ body {
   justify-content: center;
   margin:  auto;
   padding: 0 5px;
-
+  text-wrap: pretty;
 }
 
 @media(max-width: 400px) {
@@ -114,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: uperclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   color: var(--text-alt);
   line-height: normal;
+  text-wrap: balance;
 }
 
 h1 {
