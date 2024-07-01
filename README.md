@@ -38,6 +38,15 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.24
+  * Change the `--accent-opposite-alt` to improve contrast
+  * Add `text-wrap: balance` to `h#` tags
+  * Remove margin between first paragraph and top of the `article div`
+  * Adjust margins and paddings for `TableOfContents`
+  * Adjust sizes for `FloatRight` and `FloatLeft`
+  * Modify padding for code examples
+  * Add `@view-transition` and `text-wrap`. This only shows up in blink based browsers
+
 ### v1.3.23
   * Make some space adjustments for `<details>`
   * Minor changes to `[popover]`

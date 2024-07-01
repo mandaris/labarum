@@ -96,7 +96,8 @@ body {
 .style-box {
   background-color: var(--background-alt);
   border-radius: 5px;
-  box-shadow: 0px 2px 7px var(--box-shadow-color-1),
+  box-shadow: 
+    0px 2px 7px var(--box-shadow-color-1),
     0px 7px 13px -3px var(--accent),
     inset 0px -3px 0px var(--box-shadow-color-3);
 }
@@ -644,9 +645,10 @@ del[cite]:after {
 }
 
 .TableOfContents {
-  display: block;
+  display: hidden;
   margin: 0 auto;
-  width: 90%;
+  padding: 7px;
+  max-width: 90%;
 }
 
 .TableOfContents ul {
@@ -658,22 +660,21 @@ del[cite]:after {
 }
 
 .TableOfContentsHeader {
-  margin: 0;
+  margin: 7px;
   padding: 0;
-  margin-top: 5px;
 }
 
 
 @media(min-width: 60ch) {
   .FloatRight {
-    max-width: calc( 50% - 1em);
+    max-width: calc( 50% - 2em);
     float: right;
     margin-left: 1em;
     margin-right: 1em;
   }
   
   .FloatLeft {
-    max-width: calc( 50% - 1em);
+    max-width: calc( 50% - 2em);
     float: left;
     margin-left: 1em;
     margin-right: 1em;
@@ -742,6 +743,8 @@ p > code, li > code, kbd, samp {
   grid-area: debug;
 }
 
+
+
 .chroma {
   overflow-x: auto;
   border-radius: 5px;
@@ -763,6 +766,14 @@ p > code, li > code, kbd, samp {
 .lnlinks, .lnlinks:hover {
   box-shadow: none;
   text-decoration: none;
+}
+
+pre.chroma {
+  padding-inline: 7px;
+}
+
+table pre.chroma {
+  padding-inline: 0px;
 }
 
 .photos-grid-container {
@@ -826,3 +837,6 @@ abbr {
   display: inline-block;
 }
 
+@view-transition {
+  navigation: auto;
+}
