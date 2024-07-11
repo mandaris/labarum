@@ -38,6 +38,15 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.25
+  * Move author image from containing `<div>`
+  * Move hidden author information from `<div>` to `<address>` tag (unseen by users.)
+  * Move table of contents from `<aside>` to `<section>`
+  * Add `aria-label` to table of contents
+  * Adjust padding and margin to `blockquote`
+  * Add `border-radius` to `.microblog_reply_textarea > textarea`
+  * Change behavior of `a:hover` to no longer have a background come up but change the color of the link itself
+  
 ### v1.3.24
   * Change the `--accent-opposite-alt` to improve contrast
   * Add `text-wrap: balance` to `h#` tags

@@ -1,11 +1,9 @@
 <aside itemprop="author" itemscope itemtype="https://schema.org/Person" 
   class="[ author ] [ h-card ] [ p-author ]" 
   {{- if not (.Param "showAuthorInfo") }}style="display: none;"{{ end -}}>
-  <div class="[ author-image ]">
-    <img class="[ u-photo ]" loading="lazy" itemprop="image"
-      src="{{ .Site.Author.avatar }}"
-      alt="Profile image of {{ .Site.Author.name }}"/>  
-  </div>
+	<img class="[ u-photo ] [ author-image ]" loading="lazy" itemprop="image"
+		src="{{ .Site.Author.avatar }}"
+		alt="Profile image of {{ .Site.Author.name }}"/>
   <div class="[ author-bio ]">
     <a itemprop="url" class="u-url" rel="me" href="{{ .Site.BaseURL }}">
       <h1 itemprop="name" class="[ p-name ]">
