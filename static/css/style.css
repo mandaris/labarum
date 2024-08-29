@@ -26,6 +26,7 @@
 
   --background: var(--nordLight1);
   --background-alt: var(--nordLight3);
+  --background-mid: var(--nordLight2);
   --text: var(--nordDark1);
   --text-alt: var(--nordDark3);
   
@@ -47,6 +48,7 @@
   :root {
     --background: var(--nordDark3);
     --background-alt: var(--nordDark1);
+	  --background-mid: var(--nordDark2);
     --text: var(--nordLight3);
     --text-alt: var(--nordLight1);
     
@@ -103,7 +105,7 @@ body {
 }
 
 .style-box-alt {
-  background-color: var(--background);
+  background-color: var(--background-mid);
   border-radius: 5px;
   box-shadow: 
     0px 2px 7px var(--box-shadow-color-1),
@@ -320,9 +322,22 @@ p > img {
 
 audio {
   width: 100%;
+  margin-right: 1em;
+  margin-left: 1em;
+  max-width: calc(100% - 2em);
   border-radius: 7px;
+  color: var(--accent);
+  background: var(--background);
 }
 
+audio::-webkit-media-controls-panel {
+	color: var(--accent);
+  background-color: var(--background);
+}
+
+audio::-webkit-media-controls-play-button {
+  color: var(--accent-alt);
+}
 
 /* Micro.blog specific elements */
 
@@ -429,10 +444,11 @@ li::marker {
 
 
 details {
-  background-color: var(--background);
+  background-color: var(--background-mid);
   padding: .5rem 1rem;
   border-radius: 5px;
   overflow-x: auto;
+  border: 2px solid var(--accent);
 }
 
 summary: {
@@ -586,13 +602,14 @@ article ul > li > input[type="checkbox"]:checked::before {
 [popover],
 .aside-info,
 figure {
-  background-color: var(--background);
+  background-color: var(--background-mid);
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0px 2px 7px var(--box-shadow-color-1),
+  box-shadow:
+    0px 2px 7px var(--box-shadow-color-1),
     0px 7px 13px -3px var(--accent),
     inset 0px -3px 0px var(--box-shadow-color-3);
 	

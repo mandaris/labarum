@@ -38,6 +38,13 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.26
+  * Move table of contents from `<section>` to `<nav>` because I was thinking it through
+  * Adjust the colors for `<figure>`, `[popover]`, `.style-box-alt`, and `.aside-info`
+  * Adjust colors and size for `audio`
+  * Adjust spacing in `rsvp.html`
+  * Add more text to `aria-label` for table of contents
+
 ### v1.3.25
   * Move author image from containing `<div>`
   * Move hidden author information from `<div>` to `<address>` tag (unseen by users.)
