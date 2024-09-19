@@ -8,7 +8,7 @@
 
 {{ partial "site-nav.html" . }}
 
-<main>
+<main class="contentSection">
 {{ block "main" .}}{{ end }}
 </main>
 
@@ -16,7 +16,7 @@
 
 {{ partial "site-footer.html" . }}
 
-<footer id="custom-footer-container" 
+<footer id="custom-footer-container contentSection" 
   class="[ style-box ] [ optional ] [ text-center ]"
   aria-label="Additional content">
 {{ if templates.Exists "partials/custom_footer.html" -}}

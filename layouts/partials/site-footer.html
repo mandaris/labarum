@@ -1,5 +1,5 @@
 {{ "<!-- site-footer.html -->" | safeHTML }}
-<footer class="[ style-box ]" aria-label="Author and website information">
+<footer class="[ style-box ] [ site-footer ]" aria-label="Author and website information">
   {{ partial "author-info-footer.html" . }}
   {{- with  .Site.Params.description -}}
   <p class="[ text-center ]">{{ . | safeHTML }}</p>
