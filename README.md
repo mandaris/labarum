@@ -38,6 +38,14 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.27
+  * Fixed typo in `aria-label` for `plugin-container`
+  * Changed author information from `<aside>` to `<address>`
+  * Add `<nav>` to `<header>` to prepare for grid layout
+  * Add `overflow-y: auto` to `<blockquote>` to allow for expansion of element when floating images are larger than expected
+  * Add value for `accent-color` in css
+  * Remove `--max-width-value` from css as not used
+  
 ### v1.3.26
   * Move table of contents from `<section>` to `<nav>` because I was thinking it through
   * Adjust the colors for `<figure>`, `[popover]`, `.style-box-alt`, and `.aside-info`
