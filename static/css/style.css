@@ -40,6 +40,9 @@
   --box-shadow-color-1: rgba(0, 0, 0, 0.4);
   --box-shadow-color-2: rgba(0, 0, 0, 0.3);
   --box-shadow-color-3: rgba(0, 0, 0, 0.2);
+  
+  /* New method to automate sizes   */
+  interpolate-size: allow-keywords;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,7 +72,7 @@
 
 html {
   font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, Verdana, 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: 1.3rem;
 /*   box-sizing: border-box; */
 }

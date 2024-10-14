@@ -38,6 +38,10 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.29
+  * Add `interpolate-size: allow-keywords` to root of css
+  * Adjust `line-height`
+  
 ### v1.3.28
   * Attempt to fix broken css
   
