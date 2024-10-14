@@ -880,3 +880,8 @@ abbr {
 @view-transition {
   navigation: auto;
 }
+
+address {
+  font-style: normal;
+}
+}
