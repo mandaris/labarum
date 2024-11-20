@@ -38,6 +38,9 @@ The second one is activated by adding <code>{{< floating-toc >}}</code> to your 
 ![Labarum table of contents turning from light to dark mode](media/labarum-table-of-contents-float-right.gif)
 
 ## Release notes
+### v1.3.31
+  * Add `margin-right` and `margin-left` for `bluesky-embed` css class
+
 ### v1.3.30
   * Change `font-style` for `<address>`
   

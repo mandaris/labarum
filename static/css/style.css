@@ -881,6 +881,10 @@ abbr {
   navigation: auto;
 }
 
+.bluesky-embed {
+  margin-right: auto;
+  margin-left: auto;
+}
 address {
   font-style: normal;
 }

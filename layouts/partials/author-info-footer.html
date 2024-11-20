@@ -3,7 +3,7 @@
   {{- if not (.Param "showAuthorInfo") }}style="display: none;"{{ end -}}>
 	<img class="[ u-photo ] [ author-image ]" loading="lazy" itemprop="image"
 		src="{{ .Site.Author.avatar }}"
-		alt="Profile image of {{ .Site.Author.name }}"/>
+		alt="Profile of {{ .Site.Author.name }}"/>
   <div class="[ author-bio ]">
     <a itemprop="url" class="u-url" rel="me" href="{{ .Site.BaseURL }}">
       <h1 itemprop="name" class="[ p-name ]">
